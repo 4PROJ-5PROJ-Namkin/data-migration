@@ -1,6 +1,10 @@
 import json
 import logging
+import os
+from dotenv import load_dotenv
 from kafka import KafkaConsumer
+
+load_dotenv()
 
 class KafkaConsumerClient:
     """
@@ -55,7 +59,7 @@ class KafkaConsumerClient:
         self.consumer.close()
 
 if __name__ == "__main__":
-    kafka_servers = ['localhost:9092']
+    kafka_servers = [f"{os.getenv('KAFKA_HOSTNAME')}:{os.getenv('KAFKA_PORT')}"]
     topic_name = 'materials'
     group_id = 'mon_nouveau_group_id'
 
