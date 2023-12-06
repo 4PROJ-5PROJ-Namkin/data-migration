@@ -60,8 +60,8 @@ class KafkaConsumerClient:
 
 if __name__ == "__main__":
     kafka_servers = [f"{os.getenv('KAFKA_HOSTNAME')}:{os.getenv('KAFKA_PORT')}"]
-    topic_name = 'materials'
-    group_id = 'mon_nouveau_group_id'
+    topic_name = 'supply_chain'
+    group_id = 'g1'
 
     consumer_client = KafkaConsumerClient(servers=kafka_servers, topic=topic_name, group_id=group_id)
     consumer_client.subscribe()
