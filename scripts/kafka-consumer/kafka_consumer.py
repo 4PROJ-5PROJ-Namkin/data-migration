@@ -45,7 +45,7 @@ class KafkaConsumerClient:
             self.logger.info(f"Starting to consume messages from {self.topic}")
             for message in self.consumer:
                 self.logger.debug(f"Message received from partition {message.partition}")
-                print(f"Message received from partition {message.partition} at offset {message.offset} : {message.value}")
+                self.logger.info(f"Message received from partition {message.partition} at offset {message.offset} : {message.value}")
         except Exception as e:
             self.logger.error(f"An error occurred while consuming messages: {e}")
         finally:
