@@ -165,6 +165,7 @@ if __name__ == "__main__":
                 'contractNumber': 'INT',
                 'clientName': 'VARCHAR(255)',
                 'date': 'DATE',
+                'cash': 'FLOAT'
             },
             'id': 'contractNumber'
         },
