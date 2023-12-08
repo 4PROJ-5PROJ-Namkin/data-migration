@@ -167,7 +167,13 @@ if __name__ == "__main__":
                 'date': 'DATE',
             },
             'id': 'contractNumber'
-        },           
+        },
+        'machine': {
+            'fields': {
+                'machineId': 'INT',
+            },
+            'id': 'machineId'
+        },            
     }
     for dim_table, dim_fields in dim_queries_ddl.items():
         dim_query = db_manager.prepare_dimension_table_sql(dim_table, dim_fields['fields'], dim_fields['id'])
