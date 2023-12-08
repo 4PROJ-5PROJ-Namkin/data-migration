@@ -4,8 +4,6 @@ import os
 from dotenv import load_dotenv
 from kafka import KafkaConsumer
 
-load_dotenv()
-
 class KafkaConsumerClient:
     """
     A Kafka consumer client that subscribes to a specified topic and consumes messages.
@@ -59,6 +57,7 @@ class KafkaConsumerClient:
         self.consumer.close()
 
 if __name__ == "__main__":
+    load_dotenv('../../.env')
     kafka_servers = [f"{os.getenv('KAFKA_HOSTNAME')}:{os.getenv('KAFKA_PORT')}"]
     topic_name = 'supply_chain'
     group_id = 'g1'
