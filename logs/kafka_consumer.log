@@ -1,0 +1,71 @@
+2023-12-09 14:51:40,024 - INFO - Updating subscribed topics to: ['supply_chain']
+2023-12-09 14:51:40,025 - INFO - Subscribed to topic: supply_chain
+2023-12-09 14:51:40,025 - INFO - Starting to consume messages from supply_chain
+2023-12-09 14:51:40,029 - INFO - Group coordinator for g1 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2023-12-09 14:51:40,029 - INFO - Discovered coordinator coordinator-1001 for group g1
+2023-12-09 14:51:40,030 - INFO - Starting new heartbeat thread
+2023-12-09 14:51:40,031 - INFO - Revoking previously assigned partitions set() for group g1
+2023-12-09 14:51:40,032 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-09 14:51:40,032 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-09 14:51:40,033 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-09 14:51:40,137 - INFO - (Re-)joining group g1
+2023-12-09 14:51:40,138 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-09 14:51:40,139 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-09 14:51:40,151 - INFO - Elected group leader -- performing partition assignments using range
+2023-12-09 14:51:40,183 - INFO - Successfully joined group g1 with generation 9
+2023-12-09 14:51:40,183 - INFO - Updated partition assignment: [TopicPartition(topic='supply_chain', partition=0)]
+2023-12-09 14:51:40,184 - INFO - Setting newly assigned partitions {TopicPartition(topic='supply_chain', partition=0)} for group g1
+2023-12-09 14:51:40,189 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-09 14:51:40,189 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-09 14:51:40,189 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-09 14:54:49,908 - DEBUG - Message received from partition 0
+2023-12-09 14:54:49,908 - INFO - Message received from partition 0 at offset 0 : {'timeOfProduction': '2023-10-12T00:00:00.000Z', 'order': 5, 'var5': False, 'var1': None, 'var2': None, 'var3': None, 'var4': None, 'id': '4c50e051-7510-40ba-b54e-02134d4d7e09'}
+2023-12-09 14:55:43,003 - DEBUG - Message received from partition 0
+2023-12-09 14:55:43,003 - INFO - Message received from partition 0 at offset 1 : {'timeOfProduction': '2023-10-12T00:00:00.000Z', 'order': 5, 'var5': False, 'var1': None, 'var2': None, 'var3': None, 'var4': None, 'id': '348a55c0-ba6c-46aa-8812-e5622c993a9c'}
+2023-12-09 14:56:35,481 - DEBUG - Message received from partition 0
+2023-12-09 14:56:35,481 - INFO - Message received from partition 0 at offset 2 : {'timeOfProduction': '2023-10-12T00:00:00.000Z', 'order': 5, 'var5': False, 'var1': None, 'var2': None, 'var3': None, 'var4': None, 'id': 'c2e59d2a-c3b7-470a-97cb-b71e0eab8160'}
+2023-12-09 14:57:17,074 - INFO - Closing the consumer for topic: supply_chain
+2023-12-09 14:57:17,078 - INFO - Stopping heartbeat thread
+2023-12-09 14:57:17,078 - INFO - Leaving consumer group (g1).
+2023-12-09 14:57:17,084 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-09 14:57:17,084 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-09 14:57:17,086 - ERROR - Fetch to node 1001 failed: Cancelled: <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>
+2023-12-09 14:57:39,870 - INFO - Updating subscribed topics to: ['part_information']
+2023-12-09 14:57:39,871 - INFO - Subscribed to topic: part_information
+2023-12-09 14:57:39,872 - INFO - Starting to consume messages from part_information
+2023-12-09 14:57:39,875 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2023-12-09 14:57:39,875 - INFO - Discovered coordinator coordinator-1001 for group g2
+2023-12-09 14:57:39,876 - INFO - Starting new heartbeat thread
+2023-12-09 14:57:39,876 - INFO - Revoking previously assigned partitions set() for group g2
+2023-12-09 14:57:39,877 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-09 14:57:39,877 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-09 14:57:39,878 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-09 14:57:39,988 - INFO - (Re-)joining group g2
+2023-12-09 14:57:39,989 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-09 14:57:39,990 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-09 14:57:39,992 - INFO - Elected group leader -- performing partition assignments using range
+2023-12-09 14:57:39,995 - INFO - Successfully joined group g2 with generation 1
+2023-12-09 14:57:39,995 - INFO - Updated partition assignment: [TopicPartition(topic='part_information', partition=0)]
+2023-12-09 14:57:39,995 - INFO - Setting newly assigned partitions {TopicPartition(topic='part_information', partition=0)} for group g2
+2023-12-09 14:57:39,999 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-09 14:57:39,999 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-09 14:57:39,999 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-09 14:57:40,121 - DEBUG - Message received from partition 0
+2023-12-09 14:57:40,121 - INFO - Message received from partition 0 at offset 0 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 1}
+2023-12-09 14:57:40,122 - DEBUG - Message received from partition 0
+2023-12-09 14:57:40,122 - INFO - Message received from partition 0 at offset 1 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 2}
+2023-12-09 14:57:40,122 - DEBUG - Message received from partition 0
+2023-12-09 14:57:40,122 - INFO - Message received from partition 0 at offset 2 : {'defaultPrice': '14989.99', 'timeToProduce': 360, 'id': 3}
+2023-12-09 14:57:40,123 - DEBUG - Message received from partition 0
+2023-12-09 14:57:40,123 - INFO - Message received from partition 0 at offset 3 : {'defaultPrice': '14999.99', 'timeToProduce': 369, 'id': 4}
+2023-12-09 14:58:01,682 - DEBUG - Message received from partition 0
+2023-12-09 14:58:01,682 - INFO - Message received from partition 0 at offset 4 : {'defaultPrice': '19.99', 'timeToProduce': 360, 'id': 5}
+2023-12-09 14:58:01,684 - DEBUG - Message received from partition 0
+2023-12-09 14:58:01,684 - INFO - Message received from partition 0 at offset 5 : {'defaultPrice': '989.99', 'timeToProduce': 360, 'id': 6}
+2023-12-09 14:58:01,687 - DEBUG - Message received from partition 0
+2023-12-09 14:58:01,687 - INFO - Message received from partition 0 at offset 6 : {'defaultPrice': '149.99', 'timeToProduce': 369, 'id': 7}
+2023-12-09 14:58:12,751 - INFO - Closing the consumer for topic: part_information
+2023-12-09 14:58:12,754 - INFO - Stopping heartbeat thread
+2023-12-09 14:58:12,754 - INFO - Leaving consumer group (g2).
+2023-12-09 14:58:12,756 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-09 14:58:12,758 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
