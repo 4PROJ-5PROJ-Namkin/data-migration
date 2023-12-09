@@ -30,11 +30,12 @@ class KafkaConsumerClient:
 
     def configure_logging(self):
         """Configures the logging settings for the consumer."""
+        log_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'logs', 'kafka_consumer.log'))
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler('../../logs/kafka_consumer.log'),
+                logging.FileHandler(log_file_path),
                 logging.StreamHandler()
             ]
         )

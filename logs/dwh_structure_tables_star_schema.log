@@ -29,3 +29,10 @@
 2023-12-08 19:47:49,851 - INFO - Table dim_sales already exists. Skipping creation.
 2023-12-08 19:47:49,868 - INFO - Table dim_machine already exists. Skipping creation.
 2023-12-08 19:47:49,869 - INFO - Connection to the data warehouse closed.
+2023-12-10 00:34:53,021 - INFO - Connection to the data warehouse established successfully.
+2023-12-10 00:34:53,088 - INFO - Table dim_part_information already exists. Skipping creation.
+2023-12-10 00:34:53,101 - INFO - Table dim_material already exists. Skipping creation.
+2023-12-10 00:34:53,115 - INFO - Table dim_material_prices already exists. Skipping creation.
+2023-12-10 00:34:53,128 - INFO - Table dim_sales already exists. Skipping creation.
+2023-12-10 00:34:53,140 - INFO - Table dim_machine already exists. Skipping creation.
+2023-12-10 00:34:53,142 - INFO - Connection to the data warehouse closed.

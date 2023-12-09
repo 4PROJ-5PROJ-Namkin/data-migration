@@ -19,11 +19,13 @@ class DataWarehouseManager:
         self.database = database
         self.username = username
         self.password = password
+
+        log_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'logs', 'dwh_structure_tables_star_schema.log'))
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler('../../logs/dwh_structure_tables_star_schema.log'),
+                logging.FileHandler(log_file_path),
                 logging.StreamHandler()
             ]
         )
