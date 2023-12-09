@@ -30,7 +30,14 @@ class KafkaConsumerClient:
 
     def configure_logging(self):
         """Configures the logging settings for the consumer."""
-        logging.basicConfig(level=logging.INFO)
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s',
+            handlers=[
+                logging.FileHandler('../../logs/kafka_consumer.log'),
+                logging.StreamHandler()
+            ]
+        )
         self.logger = logging.getLogger(__name__)
         self.logger.setLevel(logging.DEBUG)
 
@@ -59,8 +66,8 @@ class KafkaConsumerClient:
 if __name__ == "__main__":
     load_dotenv('../../.env')
     kafka_servers = [f"{os.getenv('KAFKA_HOSTNAME')}:{os.getenv('KAFKA_PORT')}"]
-    topic_name = 'supply_chain'
-    group_id = 'g1'
+    topic_name = 'part_information'
+    group_id = 'g2'
 
     consumer_client = KafkaConsumerClient(servers=kafka_servers, topic=topic_name, group_id=group_id)
     consumer_client.subscribe()
