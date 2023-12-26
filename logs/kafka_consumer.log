@@ -145,3 +145,253 @@
 2023-12-10 00:36:10,029 - INFO - Leaving consumer group (g2).
 2023-12-10 00:36:10,033 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
 2023-12-10 00:36:10,033 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-26 00:18:42,213 - INFO - Updating subscribed topics to: ['part_information']
+2023-12-26 00:18:42,214 - INFO - Subscribed to topic: part_information
+2023-12-26 00:18:42,214 - INFO - Starting to consume messages from part_information
+2023-12-26 00:18:43,054 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2023-12-26 00:18:43,055 - INFO - Discovered coordinator coordinator-1001 for group g2
+2023-12-26 00:18:43,055 - INFO - Starting new heartbeat thread
+2023-12-26 00:18:43,055 - INFO - Revoking previously assigned partitions set() for group g2
+2023-12-26 00:18:43,056 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:18:43,057 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:18:43,057 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-26 00:18:43,157 - INFO - (Re-)joining group g2
+2023-12-26 00:18:43,159 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:18:43,161 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:18:43,254 - INFO - Elected group leader -- performing partition assignments using range
+2023-12-26 00:18:43,321 - INFO - Successfully joined group g2 with generation 1
+2023-12-26 00:18:43,322 - INFO - Updated partition assignment: [TopicPartition(topic='part_information', partition=0)]
+2023-12-26 00:18:43,322 - INFO - Setting newly assigned partitions {TopicPartition(topic='part_information', partition=0)} for group g2
+2023-12-26 00:18:43,323 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:18:43,323 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:18:43,323 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-26 00:19:42,895 - DEBUG - Message received from partition 0
+2023-12-26 00:19:42,895 - INFO - Message received from partition 0 at offset 0 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 9}
+2023-12-26 00:46:00,776 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:00,777 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:00,778 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:00,779 - ERROR - Fetch to node 1001 failed: KafkaConnectionError: socket disconnected
+2023-12-26 00:46:00,781 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:00,781 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:00,782 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: Socket EVENT_READ without in-flight-requests
+2023-12-26 00:46:00,782 - WARNING - Node coordinator-1001 connection failed -- refreshing metadata
+2023-12-26 00:46:00,782 - WARNING - Marking the coordinator dead (node coordinator-1001) for group g2: Node Disconnected.
+2023-12-26 00:46:00,789 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:00,790 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:00,790 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:00,790 - ERROR - Error sending GroupCoordinatorRequest_v0 to node 1001 [KafkaConnectionError: socket disconnected]
+2023-12-26 00:46:00,955 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:00,956 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:00,957 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:00,957 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:00,957 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:01,127 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:01,128 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:01,129 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:01,129 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:01,129 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:01,299 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:01,300 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:01,301 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:01,301 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:01,301 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:01,468 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:01,470 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:01,470 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:01,471 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:01,471 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:01,643 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:01,644 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:01,645 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:01,645 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:01,645 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:01,814 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:01,815 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:01,815 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:01,815 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:01,816 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:01,984 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:01,985 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:01,986 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:01,986 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:01,986 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:02,154 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:02,156 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:02,156 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:02,157 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:02,157 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:02,324 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:02,325 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:02,326 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:02,326 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:02,326 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:02,495 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:02,497 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:02,497 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:02,497 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:02,498 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:02,668 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:02,669 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:02,670 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:02,671 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:02,671 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:02,836 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:02,838 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:02,839 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:02,839 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:02,840 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:03,006 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:03,008 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:03,008 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:03,008 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:03,009 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:03,179 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:03,180 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:03,180 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:03,180 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:03,181 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:03,353 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:03,354 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:03,355 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:03,355 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:03,355 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:03,528 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:03,529 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:03,529 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:03,529 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:03,530 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:03,697 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:03,698 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:03,698 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:03,698 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:03,699 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:03,866 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:03,867 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:03,867 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:03,867 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:03,868 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:04,038 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:04,039 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:04,040 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:04,040 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:04,041 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:04,207 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:04,208 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:04,209 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:04,209 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:04,209 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:04,378 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:04,379 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:04,380 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:04,380 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:04,380 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:04,548 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:04,549 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:04,550 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:04,550 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:04,551 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:04,722 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:04,723 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:04,724 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:04,724 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:04,724 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:04,897 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:04,898 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:04,899 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:04,899 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:04,899 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:05,068 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:05,069 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:05,070 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:05,071 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:05,071 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:05,242 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:46:05,243 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:46:05,244 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2023-12-26 00:46:05,244 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2023-12-26 00:46:05,244 - WARNING - Node 1001 connection failed -- refreshing metadata
+2023-12-26 00:46:05,414 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:49:35,286 - INFO - Closing the consumer for topic: part_information
+2023-12-26 00:49:39,455 - INFO - Stopping heartbeat thread
+2023-12-26 00:56:00,440 - INFO - Updating subscribed topics to: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2023-12-26 00:56:00,442 - INFO - Subscribed to topics: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2023-12-26 00:56:00,442 - INFO - Starting to consume messages from ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2023-12-26 00:56:00,748 - WARNING - Topic machines is not available during auto-create initialization
+2023-12-26 00:56:00,749 - WARNING - Topic material is not available during auto-create initialization
+2023-12-26 00:56:00,749 - WARNING - Topic material_prices is not available during auto-create initialization
+2023-12-26 00:56:00,749 - WARNING - Topic supply_chain is not available during auto-create initialization
+2023-12-26 00:56:00,749 - WARNING - Topic part_information is not available during auto-create initialization
+2023-12-26 00:56:00,857 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:56:00,858 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:56:00,858 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-26 00:56:01,406 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2023-12-26 00:56:01,407 - INFO - Discovered coordinator coordinator-1001 for group g2
+2023-12-26 00:56:01,407 - INFO - Starting new heartbeat thread
+2023-12-26 00:56:01,408 - INFO - Revoking previously assigned partitions set() for group g2
+2023-12-26 00:56:01,409 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 00:56:01,410 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 00:56:01,519 - INFO - (Re-)joining group g2
+2023-12-26 00:56:01,597 - INFO - Elected group leader -- performing partition assignments using range
+2023-12-26 00:56:01,598 - WARNING - No partition metadata for topic material
+2023-12-26 00:56:01,598 - WARNING - No partition metadata for topic machines
+2023-12-26 00:56:01,598 - WARNING - No partition metadata for topic part_information
+2023-12-26 00:56:01,598 - WARNING - No partition metadata for topic supply_chain
+2023-12-26 00:56:01,598 - WARNING - No partition metadata for topic material_prices
+2023-12-26 00:56:01,660 - INFO - Successfully joined group g2 with generation 1
+2023-12-26 00:56:01,660 - INFO - Updated partition assignment: []
+2023-12-26 00:56:01,660 - INFO - Setting newly assigned partitions set() for group g2
+2023-12-26 00:56:01,660 - INFO - Revoking previously assigned partitions set() for group g2
+2023-12-26 00:56:01,660 - INFO - (Re-)joining group g2
+2023-12-26 00:56:01,666 - INFO - Elected group leader -- performing partition assignments using range
+2023-12-26 00:56:01,669 - INFO - Successfully joined group g2 with generation 2
+2023-12-26 00:56:01,669 - INFO - Updated partition assignment: [TopicPartition(topic='machines', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='supply_chain', partition=0)]
+2023-12-26 00:56:01,670 - INFO - Setting newly assigned partitions {TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='supply_chain', partition=0)} for group g2
+2023-12-26 00:56:20,886 - DEBUG - Message received from partition 0
+2023-12-26 00:56:20,886 - INFO - Message received from partition 0 at offset 0 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 10}
+2023-12-26 00:56:28,313 - DEBUG - Message received from partition 0
+2023-12-26 00:56:28,313 - INFO - Message received from partition 0 at offset 0 : {'name': 'zinc', 'id': 2}
+2023-12-26 01:01:53,834 - INFO - Closing the consumer for topic: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2023-12-26 01:01:53,838 - INFO - Stopping heartbeat thread
+2023-12-26 01:01:53,838 - INFO - Leaving consumer group (g2).
+2023-12-26 01:01:53,845 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-26 01:01:53,846 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-26 01:01:55,433 - INFO - Updating subscribed topics to: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2023-12-26 01:01:55,434 - INFO - Subscribed to topics: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2023-12-26 01:01:55,434 - INFO - Starting to consume messages from ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2023-12-26 01:01:55,436 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2023-12-26 01:01:55,436 - INFO - Discovered coordinator coordinator-1001 for group g2
+2023-12-26 01:01:55,437 - INFO - Starting new heartbeat thread
+2023-12-26 01:01:55,438 - INFO - Revoking previously assigned partitions set() for group g2
+2023-12-26 01:01:55,438 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 01:01:55,439 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 01:01:55,439 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-26 01:01:55,554 - INFO - (Re-)joining group g2
+2023-12-26 01:01:55,555 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 01:01:55,556 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 01:01:55,558 - INFO - Elected group leader -- performing partition assignments using range
+2023-12-26 01:01:55,558 - WARNING - No partition metadata for topic material_prices
+2023-12-26 01:01:55,558 - WARNING - No partition metadata for topic supply_chain
+2023-12-26 01:01:55,559 - WARNING - No partition metadata for topic material
+2023-12-26 01:01:55,559 - WARNING - No partition metadata for topic part_information
+2023-12-26 01:01:55,559 - WARNING - No partition metadata for topic machines
+2023-12-26 01:01:55,561 - INFO - Successfully joined group g2 with generation 4
+2023-12-26 01:01:55,561 - INFO - Updated partition assignment: []
+2023-12-26 01:01:55,561 - INFO - Setting newly assigned partitions set() for group g2
+2023-12-26 01:01:55,562 - INFO - Revoking previously assigned partitions set() for group g2
+2023-12-26 01:01:55,562 - INFO - (Re-)joining group g2
+2023-12-26 01:01:55,563 - INFO - Elected group leader -- performing partition assignments using range
+2023-12-26 01:01:55,565 - INFO - Successfully joined group g2 with generation 5
+2023-12-26 01:01:55,566 - INFO - Updated partition assignment: [TopicPartition(topic='machines', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='supply_chain', partition=0)]
+2023-12-26 01:01:55,566 - INFO - Setting newly assigned partitions {TopicPartition(topic='part_information', partition=0), TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='material_prices', partition=0)} for group g2
+2023-12-26 01:01:55,569 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2023-12-26 01:01:55,570 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-12-26 01:01:55,570 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-26 01:02:26,121 - DEBUG - Message received from supply_chain and from partition 0
+2023-12-26 01:02:26,121 - INFO - Message received from supply_chain and from partition 0 at offset 0 : {'timeOfProduction': '2023-10-10T00:00:00.000Z', 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'id': 'e2bbd8cf-386e-4c55-943f-d8d6f524722e'}
+2023-12-26 01:03:33,627 - DEBUG - Message received from part_information and from partition 0
+2023-12-26 01:03:33,627 - INFO - Message received from part_information and from partition 0 at offset 1 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 11}
+2023-12-26 01:03:42,690 - INFO - Closing the consumer for topic: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2023-12-26 01:03:42,693 - INFO - Stopping heartbeat thread
+2023-12-26 01:03:42,694 - INFO - Leaving consumer group (g2).
+2023-12-26 01:03:42,696 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-12-26 01:03:42,696 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 

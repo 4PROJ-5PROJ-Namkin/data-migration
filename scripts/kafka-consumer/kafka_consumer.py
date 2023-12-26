@@ -10,7 +10,7 @@ class KafkaConsumerClient:
 
     """
 
-    def __init__(self, servers, topic, group_id=None):
+    def __init__(self, servers, topics, group_id=None):
         """
         Initializes the KafkaConsumerClient.
 
@@ -25,7 +25,7 @@ class KafkaConsumerClient:
             group_id=group_id,
             value_deserializer=lambda m: json.loads(m.decode('utf-8'))
         )
-        self.topic = topic
+        self.topics = topics
         self.configure_logging()
 
     def configure_logging(self):
@@ -43,17 +43,17 @@ class KafkaConsumerClient:
         self.logger.setLevel(logging.DEBUG)
 
     def subscribe(self):
-        """Subscribes the consumer to the topic."""
-        self.consumer.subscribe([self.topic])
-        self.logger.info(f"Subscribed to topic: {self.topic}")
+        """Subscribes the consumer to the topics."""
+        self.consumer.subscribe(self.topics)
+        self.logger.info(f"Subscribed to topics: {self.topics}")
 
     def consume_messages(self):
-        """Consumes and processes messages from the subscribed topic."""
+        """Consumes and processes messages from the subscribed topics."""
         try:
-            self.logger.info(f"Starting to consume messages from {self.topic}")
+            self.logger.info(f"Starting to consume messages from {self.topics}")
             for message in self.consumer:
-                self.logger.debug(f"Message received from partition {message.partition}")
-                self.logger.info(f"Message received from partition {message.partition} at offset {message.offset} : {message.value}")
+                self.logger.debug(f"Message received from {message.topic} and from partition {message.partition}")
+                self.logger.info(f"Message received from {message.topic} and from partition {message.partition} at offset {message.offset} : {message.value}")
         except Exception as e:
             self.logger.error(f"An error occurred while consuming messages: {e}")
         finally:
@@ -61,15 +61,15 @@ class KafkaConsumerClient:
 
     def close(self):
         """Closes the Kafka consumer."""
-        self.logger.info(f"Closing the consumer for topic: {self.topic}")
+        self.logger.info(f"Closing the consumer for topic: {self.topics}")
         self.consumer.close()
 
 if __name__ == "__main__":
     load_dotenv('../../.env')
     kafka_servers = [f"{os.getenv('KAFKA_HOSTNAME')}:{os.getenv('KAFKA_PORT')}"]
-    topic_name = 'part_information'
+    topic_names = ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
     group_id = 'g2'
 
-    consumer_client = KafkaConsumerClient(servers=kafka_servers, topic=topic_name, group_id=group_id)
+    consumer_client = KafkaConsumerClient(servers=kafka_servers, topics=topic_names, group_id=group_id)
     consumer_client.subscribe()
     consumer_client.consume_messages()
