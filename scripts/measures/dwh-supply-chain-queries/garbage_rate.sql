@@ -5,6 +5,6 @@ SELECT TOP 100000
     SUM(CAST(var5 AS INT)) AS GarbageRate
 FROM fact_table
 WHERE timeOfProduction >= DATEDIFF(SECOND, '19700101', '2010-01-01') 
-    AND timeOfProduction < DATEDIFF(SECOND, '19700101', '2014-01-01')
+AND timeOfProduction < DATEDIFF(SECOND, '19700101', '2014-01-01')
 GROUP BY partId
 ORDER BY GarbageRate ASC;

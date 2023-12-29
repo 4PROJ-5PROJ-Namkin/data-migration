@@ -1,0 +1,66 @@
+2023-12-29 22:12:01,176 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:12:01,179 - root - ERROR - Error occurred while reading the Material Excel file: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+2023-12-29 22:14:19,142 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:14:19,424 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:15:32,522 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:15:32,739 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:15:32,747 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-29 22:15:32,747 - root - ERROR - An error occurred while transforming the DataFrame: 'prices'
+2023-12-29 22:17:05,987 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:17:06,204 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:17:46,803 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:17:47,019 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:18:29,199 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:18:29,421 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:18:37,947 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:18:38,157 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:18:55,954 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:18:56,165 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:18:56,166 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-29 22:18:56,195 - root - ERROR - An error occurred while transforming the DataFrame: Can only use .dt accessor with datetimelike values
+2023-12-29 22:20:05,055 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:20:05,305 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:20:05,306 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-29 22:20:05,310 - root - ERROR - Date column is not recognized as datetime.
+2023-12-29 22:20:05,310 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-29 22:22:44,010 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:22:44,228 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:22:44,229 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-29 22:22:44,232 - root - ERROR - Date column is not recognized as datetime.
+2023-12-29 22:22:44,233 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-29 22:25:14,287 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:25:14,530 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:25:14,531 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-29 22:25:14,534 - root - ERROR - Date column is not recognized as datetime.
+2023-12-29 22:25:14,534 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-29 22:29:32,050 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:29:32,278 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:29:32,278 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-29 22:29:32,281 - root - ERROR - Date column is not recognized as datetime.
+2023-12-29 22:29:32,282 - root - INFO - Successfully transformed DataFrame for dim_material_price table.2023-12-29 22:32:12,677 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:32:12,889 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:32:12,889 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-29 22:32:12,893 - root - ERROR - Date column is not recognized as datetime.
+2023-12-29 22:32:12,894 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-29 22:33:10,394 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:33:10,607 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:33:10,607 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-29 22:33:10,611 - root - ERROR - Date column is not recognized as datetime.
+2023-12-29 22:33:10,611 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-29 22:33:28,075 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:33:28,297 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:33:28,297 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-29 22:33:28,300 - root - ERROR - Date column is not recognized as datetime.
+2023-12-29 22:33:28,302 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-29 22:34:49,184 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:34:49,403 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:34:49,403 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-29 22:34:49,406 - root - ERROR - Date column is not recognized as datetime.
+2023-12-29 22:34:49,407 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-29 22:34:49,641 - root - INFO - Data inserted into the DWH table successfully.
+2023-12-29 22:40:00,711 - root - INFO - Starting to read the Material Excel file.
+2023-12-29 22:40:00,931 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:40:00,934 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-29 22:40:00,937 - root - ERROR - Date column is not recognized as datetime.
+2023-12-29 22:40:00,937 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-29 22:40:01,127 - root - INFO - Data inserted into the DWH table successfully.
