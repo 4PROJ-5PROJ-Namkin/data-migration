@@ -43,3 +43,58 @@
 2023-12-12 21:08:17,540 - INFO - Table dim_sales already exists. Skipping creation.
 2023-12-12 21:08:17,551 - INFO - Table dim_machine already exists. Skipping creation.
 2023-12-12 21:08:17,555 - INFO - Connection to the data warehouse closed.
+2023-12-29 13:56:16,908 - INFO - Connection to the data warehouse established successfully.
+2023-12-29 13:56:16,939 - INFO - Table dim_part_information already exists. Skipping creation.
+2023-12-29 13:56:16,950 - INFO - Table dim_material already exists. Skipping creation.
+2023-12-29 13:56:16,962 - INFO - Table dim_material_prices already exists. Skipping creation.
+2023-12-29 13:56:16,972 - INFO - Table dim_sales already exists. Skipping creation.
+2023-12-29 13:56:16,984 - INFO - Table dim_machine already exists. Skipping creation.
+2023-12-29 13:56:16,985 - INFO - Connection to the data warehouse closed.
+2023-12-29 13:57:57,247 - INFO - Connection to the data warehouse established successfully.
+2023-12-29 13:57:57,271 - INFO - Table dim_part_information already exists. Skipping creation.
+2023-12-29 13:57:57,281 - INFO - Table dim_material already exists. Skipping creation.
+2023-12-29 13:57:57,291 - INFO - Table dim_material_prices already exists. Skipping creation.
+2023-12-29 13:57:57,304 - INFO - Table dim_sales already exists. Skipping creation.
+2023-12-29 13:57:57,320 - INFO - Table dim_machine already exists. Skipping creation.
+2023-12-29 13:57:57,358 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers le mot clé 'order'. (156) (SQLExecDirectW)")
+2023-12-29 13:57:57,360 - INFO - Connection to the data warehouse closed.
+2023-12-29 13:59:12,447 - INFO - Connection to the data warehouse established successfully.
+2023-12-29 13:59:12,505 - INFO - Table dim_part_information already exists. Skipping creation.
+2023-12-29 13:59:12,524 - INFO - Table dim_material already exists. Skipping creation.
+2023-12-29 13:59:12,539 - INFO - Table dim_material_prices already exists. Skipping creation.
+2023-12-29 13:59:12,553 - INFO - Table dim_sales already exists. Skipping creation.
+2023-12-29 13:59:12,569 - INFO - Table dim_machine already exists. Skipping creation.
+2023-12-29 13:59:12,613 - ERROR - An error occurred while executing the query: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Le nom de colonne 'id' n'existe pas dans la table ou la vue cible. (1911) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de créer la contrainte ou l'index. Voir les erreurs précédentes. (1750)")
+2023-12-29 13:59:12,614 - INFO - Connection to the data warehouse closed.
+2023-12-29 14:02:34,912 - INFO - Connection to the data warehouse established successfully.
+2023-12-29 14:02:34,940 - INFO - Table dim_part_information already exists. Skipping creation.
+2023-12-29 14:02:34,953 - INFO - Table dim_material already exists. Skipping creation.
+2023-12-29 14:02:34,967 - INFO - Table dim_material_prices already exists. Skipping creation.
+2023-12-29 14:02:34,978 - INFO - Table dim_sales already exists. Skipping creation.
+2023-12-29 14:02:34,991 - INFO - Table dim_machine already exists. Skipping creation.
+2023-12-29 14:02:35,016 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]La clé étrangère 'FK__fact_supp__partI__6FE99F9F' fait référence à la table non valide 'part_information'. (1767) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de créer la contrainte ou l'index. Voir les erreurs précédentes. (1750)")
+2023-12-29 14:02:35,016 - INFO - Connection to the data warehouse closed.
+2023-12-29 14:06:11,475 - INFO - Connection to the data warehouse established successfully.
+2023-12-29 14:06:11,514 - INFO - Table dim_part_information already exists. Skipping creation.
+2023-12-29 14:06:11,526 - INFO - Table dim_material already exists. Skipping creation.
+2023-12-29 14:06:11,539 - INFO - Table dim_material_prices already exists. Skipping creation.
+2023-12-29 14:06:11,548 - INFO - Table dim_sales already exists. Skipping creation.
+2023-12-29 14:06:11,556 - INFO - Table dim_machine already exists. Skipping creation.
+2023-12-29 14:06:11,578 - INFO - Query executed successfully.
+2023-12-29 14:06:11,578 - INFO - Connection to the data warehouse closed.
+2023-12-29 14:07:00,127 - INFO - Connection to the data warehouse established successfully.
+2023-12-29 14:07:00,140 - INFO - Table dim_part_information already exists. Skipping creation.
+2023-12-29 14:07:00,153 - INFO - Table dim_material already exists. Skipping creation.
+2023-12-29 14:07:00,163 - INFO - Table dim_material_prices already exists. Skipping creation.
+2023-12-29 14:07:00,175 - INFO - Table dim_sales already exists. Skipping creation.
+2023-12-29 14:07:00,185 - INFO - Table dim_machine already exists. Skipping creation.
+2023-12-29 14:07:00,192 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2023-12-29 14:07:00,193 - INFO - Connection to the data warehouse closed.
+2023-12-29 16:05:34,301 - INFO - Connection to the data warehouse established successfully.
+2023-12-29 16:05:34,335 - INFO - Table dim_part_information already exists. Skipping creation.
+2023-12-29 16:05:34,349 - INFO - Table dim_material already exists. Skipping creation.
+2023-12-29 16:05:34,360 - INFO - Table dim_material_prices already exists. Skipping creation.
+2023-12-29 16:05:34,373 - INFO - Table dim_sales already exists. Skipping creation.
+2023-12-29 16:05:34,388 - INFO - Table dim_machine already exists. Skipping creation.
+2023-12-29 16:05:34,411 - INFO - Query executed successfully.
+2023-12-29 16:05:34,412 - INFO - Connection to the data warehouse closed.
