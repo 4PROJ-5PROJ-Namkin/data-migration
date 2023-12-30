@@ -212,4 +212,4 @@ if __name__ == "__main__":
         for t_df, t_name in zip(target_df, target_tables):
             export_data_into_dwh_table(t_df, server, database, username, password, t_name)
     except Exception as e:
-        logging.error(f'Failed to serialize the values of the {t_df} DataFrame in the {t_name} table')
+        logging.error(f'Failed to serialize the values of the {t_df} DataFrame in the {t_name} table: {e}')
