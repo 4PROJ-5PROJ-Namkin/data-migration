@@ -158,6 +158,16 @@ def populate_dim_part_information_table(part_information_df, material_col='meter
     except Exception as e:
         logging.error(f"An error occurred while transforming the DataFrame for dim_part_information table: {e}")
 
+def populate_dim_machine_table(part_information_df):
+    """
+    Transforms and enriches the machine DataFrame by extracting the unique id 
+    of the part information transformed and leveraged DataFrame in order to 
+    ensure referential integrity in both sides.
+    """
+    return part_information_df.select("machineId") \
+                            .dropDuplicates() \
+                            .orderBy('machineId', ascending=True)
+
 def export_data_into_dwh_table(df, server, database, username, password, table_name):
     """
     Inserts records from a DataFrame into a DWH table persisted in a SQL Server database.
@@ -177,10 +187,10 @@ def export_data_into_dwh_table(df, server, database, username, password, table_n
           .option("driver", "com.microsoft.sqlserver.jdbc.SQLServerDriver") \
           .save()
         
-        logging.info("Data inserted into the DWH table successfully.")
+        logging.info(f"Data inserted into the DWH {table_name} table successfully.")
 
     except Exception as e:
-        logging.error(f"An error occurred while inserting data into SQL Server: {e}")
+        logging.error(f"An error occurred while inserting {table_name} data into SQL Server: {e}")
 
 if __name__ == "__main__":
     input_path = '../../data/machines'
@@ -204,6 +214,7 @@ if __name__ == "__main__":
     
     material_price_df = populate_dim_material_price_table(material_df)
     part_df = populate_dim_part_information_table(part_information_df)
+    machine_df = populate_dim_machine_table(part_df)
 
     material_df = material_df.withColumn('id', col('id').cast(ShortType())) \
                             .select('id', 'name')
@@ -211,8 +222,8 @@ if __name__ == "__main__":
                                             .select('id', 'defaultPrice', 'timeToProduce')
 
     try: 
-        target_df = [material_df, material_price_df, part_information_df]
-        target_tables = ['dim_material', 'dim_material_prices', 'dim_part_information']
+        target_df = [material_df, material_price_df, part_information_df, machine_df]
+        target_tables = ['dim_material', 'dim_material_prices', 'dim_part_information', 'dim_machine']
 
         for t_df, t_name in zip(target_df, target_tables):
             export_data_into_dwh_table(t_df, server, database, username, password, t_name)

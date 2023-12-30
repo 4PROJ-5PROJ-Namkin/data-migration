@@ -148,6 +148,28 @@ class DataWarehouseManager:
         dim_table = f"CREATE TABLE fact_{table_name.lower()} (\n    {fields_str}\n)"
         return dim_table
 
+    def generate_massive_insert_query(self, table_name, column_names, records):
+        """
+        Generate a SQL query for a massive bulk insertion.
+
+        :param table_name: Name of the table to insert into.
+        :param column_names: List of column names in the order corresponding to the records.
+        :param records: List of tuples, each tuple representing a record to be inserted.
+        :return: SQL query string for massive bulk insertion.
+        """
+        try:
+            placeholders = ', '.join(['?' for _ in column_names])
+            insert_query = f"INSERT INTO {table_name} ({', '.join(column_names)}) VALUES "
+            value_placeholders = ', '.join([f'({placeholders})' for _ in records])
+            insert_query += value_placeholders
+
+            logging.info(f"Generated massive insert query for table {table_name} with {len(records)} records.")
+            
+            return insert_query
+        except Exception as e:
+            logging.error(f"Error generating massive insert query: {str(e)}")
+            return None
+
 if __name__ == "__main__":
     load_dotenv('../../.env')
     server = os.getenv('DB_HOST')

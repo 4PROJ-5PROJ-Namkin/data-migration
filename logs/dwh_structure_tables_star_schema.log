@@ -98,3 +98,26 @@
 2023-12-29 16:05:34,388 - INFO - Table dim_machine already exists. Skipping creation.
 2023-12-29 16:05:34,411 - INFO - Query executed successfully.
 2023-12-29 16:05:34,412 - INFO - Connection to the data warehouse closed.
+2023-12-30 21:07:57,383 - INFO - Connection to the data warehouse established successfully.
+2023-12-30 21:11:24,410 - INFO - Connection to the data warehouse established successfully.
+2023-12-30 21:12:25,402 - INFO - Connection to the data warehouse established successfully.
+2023-12-30 21:12:50,355 - INFO - Connection to the data warehouse established successfully.
+2023-12-30 21:12:50,356 - INFO - Generated massive insert query for table machine with 4 records.
+2023-12-30 21:14:53,729 - INFO - Connection to the data warehouse established successfully.
+2023-12-30 21:14:53,730 - INFO - Generated massive insert query for table machine with 4 records.
+2023-12-30 21:14:53,731 - ERROR - An error occurred while executing the query: ('07002', '[07002] [Microsoft][ODBC Driver 17 for SQL Server]COUNT field incorrect or syntax error (0) (SQLExecDirectW)')
+2023-12-30 21:14:53,731 - INFO - Connection to the data warehouse closed.
+2023-12-30 21:18:38,630 - INFO - Connection to the data warehouse established successfully.
+2023-12-30 21:18:38,630 - INFO - Generated massive insert query for table machine with 5 records.
+2023-12-30 21:18:38,631 - INFO - Connection to the data warehouse closed.
+2023-12-30 21:18:51,254 - INFO - Connection to the data warehouse established successfully.
+2023-12-30 21:18:51,254 - INFO - Generated massive insert query for table machine with 5 records.
+2023-12-30 21:18:51,254 - INFO - Connection to the data warehouse closed.
+2023-12-30 21:19:08,177 - INFO - Connection to the data warehouse established successfully.
+2023-12-30 21:19:08,177 - INFO - Generated massive insert query for table machine with 5 records.
+2023-12-30 21:19:08,261 - ERROR - An error occurred while executing the query: ("A TVP's rows must be Sequence objects.", 'HY000')
+2023-12-30 21:19:08,262 - INFO - Connection to the data warehouse closed.
+2023-12-30 21:22:32,651 - INFO - Connection to the data warehouse established successfully.
+2023-12-30 21:22:32,651 - INFO - Generated massive insert query for table machine with 5 records.
+2023-12-30 21:22:32,661 - ERROR - An error occurred while executing the query: ("A TVP's rows must be Sequence objects.", 'HY000')
+2023-12-30 21:22:32,662 - INFO - Connection to the data warehouse closed.

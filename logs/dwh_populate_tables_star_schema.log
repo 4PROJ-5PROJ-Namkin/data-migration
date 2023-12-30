@@ -114,3 +114,44 @@
 2023-12-30 20:09:34,556 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
 2023-12-30 20:09:58,615 - root - INFO - Starting to read the Sales Excel file.
 2023-12-30 20:09:58,823 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-30 22:52:58,300 - root - INFO - Starting to read the Sales Excel file.
+2023-12-30 22:52:58,594 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-30 22:54:40,279 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 22:54:40,526 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 22:54:40,527 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 22:54:40,532 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-30 22:54:40,533 - root - INFO - Starting to read the Sales Excel file.
+2023-12-30 22:54:40,536 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-30 22:55:05,149 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 22:55:05,371 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 22:55:05,372 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 22:55:05,376 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-30 22:55:05,376 - root - INFO - Starting to read the Sales Excel file.
+2023-12-30 22:55:05,379 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-30 22:55:30,846 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 22:55:31,066 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 22:55:31,066 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 22:55:31,071 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-30 22:55:31,078 - root - INFO - Starting to read the Sales Excel file.
+2023-12-30 22:55:31,082 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-30 22:55:46,458 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 22:55:46,673 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 22:55:46,673 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 22:55:46,678 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-30 22:55:46,678 - root - INFO - Starting to read the Sales Excel file.
+2023-12-30 22:55:46,681 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-30 22:55:46,747 - root - INFO - Data inserted into the DWH table successfully.
+2023-12-30 23:00:23,426 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 23:00:23,647 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 23:00:23,647 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 23:00:23,653 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-30 23:00:23,653 - root - INFO - Starting to read the Sales Excel file.
+2023-12-30 23:00:23,657 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-30 23:00:23,980 - root - INFO - Data inserted into the DWH dim_machine table successfully.
+2023-12-30 23:02:54,203 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 23:02:54,426 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 23:02:54,426 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 23:02:54,431 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-30 23:02:54,431 - root - INFO - Starting to read the Sales Excel file.
+2023-12-30 23:02:54,434 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-30 23:02:55,072 - root - INFO - Data inserted into the DWH dim_part_information table successfully.

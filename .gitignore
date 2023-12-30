@@ -1,2 +1,4 @@
 jobs/dwh/test.py
 jobs/dwh/test_1.py
+jobs/dwh/dwh_bulk_massive_insertions_query.py
+logs/dwh_bulk_insert.log
