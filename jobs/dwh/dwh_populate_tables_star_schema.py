@@ -7,16 +7,6 @@ from py4j.protocol import Py4JJavaError
 from dotenv import load_dotenv
 from dwh_prototype_udf_utils import parse_date, string_to_int_list
 
-log_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'logs', 'dwh_populate_tables_star_schema.log'))
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-                logging.FileHandler(log_file_path),
-                logging.StreamHandler()
-            ]
-    )
-
 def create_spark_session():
     """
     Initialize and return a Spark session with specific configurations.
@@ -192,6 +182,16 @@ def export_data_into_dwh_table(df, server, database, username, password, table_n
         logging.error(f"An error occurred while inserting {table_name} data into SQL Server: {e}")
 
 if __name__ == "__main__":
+    log_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'logs', 'dwh_populate_tables_star_schema.log'))
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        handlers=[
+                    logging.FileHandler(log_file_path),
+                    logging.StreamHandler()
+                ]
+        )
+    
     input_path = '../../data/machines'
     output_path = '../../data/machines_parquet/'
     final_output_path = '../../data/machines_all_parquet/'
