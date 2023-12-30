@@ -1,6 +1,7 @@
 import pyodbc
 import logging
 from dotenv import load_dotenv
+from dwh_define_star_schemas_dictionaries import dim_queries_ddl, fact_query_ddl
 import os
 
 class DataWarehouseManager:
@@ -179,88 +180,6 @@ if __name__ == "__main__":
 
     db_manager = DataWarehouseManager(server, database, username, password)
     db_manager.connect()
-
-    dim_queries_ddl = {
-        'part_information': {
-            'fields': {
-                'id': 'INT',
-                'defaultPrice': 'FLOAT',
-                'timeToProduce': 'FLOAT',
-            },
-            'id': 'id'
-        },
-        'material': {
-            'fields': {
-                'id': 'INT',
-                'name': 'VARCHAR(255)',
-            },
-            'id': 'id'
-        },        
-        'material_prices': {
-            'fields': {
-                'id': 'INT',
-                'price': 'VARCHAR(255)',
-                'date': 'DATE',
-            },
-            'id': 'id'
-        },
-        'sales': {
-            'fields': {
-                'contractNumber': 'INT',
-                'clientName': 'VARCHAR(255)',
-                'date': 'DATE',
-                'cash': 'FLOAT'
-            },
-            'id': 'contractNumber'
-        },
-        'machine': {
-            'fields': {
-                'machineId': 'INT',
-            },
-            'id': 'machineId'
-        },            
-    }
-
-    fact_query_ddl = {
-        'fields': {
-            'id': 'INT',
-            'machineId': 'INT',
-            'timeOfProduction': 'DATE',
-            'isDamaged': 'BIT',
-            'partId': 'INT',
-            'contractId': 'INT',
-            'materialId': 'INT',
-            'materialPriceId': 'INT',
-        },
-        'ref': [
-            {
-                'table': 'part_information',
-                'pk': 'id',
-                'fk': 'partId'
-            },
-            {
-                'table': 'material',
-                'pk': 'id',
-                'fk': 'materialId'
-            }, 
-            {
-                'table': 'material_prices',
-                'pk': 'id',
-                'fk': 'materialPriceId'
-            },
-            {
-                'table': 'sales',
-                'pk': 'contractNumber',
-                'fk': 'contractId'
-            },
-            {
-                'table': 'machine',
-                'pk': 'machineId',
-                'fk': 'machineId'
-            },
-        ],
-        'id': 'id',
-    }
 
     for dim_table, dim_fields in dim_queries_ddl.items():
         dim_query = db_manager.prepare_dimension_table_sql(dim_table, dim_fields['fields'], dim_fields['id'])

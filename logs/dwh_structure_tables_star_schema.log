@@ -121,3 +121,11 @@
 2023-12-30 21:22:32,651 - INFO - Generated massive insert query for table machine with 5 records.
 2023-12-30 21:22:32,661 - ERROR - An error occurred while executing the query: ("A TVP's rows must be Sequence objects.", 'HY000')
 2023-12-30 21:22:32,662 - INFO - Connection to the data warehouse closed.
+2023-12-30 23:27:23,093 - INFO - Connection to the data warehouse established successfully.
+2023-12-30 23:27:23,113 - INFO - Table dim_part_information already exists. Skipping creation.
+2023-12-30 23:27:23,126 - INFO - Table dim_material already exists. Skipping creation.
+2023-12-30 23:27:23,137 - INFO - Table dim_material_prices already exists. Skipping creation.
+2023-12-30 23:27:23,146 - INFO - Table dim_sales already exists. Skipping creation.
+2023-12-30 23:27:23,156 - INFO - Table dim_machine already exists. Skipping creation.
+2023-12-30 23:27:23,169 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2023-12-30 23:27:23,170 - INFO - Connection to the data warehouse closed.
