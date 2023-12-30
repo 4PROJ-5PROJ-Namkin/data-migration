@@ -160,9 +160,8 @@ def populate_dim_part_information_table(part_information_df, material_col='meter
 
 def populate_dim_machine_table(part_information_df):
     """
-    Transforms and enriches the machine DataFrame by extracting the unique 
-    material ids of the part information transformed and leveraged DataFrame
-    in order to ensure referential integrity in both sides.
+    Transforms and enriches the machine DataFrame by extracting the unique material ids of the part information 
+    transformed and leveraged DataFrame in order to ensure referential integrity in both sides.
     """
     return part_information_df.select("machineId") \
                             .dropDuplicates() \
