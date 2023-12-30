@@ -65,3 +65,52 @@
 2023-12-29 22:40:00,937 - root - ERROR - Date column is not recognized as datetime.
 2023-12-29 22:40:00,937 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
 2023-12-29 22:40:01,127 - root - INFO - Data inserted into the DWH table successfully.
+2023-12-30 19:52:43,435 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 19:52:43,738 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 19:55:40,468 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 19:55:40,697 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 19:56:16,906 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 19:56:17,122 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 19:56:17,122 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 19:56:17,122 - root - ERROR - An error occurred while transforming the DataFrame for dim_part_information table: name 'ast' is not defined
+2023-12-30 19:56:43,144 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 19:56:43,376 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 19:56:43,376 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 19:56:43,384 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-30 19:58:10,051 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 19:58:10,275 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 19:58:10,276 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 19:58:10,280 - root - ERROR - An error occurred while transforming the DataFrame for dim_part_information table: Length of values (598) does not match length of index (600)
+2023-12-30 19:58:10,280 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 19:58:10,281 - root - ERROR - An error occurred while transforming the DataFrame for dim_part_information table: 'NoneType' object is not subscriptable
+2023-12-30 19:59:38,073 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 19:59:38,285 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 19:59:38,285 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 19:59:38,290 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-30 19:59:38,290 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 19:59:38,290 - root - ERROR - An error occurred while transforming the DataFrame for dim_part_information table: 'meterials'
+2023-12-30 20:00:04,325 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 20:00:04,547 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 20:00:10,734 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 20:00:10,952 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 20:00:10,953 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 20:00:10,957 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-30 20:00:41,170 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 20:00:41,393 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 20:00:45,694 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 20:00:45,909 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 20:00:45,910 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 20:00:45,914 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-30 20:01:37,575 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 20:01:37,790 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 20:01:37,790 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 20:01:37,795 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-30 20:02:39,950 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-30 20:02:40,179 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 20:02:40,179 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-30 20:02:40,184 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-30 20:02:40,829 - root - INFO - Data inserted into the DWH table successfully.
+2023-12-30 20:09:34,339 - root - INFO - Starting to read the Sales Excel file.
+2023-12-30 20:09:34,556 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-30 20:09:58,615 - root - INFO - Starting to read the Sales Excel file.
+2023-12-30 20:09:58,823 - root - WARNING - The Sales Excel file is empty. Skipping file processing.

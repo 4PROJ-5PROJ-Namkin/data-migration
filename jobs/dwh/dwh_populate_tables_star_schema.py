@@ -1,10 +1,10 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import udf, from_json, explode, col, to_date, monotonically_increasing_id, regexp_replace
-from pyspark.sql.types import ArrayType, StructType, StructField, StringType, DoubleType, DateType, ShortType, LongType
+from pyspark.sql.types import ArrayType, StructType, StructField, StringType, DoubleType, DateType, ShortType, LongType, IntegerType
 import os
-import datetime
 import logging
 from dotenv import load_dotenv
+from dwh_prototype_udf_utils import parse_date, string_to_int_list
 
 log_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'logs', 'dwh_populate_tables_star_schema.log'))
 logging.basicConfig(
@@ -84,21 +84,16 @@ def read_excel_with_spark(file_path, file_name, sheet_name=None):
             read_excel_query = read_excel_query.option("dataAddress", f"{sheet_name}!")
         
         df = read_excel_query.load(file_path)
+
+        if df.rdd.isEmpty():
+            logging.warning(f"The {file_name} Excel file is empty. Skipping file processing.")
+            return None
+                
         logging.info(f"Successfully read the {file_name} Excel file into a Spark DataFrame.")
         return df
 
     except Exception as e:
         logging.error(f"Error occurred while reading the {file_name} Excel file: {e}")
-
-def parse_date(date_str):
-    """
-    A UDF that takes in argument a column date and parse it into the right date format.
-    """
-    try:
-        return datetime.datetime.strptime(date_str, '%d-%m-%Y').date()
-    except ValueError as ve:
-        logging.error(f"Date parsing error: {ve}")
-        return None
 
 def populate_dim_material_price_table(material_df, price_col='prices', date_format='MM-dd-yyyy'):
     """
@@ -130,6 +125,34 @@ def populate_dim_material_price_table(material_df, price_col='prices', date_form
 
     except Exception as e:
         logging.error("An error occurred while transforming the DataFrame for dim_material_price table: %s", e)
+
+def populate_dim_part_information_table(part_information_df, material_col='meterials', machine_col='machine'):
+    """
+    Transforms and enriches the part information DataFrame by exploding the 'machine' and 'meterials' columns.
+    """
+    try:
+        logging.info("Starting to transform DataFrame for dim_part_information table.")
+
+        string_to_int_list_udf = udf(string_to_int_list, ArrayType(IntegerType()))
+        part_information_df = part_information_df \
+            .withColumn(material_col, regexp_replace(col(material_col), "'", "")) \
+            .withColumn(material_col, string_to_int_list_udf(col(material_col))) \
+            .withColumn(machine_col, string_to_int_list_udf(col(machine_col)))
+
+        part_information_df = part_information_df \
+            .withColumn(material_col, explode(col(material_col))) \
+            .withColumn(machine_col, explode(col(machine_col))) \
+            .withColumn('id', monotonically_increasing_id())
+            
+        final_df = part_information_df \
+            .withColumnRenamed(machine_col, "machineId") \
+            .withColumnRenamed(material_col, "materialId")
+            
+        logging.info("Successfully transformed DataFrame for dim_part_information table.")
+        return final_df
+    
+    except Exception as e:
+        logging.error(f"An error occurred while transforming the DataFrame for dim_part_information table: {e}")
 
 def export_data_into_dwh_table(df, server, database, username, password, table_name):
     """
@@ -172,12 +195,21 @@ if __name__ == "__main__":
 
 
     material_df = read_excel_with_spark("../../data/material-data.xlsx" , "Material")
+    part_information_df = read_excel_with_spark("../../data/part-reference.xlsx", "Part Information")
+    
     material_price_df = populate_dim_material_price_table(material_df)
+    part_df = populate_dim_part_information_table(part_information_df)
 
-    material_df = material_df.select('id', 'name')
+    material_df = material_df.withColumn('id', col('id').cast(ShortType())) \
+                            .select('id', 'name')
+    part_information_df = part_information_df.withColumn('id', col('id').cast(ShortType())) \
+                                            .select('id', 'defaultPrice', 'timeToProduce')
 
-    target_df = [material_df, material_price_df]
-    target_tables = ['dim_material', 'dim_material_prices']
+    try: 
+        target_df = [material_df, material_price_df, part_information_df]
+        target_tables = ['dim_material', 'dim_material_prices', 'dim_part_information']
 
-    for t_df, t_name in zip(target_df, target_tables):
-        export_data_into_dwh_table(t_df, server, database, username, password, t_name)
+        for t_df, t_name in zip(target_df, target_tables):
+            export_data_into_dwh_table(t_df, server, database, username, password, t_name)
+    except Exception as e:
+        logging.error(f'Failed to serialize the values of the {t_df} DataFrame in the {t_name} table')
