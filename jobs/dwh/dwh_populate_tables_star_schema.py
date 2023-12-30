@@ -3,6 +3,7 @@ from pyspark.sql.functions import udf, from_json, explode, col, to_date, monoton
 from pyspark.sql.types import ArrayType, StructType, StructField, StringType, DoubleType, DateType, ShortType, LongType, IntegerType
 import os
 import logging
+from py4j.protocol import Py4JJavaError
 from dotenv import load_dotenv
 from dwh_prototype_udf_utils import parse_date, string_to_int_list
 
@@ -83,17 +84,20 @@ def read_excel_with_spark(file_path, file_name, sheet_name=None):
         if sheet_name:
             read_excel_query = read_excel_query.option("dataAddress", f"{sheet_name}!")
         
-        df = read_excel_query.load(file_path)
-
-        if df.rdd.isEmpty():
-            logging.warning(f"The {file_name} Excel file is empty. Skipping file processing.")
-            return None
-                
+        df = read_excel_query.load(file_path)                
         logging.info(f"Successfully read the {file_name} Excel file into a Spark DataFrame.")
         return df
 
+    except Py4JJavaError as e:
+        if "java.util.NoSuchElementException: head of empty list" in str(e.java_exception):
+            logging.warning(f"The {file_name} Excel file is empty. Skipping file processing.")
+            return None
+        else:
+            logging.error(f"Error occurred while reading the {file_name} Excel file: {e}")
+            return None
     except Exception as e:
-        logging.error(f"Error occurred while reading the {file_name} Excel file: {e}")
+        logging.error(f"An unexpected error occurred while reading the {file_name} Excel file: {e}")
+        return None
 
 def populate_dim_material_price_table(material_df, price_col='prices', date_format='MM-dd-yyyy'):
     """
@@ -196,6 +200,7 @@ if __name__ == "__main__":
 
     material_df = read_excel_with_spark("../../data/material-data.xlsx" , "Material")
     part_information_df = read_excel_with_spark("../../data/part-reference.xlsx", "Part Information")
+    sales_df = read_excel_with_spark("../../data/sales.xlsx", "Sales")
     
     material_price_df = populate_dim_material_price_table(material_df)
     part_df = populate_dim_part_information_table(part_information_df)
