@@ -16,7 +16,7 @@ dim_queries_ddl = {
     },        
     'material_prices': {
         'fields': {
-            'id': 'INT',
+            'id': 'BIGINT',
             'price': 'VARCHAR(255)',
             'date': 'DATE',
         },
@@ -41,14 +41,14 @@ dim_queries_ddl = {
 
 fact_query_ddl = {
     'fields': {
-        'id': 'INT',
+        'id': 'BIGINT',
         'machineId': 'INT',
-        'timeOfProduction': 'DATE',
+        'timeOfProduction': 'datetime2(7)',
         'isDamaged': 'BIT',
         'partId': 'INT',
         'contractId': 'INT',
         'materialId': 'INT',
-        'materialPriceId': 'INT',
+        'materialPriceId': 'BIGINT',
     },
     'ref': [
         {

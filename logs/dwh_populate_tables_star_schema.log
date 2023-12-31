@@ -1,112 +1,112 @@
 2023-12-29 22:12:01,176 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:12:01,179 - root - ERROR - Error occurred while reading the Material Excel file: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+2023-12-29 22:12:01,179 - root - ERROR - Error occurred while reading the Material Excel file: Missing optional dependency 'openpyxl'. Use pip or conda to install openpyxl.
 2023-12-29 22:14:19,142 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:14:19,424 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:14:19,424 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:15:32,522 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:15:32,739 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:15:32,739 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:15:32,747 - root - INFO - Transforming DataFrame for dim_material_prices table.
 2023-12-29 22:15:32,747 - root - ERROR - An error occurred while transforming the DataFrame: 'prices'
 2023-12-29 22:17:05,987 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:17:06,204 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:17:06,204 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:17:46,803 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:17:47,019 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:17:47,019 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:18:29,199 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:18:29,421 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:18:29,421 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:18:37,947 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:18:38,157 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:18:38,157 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:18:55,954 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:18:56,165 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:18:56,165 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:18:56,166 - root - INFO - Transforming DataFrame for dim_material_prices table.
 2023-12-29 22:18:56,195 - root - ERROR - An error occurred while transforming the DataFrame: Can only use .dt accessor with datetimelike values
 2023-12-29 22:20:05,055 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:20:05,305 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:20:05,305 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:20:05,306 - root - INFO - Transforming DataFrame for dim_material_prices table.
 2023-12-29 22:20:05,310 - root - ERROR - Date column is not recognized as datetime.
 2023-12-29 22:20:05,310 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
 2023-12-29 22:22:44,010 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:22:44,228 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:22:44,228 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:22:44,229 - root - INFO - Transforming DataFrame for dim_material_prices table.
 2023-12-29 22:22:44,232 - root - ERROR - Date column is not recognized as datetime.
 2023-12-29 22:22:44,233 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
 2023-12-29 22:25:14,287 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:25:14,530 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:25:14,530 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:25:14,531 - root - INFO - Transforming DataFrame for dim_material_prices table.
 2023-12-29 22:25:14,534 - root - ERROR - Date column is not recognized as datetime.
 2023-12-29 22:25:14,534 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
 2023-12-29 22:29:32,050 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:29:32,278 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:29:32,278 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:29:32,278 - root - INFO - Transforming DataFrame for dim_material_prices table.
 2023-12-29 22:29:32,281 - root - ERROR - Date column is not recognized as datetime.
 2023-12-29 22:29:32,282 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
 2023-12-29 22:32:12,677 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:32:12,889 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:32:12,889 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:32:12,889 - root - INFO - Transforming DataFrame for dim_material_prices table.
 2023-12-29 22:32:12,893 - root - ERROR - Date column is not recognized as datetime.
 2023-12-29 22:32:12,894 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
 2023-12-29 22:33:10,394 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:33:10,607 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:33:10,607 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:33:10,607 - root - INFO - Transforming DataFrame for dim_material_prices table.
 2023-12-29 22:33:10,611 - root - ERROR - Date column is not recognized as datetime.
 2023-12-29 22:33:10,611 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
 2023-12-29 22:33:28,075 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:33:28,297 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:33:28,297 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:33:28,297 - root - INFO - Transforming DataFrame for dim_material_prices table.
 2023-12-29 22:33:28,300 - root - ERROR - Date column is not recognized as datetime.
 2023-12-29 22:33:28,302 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
 2023-12-29 22:34:49,184 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:34:49,403 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:34:49,403 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:34:49,403 - root - INFO - Transforming DataFrame for dim_material_prices table.
 2023-12-29 22:34:49,406 - root - ERROR - Date column is not recognized as datetime.
 2023-12-29 22:34:49,407 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
 2023-12-29 22:34:49,641 - root - INFO - Data inserted into the DWH table successfully.
 2023-12-29 22:40:00,711 - root - INFO - Starting to read the Material Excel file.
-2023-12-29 22:40:00,931 - root - INFO - Successfully read the Material Excel file into a pandas DataFrame.
+2023-12-29 22:40:00,931 - root - INFO - Successfully read the Material Excel file into a DataFrame.
 2023-12-29 22:40:00,934 - root - INFO - Transforming DataFrame for dim_material_prices table.
 2023-12-29 22:40:00,937 - root - ERROR - Date column is not recognized as datetime.
 2023-12-29 22:40:00,937 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
 2023-12-29 22:40:01,127 - root - INFO - Data inserted into the DWH table successfully.
 2023-12-30 19:52:43,435 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 19:52:43,738 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 19:52:43,738 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 19:55:40,468 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 19:55:40,697 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 19:55:40,697 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 19:56:16,906 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 19:56:17,122 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 19:56:17,122 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 19:56:17,122 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 19:56:17,122 - root - ERROR - An error occurred while transforming the DataFrame for dim_part_information table: name 'ast' is not defined
 2023-12-30 19:56:43,144 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 19:56:43,376 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 19:56:43,376 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 19:56:43,376 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 19:56:43,384 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
 2023-12-30 19:58:10,051 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 19:58:10,275 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 19:58:10,275 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 19:58:10,276 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 19:58:10,280 - root - ERROR - An error occurred while transforming the DataFrame for dim_part_information table: Length of values (598) does not match length of index (600)
 2023-12-30 19:58:10,280 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 19:58:10,281 - root - ERROR - An error occurred while transforming the DataFrame for dim_part_information table: 'NoneType' object is not subscriptable
 2023-12-30 19:59:38,073 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 19:59:38,285 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 19:59:38,285 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 19:59:38,285 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 19:59:38,290 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
 2023-12-30 19:59:38,290 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 19:59:38,290 - root - ERROR - An error occurred while transforming the DataFrame for dim_part_information table: 'meterials'
 2023-12-30 20:00:04,325 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 20:00:04,547 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 20:00:04,547 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 20:00:10,734 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 20:00:10,952 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 20:00:10,952 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 20:00:10,953 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 20:00:10,957 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
 2023-12-30 20:00:41,170 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 20:00:41,393 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 20:00:41,393 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 20:00:45,694 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 20:00:45,909 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 20:00:45,909 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 20:00:45,910 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 20:00:45,914 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
 2023-12-30 20:01:37,575 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 20:01:37,790 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 20:01:37,790 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 20:01:37,790 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 20:01:37,795 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
 2023-12-30 20:02:39,950 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 20:02:40,179 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 20:02:40,179 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 20:02:40,179 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 20:02:40,184 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
 2023-12-30 20:02:40,829 - root - INFO - Data inserted into the DWH table successfully.
@@ -117,41 +117,811 @@
 2023-12-30 22:52:58,300 - root - INFO - Starting to read the Sales Excel file.
 2023-12-30 22:52:58,594 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
 2023-12-30 22:54:40,279 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 22:54:40,526 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 22:54:40,526 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 22:54:40,527 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 22:54:40,532 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
 2023-12-30 22:54:40,533 - root - INFO - Starting to read the Sales Excel file.
 2023-12-30 22:54:40,536 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
 2023-12-30 22:55:05,149 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 22:55:05,371 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 22:55:05,371 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 22:55:05,372 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 22:55:05,376 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
 2023-12-30 22:55:05,376 - root - INFO - Starting to read the Sales Excel file.
 2023-12-30 22:55:05,379 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
 2023-12-30 22:55:30,846 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 22:55:31,066 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 22:55:31,066 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 22:55:31,066 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 22:55:31,071 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
 2023-12-30 22:55:31,078 - root - INFO - Starting to read the Sales Excel file.
 2023-12-30 22:55:31,082 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
 2023-12-30 22:55:46,458 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 22:55:46,673 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 22:55:46,673 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 22:55:46,673 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 22:55:46,678 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
 2023-12-30 22:55:46,678 - root - INFO - Starting to read the Sales Excel file.
 2023-12-30 22:55:46,681 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
 2023-12-30 22:55:46,747 - root - INFO - Data inserted into the DWH table successfully.
 2023-12-30 23:00:23,426 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 23:00:23,647 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 23:00:23,647 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 23:00:23,647 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 23:00:23,653 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
 2023-12-30 23:00:23,653 - root - INFO - Starting to read the Sales Excel file.
 2023-12-30 23:00:23,657 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
 2023-12-30 23:00:23,980 - root - INFO - Data inserted into the DWH dim_machine table successfully.
 2023-12-30 23:02:54,203 - root - INFO - Starting to read the Part Information Excel file.
-2023-12-30 23:02:54,426 - root - INFO - Successfully read the Part Information Excel file into a pandas DataFrame.
+2023-12-30 23:02:54,426 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
 2023-12-30 23:02:54,426 - root - INFO - Starting to transform DataFrame for dim_part_information table.
 2023-12-30 23:02:54,431 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
 2023-12-30 23:02:54,431 - root - INFO - Starting to read the Sales Excel file.
 2023-12-30 23:02:54,434 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
 2023-12-30 23:02:55,072 - root - INFO - Data inserted into the DWH dim_part_information table successfully.
+2023-12-31 18:45:10,512 - root - INFO - Starting to convert machine-1-0.csv CSV file to Parquet format.
+2023-12-31 18:45:10,718 - root - INFO - Converted machine-1-0.csv to Parquet format successfully.
+2023-12-31 18:45:10,718 - root - INFO - Starting to convert machine-10-0.csv CSV file to Parquet format.
+2023-12-31 18:45:10,872 - root - INFO - Converted machine-10-0.csv to Parquet format successfully.
+2023-12-31 18:45:10,873 - root - INFO - Starting to convert machine-11-0.csv CSV file to Parquet format.
+2023-12-31 18:45:11,032 - root - INFO - Converted machine-11-0.csv to Parquet format successfully.
+2023-12-31 18:45:11,033 - root - INFO - Starting to convert machine-12-0.csv CSV file to Parquet format.
+2023-12-31 18:45:11,213 - root - INFO - Converted machine-12-0.csv to Parquet format successfully.
+2023-12-31 18:45:11,213 - root - INFO - Starting to convert machine-13-0.csv CSV file to Parquet format.
+2023-12-31 18:45:11,370 - root - INFO - Converted machine-13-0.csv to Parquet format successfully.
+2023-12-31 18:45:11,370 - root - INFO - Starting to convert machine-14-0.csv CSV file to Parquet format.
+2023-12-31 18:45:11,525 - root - INFO - Converted machine-14-0.csv to Parquet format successfully.
+2023-12-31 18:45:11,525 - root - INFO - Starting to convert machine-15-0.csv CSV file to Parquet format.
+2023-12-31 18:45:11,683 - root - INFO - Converted machine-15-0.csv to Parquet format successfully.
+2023-12-31 18:45:11,683 - root - INFO - Starting to convert machine-16-0.csv CSV file to Parquet format.
+2023-12-31 18:45:11,842 - root - INFO - Converted machine-16-0.csv to Parquet format successfully.
+2023-12-31 18:45:11,843 - root - INFO - Starting to convert machine-17-0.csv CSV file to Parquet format.
+2023-12-31 18:45:11,998 - root - INFO - Converted machine-17-0.csv to Parquet format successfully.
+2023-12-31 18:45:11,999 - root - INFO - Starting to convert machine-18-0.csv CSV file to Parquet format.
+2023-12-31 18:45:12,159 - root - INFO - Converted machine-18-0.csv to Parquet format successfully.
+2023-12-31 18:45:12,159 - root - INFO - Starting to convert machine-19-0.csv CSV file to Parquet format.
+2023-12-31 18:45:12,307 - root - INFO - Converted machine-19-0.csv to Parquet format successfully.
+2023-12-31 18:45:12,307 - root - INFO - Starting to convert machine-2-0.csv CSV file to Parquet format.
+2023-12-31 18:45:12,464 - root - INFO - Converted machine-2-0.csv to Parquet format successfully.
+2023-12-31 18:45:12,464 - root - INFO - Starting to convert machine-20-0.csv CSV file to Parquet format.
+2023-12-31 18:45:12,625 - root - INFO - Converted machine-20-0.csv to Parquet format successfully.
+2023-12-31 18:45:12,625 - root - INFO - Starting to convert machine-21-0.csv CSV file to Parquet format.
+2023-12-31 18:45:12,772 - root - INFO - Converted machine-21-0.csv to Parquet format successfully.
+2023-12-31 18:45:12,772 - root - INFO - Starting to convert machine-22-0.csv CSV file to Parquet format.
+2023-12-31 18:45:12,927 - root - INFO - Converted machine-22-0.csv to Parquet format successfully.
+2023-12-31 18:45:12,927 - root - INFO - Starting to convert machine-23-0.csv CSV file to Parquet format.
+2023-12-31 18:45:13,084 - root - INFO - Converted machine-23-0.csv to Parquet format successfully.
+2023-12-31 18:45:13,084 - root - INFO - Starting to convert machine-24-0.csv CSV file to Parquet format.
+2023-12-31 18:45:13,240 - root - INFO - Converted machine-24-0.csv to Parquet format successfully.
+2023-12-31 18:45:13,240 - root - INFO - Starting to convert machine-25-0.csv CSV file to Parquet format.
+2023-12-31 18:45:13,394 - root - INFO - Converted machine-25-0.csv to Parquet format successfully.
+2023-12-31 18:45:13,394 - root - INFO - Starting to convert machine-26-0.csv CSV file to Parquet format.
+2023-12-31 18:45:13,546 - root - INFO - Converted machine-26-0.csv to Parquet format successfully.
+2023-12-31 18:45:13,546 - root - INFO - Starting to convert machine-27-0.csv CSV file to Parquet format.
+2023-12-31 18:45:13,703 - root - INFO - Converted machine-27-0.csv to Parquet format successfully.
+2023-12-31 18:45:13,703 - root - INFO - Starting to convert machine-28-0.csv CSV file to Parquet format.
+2023-12-31 18:45:13,856 - root - INFO - Converted machine-28-0.csv to Parquet format successfully.
+2023-12-31 18:45:13,856 - root - INFO - Starting to convert machine-29-0.csv CSV file to Parquet format.
+2023-12-31 18:45:14,010 - root - INFO - Converted machine-29-0.csv to Parquet format successfully.
+2023-12-31 18:45:14,010 - root - INFO - Starting to convert machine-3-0.csv CSV file to Parquet format.
+2023-12-31 18:45:14,161 - root - INFO - Converted machine-3-0.csv to Parquet format successfully.
+2023-12-31 18:45:14,161 - root - INFO - Starting to convert machine-30-0.csv CSV file to Parquet format.
+2023-12-31 18:45:14,318 - root - INFO - Converted machine-30-0.csv to Parquet format successfully.
+2023-12-31 18:45:14,318 - root - INFO - Starting to convert machine-31-0.csv CSV file to Parquet format.
+2023-12-31 18:45:14,472 - root - INFO - Converted machine-31-0.csv to Parquet format successfully.
+2023-12-31 18:45:14,473 - root - INFO - Starting to convert machine-32-0.csv CSV file to Parquet format.
+2023-12-31 18:45:14,630 - root - INFO - Converted machine-32-0.csv to Parquet format successfully.
+2023-12-31 18:45:14,631 - root - INFO - Starting to convert machine-33-0.csv CSV file to Parquet format.
+2023-12-31 18:45:14,785 - root - INFO - Converted machine-33-0.csv to Parquet format successfully.
+2023-12-31 18:45:14,785 - root - INFO - Starting to convert machine-34-0.csv CSV file to Parquet format.
+2023-12-31 18:45:14,940 - root - INFO - Converted machine-34-0.csv to Parquet format successfully.
+2023-12-31 18:45:14,940 - root - INFO - Starting to convert machine-35-0.csv CSV file to Parquet format.
+2023-12-31 18:45:15,094 - root - INFO - Converted machine-35-0.csv to Parquet format successfully.
+2023-12-31 18:45:15,094 - root - INFO - Starting to convert machine-36-0.csv CSV file to Parquet format.
+2023-12-31 18:45:15,247 - root - INFO - Converted machine-36-0.csv to Parquet format successfully.
+2023-12-31 18:45:15,247 - root - INFO - Starting to convert machine-37-0.csv CSV file to Parquet format.
+2023-12-31 18:45:15,405 - root - INFO - Converted machine-37-0.csv to Parquet format successfully.
+2023-12-31 18:45:15,406 - root - INFO - Starting to convert machine-38-0.csv CSV file to Parquet format.
+2023-12-31 18:45:15,567 - root - INFO - Converted machine-38-0.csv to Parquet format successfully.
+2023-12-31 18:45:15,567 - root - INFO - Starting to convert machine-39-0.csv CSV file to Parquet format.
+2023-12-31 18:45:15,724 - root - INFO - Converted machine-39-0.csv to Parquet format successfully.
+2023-12-31 18:45:15,724 - root - INFO - Starting to convert machine-4-0.csv CSV file to Parquet format.
+2023-12-31 18:45:15,871 - root - INFO - Converted machine-4-0.csv to Parquet format successfully.
+2023-12-31 18:45:15,871 - root - INFO - Starting to convert machine-40-0.csv CSV file to Parquet format.
+2023-12-31 18:45:16,024 - root - INFO - Converted machine-40-0.csv to Parquet format successfully.
+2023-12-31 18:45:16,024 - root - INFO - Starting to convert machine-41-0.csv CSV file to Parquet format.
+2023-12-31 18:45:16,175 - root - INFO - Converted machine-41-0.csv to Parquet format successfully.
+2023-12-31 18:45:16,175 - root - INFO - Starting to convert machine-42-0.csv CSV file to Parquet format.
+2023-12-31 18:45:16,356 - root - INFO - Converted machine-42-0.csv to Parquet format successfully.
+2023-12-31 18:45:16,356 - root - INFO - Starting to convert machine-43-0.csv CSV file to Parquet format.
+2023-12-31 18:45:16,508 - root - INFO - Converted machine-43-0.csv to Parquet format successfully.
+2023-12-31 18:45:16,508 - root - INFO - Starting to convert machine-44-0.csv CSV file to Parquet format.
+2023-12-31 18:45:16,657 - root - INFO - Converted machine-44-0.csv to Parquet format successfully.
+2023-12-31 18:45:16,658 - root - INFO - Starting to convert machine-45-0.csv CSV file to Parquet format.
+2023-12-31 18:45:16,819 - root - INFO - Converted machine-45-0.csv to Parquet format successfully.
+2023-12-31 18:45:16,820 - root - INFO - Starting to convert machine-46-0.csv CSV file to Parquet format.
+2023-12-31 18:45:16,977 - root - INFO - Converted machine-46-0.csv to Parquet format successfully.
+2023-12-31 18:45:16,978 - root - INFO - Starting to convert machine-47-0.csv CSV file to Parquet format.
+2023-12-31 18:45:17,136 - root - INFO - Converted machine-47-0.csv to Parquet format successfully.
+2023-12-31 18:45:17,136 - root - INFO - Starting to convert machine-48-0.csv CSV file to Parquet format.
+2023-12-31 18:45:17,287 - root - INFO - Converted machine-48-0.csv to Parquet format successfully.
+2023-12-31 18:45:17,288 - root - INFO - Starting to convert machine-49-0.csv CSV file to Parquet format.
+2023-12-31 18:45:17,448 - root - INFO - Converted machine-49-0.csv to Parquet format successfully.
+2023-12-31 18:45:17,448 - root - INFO - Starting to convert machine-5-0.csv CSV file to Parquet format.
+2023-12-31 18:45:17,602 - root - INFO - Converted machine-5-0.csv to Parquet format successfully.
+2023-12-31 18:45:17,602 - root - INFO - Starting to convert machine-50-0.csv CSV file to Parquet format.
+2023-12-31 18:45:17,762 - root - INFO - Converted machine-50-0.csv to Parquet format successfully.
+2023-12-31 18:45:17,762 - root - INFO - Starting to convert machine-6-0.csv CSV file to Parquet format.
+2023-12-31 18:45:17,919 - root - INFO - Converted machine-6-0.csv to Parquet format successfully.
+2023-12-31 18:45:17,919 - root - INFO - Starting to convert machine-7-0.csv CSV file to Parquet format.
+2023-12-31 18:45:18,072 - root - INFO - Converted machine-7-0.csv to Parquet format successfully.
+2023-12-31 18:45:18,072 - root - INFO - Starting to convert machine-8-0.csv CSV file to Parquet format.
+2023-12-31 18:45:18,226 - root - INFO - Converted machine-8-0.csv to Parquet format successfully.
+2023-12-31 18:45:18,226 - root - INFO - Starting to convert machine-9-0.csv CSV file to Parquet format.
+2023-12-31 18:45:18,380 - root - INFO - Converted machine-9-0.csv to Parquet format successfully.
+2023-12-31 18:45:23,159 - root - INFO - Concatenated parquet files into ../../data/machines_parquet/machine_all_parquet
+2023-12-31 18:52:44,580 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 18:52:44,581 - root - ERROR - An unexpected error occurred while reading the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet: [Errno 2] No such file or directory: '../../data/machines_parquet/machine_all_parquet/Supply Chain'
+2023-12-31 18:53:38,634 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 18:53:39,220 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into a DataFrame.
+2023-12-31 19:01:57,918 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:01:58,269 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:01:58,269 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:01:58,276 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:01:58,277 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:01:58,277 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:01:58,288 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:01:58,288 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:01:58,293 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:01:58,293 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:01:58,297 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:01:58,298 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:01:58,298 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:02:57,111 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:02:57,324 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:02:57,324 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:02:57,328 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:02:57,328 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:02:57,328 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:02:57,338 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:02:57,338 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:02:57,342 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:02:57,343 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:02:57,347 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:02:57,347 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:02:57,347 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:02:57,347 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:02:57,833 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into a DataFrame.
+2023-12-31 19:02:57,833 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:03:01,463 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: You are trying to merge on object and int64 columns. If you wish to proceed you should use pd.concat
+2023-12-31 19:04:19,272 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:04:19,616 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:04:19,617 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:04:19,625 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:04:19,626 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:04:19,626 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:04:19,637 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:04:19,637 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:04:19,643 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:04:19,644 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:04:19,648 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:04:19,648 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:04:19,649 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:04:19,649 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:04:20,144 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into a DataFrame.
+2023-12-31 19:04:20,145 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:04:20,145 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: 'machineId'
+2023-12-31 19:08:07,666 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:08:07,876 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:08:07,876 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:08:07,879 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:08:07,880 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:08:07,890 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:08:07,901 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:08:07,901 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:08:07,906 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:08:07,910 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:08:07,914 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:08:07,914 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:08:07,915 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:08:07,917 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:08:08,315 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:08:08,315 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:08:08,316 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: 'machineId'
+2023-12-31 19:09:01,767 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:09:01,985 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:09:01,985 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:09:01,988 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:09:01,989 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:09:01,997 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:09:02,007 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:09:02,007 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:09:02,012 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:09:02,018 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:09:02,021 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:09:02,022 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:09:02,022 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:09:02,022 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:09:02,452 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:09:02,453 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:09:02,453 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: 'machineId'
+2023-12-31 19:09:25,515 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:09:25,728 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:09:25,728 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:09:25,731 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:09:25,731 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:09:25,737 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:09:25,747 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:09:25,747 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:09:25,752 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:09:25,758 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:09:25,762 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:09:25,762 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:09:25,763 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:09:25,765 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:09:26,177 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:09:26,177 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:09:26,179 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: 'machineId'
+2023-12-31 19:09:36,362 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:09:36,579 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:09:36,579 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:09:36,583 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:09:36,583 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:09:36,589 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:09:36,599 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:09:36,599 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:09:36,604 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:09:36,609 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:09:36,614 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:09:36,615 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:09:36,615 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:09:36,616 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:09:37,051 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:09:37,051 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:09:37,052 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: 'machineId'
+2023-12-31 19:10:24,988 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:10:25,205 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:10:25,205 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:10:25,208 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:10:25,209 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:10:25,214 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:10:25,222 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:10:25,223 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:10:25,227 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:10:25,233 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:10:25,237 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:10:25,238 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:10:25,238 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:10:25,241 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:10:25,653 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:10:25,654 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:10:25,654 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: 'machineId'
+2023-12-31 19:10:51,559 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:10:51,776 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:10:51,776 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:10:51,779 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:10:51,779 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:10:51,784 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:10:51,795 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:10:51,795 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:10:51,800 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:10:51,805 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:10:51,809 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:10:51,809 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:10:51,810 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:10:51,814 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:10:52,271 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:10:52,271 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:10:55,449 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: You are trying to merge on object and int32 columns. If you wish to proceed you should use pd.concat
+2023-12-31 19:11:24,088 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:11:24,408 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:11:24,408 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:11:24,412 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:11:24,412 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:11:24,420 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:11:24,430 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:11:24,431 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:11:24,435 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:11:24,440 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:11:24,446 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:11:24,446 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:11:24,446 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:11:24,450 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:11:24,960 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:11:45,678 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:11:45,886 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:11:45,886 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:11:45,890 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:11:45,890 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:11:45,896 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:11:45,905 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:11:45,905 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:11:45,910 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:11:45,916 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:11:45,920 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:11:45,920 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:11:45,920 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:11:45,924 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:11:46,375 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:11:46,375 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:11:48,511 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: You are trying to merge on object and int32 columns. If you wish to proceed you should use pd.concat
+2023-12-31 19:12:41,946 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:12:42,237 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:12:42,237 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:12:42,241 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:12:42,241 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:12:42,247 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:12:42,257 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:12:42,257 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:12:42,262 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:12:42,269 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:12:42,273 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:12:42,274 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:12:42,274 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:12:42,275 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:12:42,763 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:13:15,496 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:13:15,719 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:13:15,720 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:13:15,723 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:13:15,723 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:13:15,728 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:13:15,737 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:13:15,737 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:13:15,742 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:13:15,747 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:13:15,751 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:13:15,751 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:13:15,751 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:13:15,756 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:13:16,231 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:13:56,064 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:13:56,276 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:13:56,276 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:13:56,279 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:13:56,279 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:13:56,285 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:13:56,295 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:13:56,296 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:13:56,300 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:13:56,305 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:13:56,310 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:13:56,310 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:13:56,310 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:13:56,311 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:13:56,779 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:14:32,637 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:14:32,849 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:14:32,849 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:14:32,853 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:14:32,853 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:14:32,854 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:14:32,864 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:14:32,864 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:14:32,868 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:14:32,869 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:14:32,874 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:14:32,874 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:14:32,874 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:14:32,875 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:14:33,325 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:16:55,793 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:16:56,006 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:16:56,006 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:16:56,009 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:16:56,009 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:16:56,010 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:16:56,020 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:16:56,020 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:16:56,024 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:16:56,025 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:16:56,029 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:16:56,029 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:16:56,030 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:16:56,030 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:16:56,512 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:17:09,214 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:17:09,431 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:17:09,431 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:17:09,435 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:17:09,435 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:17:09,436 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:17:09,445 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:17:09,446 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:17:09,450 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:17:09,451 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:17:09,456 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:17:09,456 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:17:09,456 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:17:09,457 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:17:09,905 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:17:10,059 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:17:12,408 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: You are trying to merge on object and int32 columns. If you wish to proceed you should use pd.concat
+2023-12-31 19:17:37,688 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:17:37,945 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:17:37,945 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:17:37,948 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:17:37,948 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:17:37,949 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:17:37,960 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:17:37,960 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:17:37,964 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:17:37,965 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:17:37,968 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:17:37,968 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:17:37,969 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:17:37,969 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:17:38,391 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:18:07,218 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:18:07,432 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:18:07,432 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:18:07,435 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:18:07,436 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:18:07,436 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:18:07,445 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:18:07,445 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:18:07,450 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:18:07,450 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:18:07,454 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:18:07,454 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:18:07,455 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:18:07,455 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:18:07,926 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:18:08,080 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:18:10,273 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: You are trying to merge on object and int32 columns. If you wish to proceed you should use pd.concat
+2023-12-31 19:21:24,245 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:21:24,476 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:21:24,476 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:21:24,480 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:21:24,481 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:21:24,482 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:21:24,492 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:21:24,492 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:21:24,497 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:21:24,499 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:21:24,503 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:21:24,503 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:21:24,504 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:21:24,505 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:21:25,022 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:21:25,175 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:21:26,287 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: 'DataFrame' object has no attribute 'to_frame'
+2023-12-31 19:21:47,604 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:21:47,827 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:21:47,827 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:21:47,831 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:21:47,831 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:21:47,833 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:21:47,843 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:21:47,843 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:21:47,848 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:21:47,848 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:21:47,852 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:21:47,852 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:21:47,852 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:21:47,853 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:21:48,278 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:21:48,439 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:22:24,679 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: Unable to allocate 2.07 GiB for an array with shape (277788252, 1) and data type object
+2023-12-31 19:25:03,233 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:25:03,466 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:25:03,466 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:25:03,470 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:25:03,470 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:25:03,472 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:25:03,481 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:25:03,482 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:25:03,486 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:25:03,487 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:25:03,490 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:25:03,491 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:25:03,491 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:25:03,491 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:25:03,966 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:25:04,112 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-31 19:25:56,152 - root - ERROR - An error occurred while transforming the DataFrame for fact_supply_chain table: Unable to allocate 2.07 GiB for an array with shape (1, 277788252) and data type float64
+2023-12-31 19:54:04,684 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:54:04,920 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:54:04,920 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:54:04,924 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:54:04,924 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:54:04,925 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:54:04,936 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:54:04,936 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:54:04,941 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:54:04,944 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:54:04,947 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:54:04,948 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:54:04,948 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:54:04,948 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:54:05,715 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:57:24,120 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:57:24,340 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:57:24,340 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:57:24,343 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:57:24,344 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:57:24,345 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:57:24,356 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:57:24,356 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:57:24,361 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:57:24,362 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:57:24,366 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:57:24,366 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:57:24,367 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:57:24,367 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:57:24,804 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:58:50,694 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:58:50,925 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:58:50,925 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:58:50,929 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:58:50,929 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:58:50,931 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:58:50,942 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:58:50,942 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:58:50,946 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:58:50,947 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:58:50,951 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:58:50,951 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:58:50,952 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:58:50,952 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:58:51,443 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 19:59:15,586 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 19:59:15,797 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 19:59:15,797 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 19:59:15,800 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 19:59:15,801 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 19:59:15,803 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 19:59:15,811 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 19:59:15,812 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 19:59:15,816 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 19:59:15,818 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 19:59:15,821 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 19:59:15,821 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 19:59:15,822 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 19:59:15,822 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 19:59:16,276 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 20:00:25,913 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 20:00:26,126 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 20:00:26,126 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 20:00:26,129 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 20:00:26,129 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 20:00:26,130 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 20:00:26,142 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 20:00:26,142 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 20:00:26,147 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 20:00:26,147 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 20:00:26,151 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 20:00:26,152 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 20:00:26,152 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 20:00:26,152 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 20:00:26,613 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 20:02:35,817 - root - ERROR - An error occurred while inserting fact_supply_chain data into SQL Server: 
+2023-12-31 20:05:12,469 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 20:05:12,710 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 20:05:12,710 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 20:05:12,714 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 20:05:12,714 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 20:05:12,715 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 20:05:12,726 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 20:05:12,727 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 20:05:12,731 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 20:05:12,733 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 20:05:12,736 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 20:05:12,737 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 20:05:12,738 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 20:05:12,739 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 20:05:13,248 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 20:05:31,085 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 20:05:31,311 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 20:05:31,311 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 20:05:31,314 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 20:05:31,315 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 20:05:31,316 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 20:05:31,326 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 20:05:31,326 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 20:05:31,331 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 20:05:31,332 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 20:05:31,336 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 20:05:31,336 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 20:05:31,336 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 20:05:31,337 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 20:05:31,844 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 20:05:46,458 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 20:05:46,683 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 20:05:46,684 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 20:05:46,687 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 20:05:46,687 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 20:05:46,688 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 20:05:46,698 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 20:05:46,698 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 20:05:46,704 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 20:05:46,705 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 20:05:46,709 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 20:05:46,709 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 20:05:46,710 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 20:05:46,710 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 20:05:47,176 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.2023-12-31 20:52:18,703 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 20:52:18,928 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 20:52:18,929 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 20:52:18,932 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 20:52:18,932 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 20:52:18,934 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 20:52:18,943 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 20:52:18,943 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 20:52:18,949 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 20:52:18,950 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 20:52:18,953 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 20:52:18,954 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 20:52:18,955 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 20:52:18,955 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 20:52:19,449 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 20:52:41,269 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 20:52:41,504 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 20:52:41,504 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 20:52:41,509 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 20:52:41,509 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 20:52:41,512 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 20:52:41,522 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 20:52:41,522 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 20:52:41,527 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 20:52:41,528 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 20:52:41,531 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 20:52:41,532 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 20:52:41,532 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 20:52:41,532 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 20:52:42,075 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 20:52:48,525 - root - ERROR - An error occurred while inserting fact_supply_chain data into SQL Server: (pyodbc.DataError) ('22003', "[22003] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Une erreur de dï¿½passement arithmï¿½tique s'est produite lors de la conversion de expression en type de donnï¿½es int. (8115) (SQLExecDirectW); [22003] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]L'instruction a ï¿½tï¿½ arrï¿½tï¿½e. (3621)")
+[SQL: INSERT INTO fact_supply_chain (id, [timeOfProduction], [isDamaged], [partId], [contractId], [materialId], [materialPriceId], [machineId]) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (3844883, '2023-12-31 15:45:30.123', 0, 65, 0, 1, 8589934593, 37)]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2023-12-31 21:07:27,159 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 21:07:27,389 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 21:07:27,389 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 21:07:27,393 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 21:07:27,393 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 21:07:27,395 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 21:07:27,406 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 21:07:27,407 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 21:07:27,412 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 21:07:27,415 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 21:07:27,419 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 21:07:27,419 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 21:07:27,420 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 21:07:27,420 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 21:07:27,885 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 21:08:21,315 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 21:08:21,522 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 21:08:21,522 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 21:08:21,525 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 21:08:21,526 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 21:08:21,527 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 21:08:21,537 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 21:08:21,537 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 21:08:21,542 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 21:08:21,543 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 21:08:21,547 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 21:08:21,547 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 21:08:21,548 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 21:08:21,548 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 21:08:22,018 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 21:08:22,532 - root - INFO - Data inserted into the DWH dim_material_prices table successfully.
+2023-12-31 21:09:26,566 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 21:09:26,777 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 21:09:26,777 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 21:09:26,780 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 21:09:26,781 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 21:09:26,782 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 21:09:26,791 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 21:09:26,791 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 21:09:26,795 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 21:09:26,797 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 21:09:26,800 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 21:09:26,801 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 21:09:26,801 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 21:09:26,801 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 21:09:27,278 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 21:09:36,256 - root - ERROR - An error occurred while inserting fact_supply_chain data into SQL Server: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]L\'instruction INSERT est en conflit avec la contrainte FOREIGN KEY "FK__fact_supp__contr__7D439ABD". Le conflit s\'est produit dans la base de données "DWH_PRODUCTION", table "dbo.dim_sales", column \'contractNumber\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]L\'instruction a été arrêtée. (3621)')
+[SQL: INSERT INTO fact_supply_chain (id, [timeOfProduction], [isDamaged], [partId], [contractId], [materialId], [materialPriceId], [machineId]) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (3844883, '2023-12-31 15:45:30.123', 0, 65, 0, 1, 8589934593, 37)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2023-12-31 21:11:33,370 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 21:11:33,600 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 21:11:33,600 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 21:11:33,603 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 21:11:33,604 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 21:11:33,605 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 21:11:33,615 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 21:11:33,615 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 21:11:33,621 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 21:11:33,622 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 21:11:33,625 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 21:11:33,625 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 21:11:33,626 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 21:11:33,626 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 21:11:34,201 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 21:11:42,536 - root - INFO - Data inserted into the DWH fact_supply_chain table successfully.
+2023-12-31 21:14:17,987 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 21:14:18,238 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 21:14:18,239 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 21:14:18,243 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 21:14:18,244 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 21:14:18,245 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 21:14:18,255 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 21:14:18,255 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 21:14:18,260 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 21:14:18,261 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 21:14:18,265 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 21:14:18,265 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 21:14:18,265 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 21:14:18,266 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 21:14:18,729 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 21:14:25,198 - root - ERROR - An error occurred while inserting fact_supply_chain data into SQL Server: (pyodbc.DataError) ('22007', "[22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]La conversion d'un type de données varchar en type de données datetime a créé une valeur hors limites. (242) (SQLExecDirectW); [22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]L'instruction a été arrêtée. (3621)")
+[SQL: INSERT INTO fact_supply_chain (id, [timeOfProduction], [isDamaged], [partId], [contractId], [materialId], [materialPriceId], [machineId]) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (3844883, '2023-12-31 15:45:30.123', 0, 65, None, 1, 8589934593, 37)]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2023-12-31 21:18:11,367 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 21:18:11,587 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 21:18:11,587 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 21:18:11,591 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 21:18:11,591 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 21:18:11,592 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 21:18:11,602 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 21:18:11,603 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 21:18:11,608 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 21:18:11,610 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 21:18:11,613 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 21:18:11,613 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 21:18:11,614 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 21:18:11,614 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 21:18:12,146 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 21:18:18,611 - root - ERROR - An error occurred while inserting fact_supply_chain data into SQL Server: (pyodbc.DataError) ('22007', "[22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]La conversion d'un type de données varchar en type de données datetime a créé une valeur hors limites. (242) (SQLExecDirectW); [22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]L'instruction a été arrêtée. (3621)")
+[SQL: INSERT INTO fact_supply_chain (id, [timeOfProduction], [isDamaged], [partId], [contractId], [materialId], [materialPriceId], [machineId]) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (3844883, '2023-12-31 15:45:30.000', 0, 65, None, 1, 8589934593, 37)]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2023-12-31 21:19:10,199 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 21:19:10,429 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 21:19:10,430 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 21:19:10,433 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 21:19:10,433 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 21:19:10,435 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 21:19:10,445 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 21:19:10,445 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 21:19:10,450 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 21:19:10,451 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 21:19:10,456 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 21:19:10,456 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 21:19:10,457 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 21:19:10,457 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 21:19:10,918 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 21:19:17,661 - root - ERROR - An error occurred while inserting fact_supply_chain data into SQL Server: (pyodbc.DataError) ('22007', "[22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]La conversion d'un type de données varchar en type de données datetime a créé une valeur hors limites. (242) (SQLExecDirectW); [22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]L'instruction a été arrêtée. (3621)")
+[SQL: INSERT INTO fact_supply_chain (id, [timeOfProduction], [isDamaged], [partId], [contractId], [materialId], [materialPriceId], [machineId]) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (3844883, '2023-12-31', 0, 65, None, 1, 8589934593, 37)]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2023-12-31 21:20:26,655 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 21:20:26,887 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 21:20:26,888 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 21:20:26,891 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 21:20:26,891 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 21:20:26,893 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 21:20:26,904 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 21:20:26,904 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 21:20:26,909 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 21:20:26,911 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 21:20:26,915 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 21:20:26,915 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 21:20:26,915 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 21:20:26,916 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 21:20:27,411 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 21:20:33,966 - root - INFO - Data inserted into the DWH fact_supply_chain table successfully.
+2023-12-31 21:24:08,934 - root - INFO - Starting to read the Material Excel file.
+2023-12-31 21:24:09,167 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2023-12-31 21:24:09,167 - root - INFO - Transforming DataFrame for dim_material_prices table.
+2023-12-31 21:24:09,170 - root - ERROR - Date column is not recognized as datetime.
+2023-12-31 21:24:09,170 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-31 21:24:09,171 - root - INFO - Starting to read the Part Information Excel file.
+2023-12-31 21:24:09,181 - root - INFO - Successfully read the Part Information Excel file into a DataFrame.
+2023-12-31 21:24:09,182 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-31 21:24:09,186 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-31 21:24:09,187 - root - INFO - Starting to read the Sales Excel file.
+2023-12-31 21:24:09,190 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2023-12-31 21:24:09,190 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-31 21:24:09,191 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-31 21:24:09,191 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2023-12-31 21:24:09,674 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into DataFrame.
+2023-12-31 21:24:18,376 - root - INFO - Data inserted into the DWH fact_supply_chain table successfully.

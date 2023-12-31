@@ -129,3 +129,20 @@
 2023-12-30 23:27:23,156 - INFO - Table dim_machine already exists. Skipping creation.
 2023-12-30 23:27:23,169 - INFO - Table fact_supply_chain already exists. Skipping creation.
 2023-12-30 23:27:23,170 - INFO - Connection to the data warehouse closed.
+2023-12-31 21:23:32,531 - INFO - Connection to the data warehouse established successfully.
+2023-12-31 21:23:32,547 - INFO - Table dim_part_information already exists. Skipping creation.
+2023-12-31 21:23:32,558 - INFO - Table dim_material already exists. Skipping creation.
+2023-12-31 21:23:32,566 - INFO - Table dim_material_prices already exists. Skipping creation.
+2023-12-31 21:23:32,580 - INFO - Table dim_sales already exists. Skipping creation.
+2023-12-31 21:23:32,590 - INFO - Table dim_machine already exists. Skipping creation.
+2023-12-31 21:23:32,612 - INFO - Query executed successfully.
+2023-12-31 21:23:32,613 - INFO - Connection to the data warehouse closed.
+2023-12-31 21:26:10,883 - INFO - Connection to the data warehouse established successfully.
+2023-12-31 21:26:10,896 - INFO - Table dim_part_information already exists. Skipping creation.
+2023-12-31 21:26:10,904 - INFO - Table dim_material already exists. Skipping creation.
+2023-12-31 21:26:10,912 - INFO - Table dim_material_prices already exists. Skipping creation.
+2023-12-31 21:26:10,921 - INFO - Table dim_sales already exists. Skipping creation.
+2023-12-31 21:26:10,932 - INFO - Table dim_machine already exists. Skipping creation.
+2023-12-31 21:26:10,945 - INFO - Table fact_supply_chain created successfully.
+2023-12-31 21:26:10,956 - INFO - Query executed successfully.
+2023-12-31 21:26:10,956 - INFO - Connection to the data warehouse closed.

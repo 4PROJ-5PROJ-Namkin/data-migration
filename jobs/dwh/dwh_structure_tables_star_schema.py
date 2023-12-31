@@ -97,6 +97,8 @@ class DataWarehouseManager:
             if self.check_table_exists(dim_name):
                 logging.info(f"Table {dim_name} already exists. Skipping creation.")
                 return
+            else:
+                logging.info(f"Table {dim_name} created successfully.")   
 
         try:
             cursor = self.connection.cursor()

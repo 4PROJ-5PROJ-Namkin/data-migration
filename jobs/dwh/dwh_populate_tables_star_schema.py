@@ -1,11 +1,11 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import udf, from_json, explode, col, to_date, monotonically_increasing_id, regexp_replace, lit
-from pyspark.sql.types import ArrayType, StructType, StructField, StringType, DoubleType, DateType, ShortType, LongType, IntegerType
+from pyspark.sql.functions import udf, from_json, explode, col, to_date, monotonically_increasing_id, regexp_replace, lit, date_format
+from pyspark.sql.types import ArrayType, StructType, StructField, StringType, DoubleType, DateType, ShortType, LongType, IntegerType, TimestampType
 import os
 import logging
 from py4j.protocol import Py4JJavaError
 from dotenv import load_dotenv
-from dwh_prototype_udf_utils import parse_date, string_to_int_list
+from dwh_prototype_udf_utils import parse_date, string_to_int_list, convert_timestamp_to_date
 
 def create_spark_session():
     """
@@ -114,7 +114,10 @@ def populate_fact_supply_chain_table(fact_supply_chain_df, part_df, material_pri
     """
     try:
         logging.info("Starting to transform DataFrame for fact_supply_chain table.")
-        fact_supply_chain_df = fact_supply_chain_df.withColumn('unique_id', monotonically_increasing_id())
+        convert_timestamp_to_date_udf = udf(convert_timestamp_to_date, TimestampType())
+        fact_supply_chain_df = fact_supply_chain_df.withColumn('unique_id', monotonically_increasing_id()) \
+                                                .withColumn("timeOfProduction", convert_timestamp_to_date_udf(col("timeOfProduction"))) \
+                                                .withColumn("timeOfProduction", date_format("timeOfProduction", "yyyy-MM-dd HH:mm:ss.SSS"))
 
         fact_supply_chain_df = fact_supply_chain_df.alias('fact').join(
             part_df.select('id', 'materialId').alias('part_info'),

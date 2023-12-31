@@ -23,3 +23,12 @@ def string_to_int_list(string_list):
     except ValueError:
         return []
 
+def convert_timestamp_to_date(timestamp):
+    """
+    A UDF (User Defined Function) for converting a timestamp in milliseconds 
+    to a datetime object. This function takes an integer timestamp 
+    (representing the number of milliseconds since the Unix epoch, 
+    January 1, 1970) and converts it into a human-readable datetime format.
+    """
+    return datetime.datetime.fromtimestamp(timestamp / 1000.0)
+
