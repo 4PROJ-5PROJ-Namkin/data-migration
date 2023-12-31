@@ -152,7 +152,7 @@ def populate_fact_supply_chain_table(fact_supply_chain_df, part_df, material_pri
         logging.error(f"An error occurred while transforming the DataFrame for fact_supply_chain table: {e}")
         return None
 
-def populate_dim_material_price_table(material_df, price_col='prices', date_format='MM-dd-yyyy'):
+def populate_dim_material_price_table(material_df, price_col='prices'):
     """
     Transforms and enriches the material DataFrame for the dim_material_price table by exploding 
     the serialized JSON 'prices' column into individual rows with 'price' and 'date' columns.
