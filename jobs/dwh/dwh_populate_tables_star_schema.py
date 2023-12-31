@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import udf, from_json, explode, col, to_date, monotonically_increasing_id, regexp_replace
+from pyspark.sql.functions import udf, from_json, explode, col, to_date, monotonically_increasing_id, regexp_replace, lit
 from pyspark.sql.types import ArrayType, StructType, StructField, StringType, DoubleType, DateType, ShortType, LongType, IntegerType
 import os
 import logging
@@ -31,23 +31,26 @@ def convert_csv_to_parquet(input_path, output_path, delimiter=",", header=True, 
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
-    for file in os.listdir(input_path):
-        if file.name.endswith(".csv"):
+    for file_name in os.listdir(input_path):
+        if file_name.endswith(".csv"):
             try:
-                file_path = os.path.join(input_path, file)
+                logging.info(f"Starting to convert {file_name} CSV file to Parquet format.")
+                
+                file_path = os.path.join(input_path, file_name)
                 df = spark.read.format("csv") \
                         .option("inferSchema", inferSchema) \
                         .option("header", header) \
                         .option("sep", delimiter) \
                         .load(file_path)
-                output_file_path = os.path.join(output_path, file.name.replace('.csv', ''))
+                
+                output_file_path = os.path.join(output_path, file_name.replace('.csv', ''))
                 if partitionBy:
                     df.write.mode('overwrite').partitionBy(partitionBy).parquet(output_file_path)
                 else:
                     df.write.mode('overwrite').parquet(output_file_path)
-                logging.info(f"Converted {file.name} to Parquet format successfully.")
+                logging.info(f"Converted {file_name} to Parquet format successfully.")
             except Exception as e:
-                logging.error(f"Failed to convert {file.name}: {e}")
+                logging.error(f"Failed to convert {file_name}: {e}")
 
 def concatenate_parquet_files(input_path, output_file):
     """
@@ -59,6 +62,21 @@ def concatenate_parquet_files(input_path, output_file):
 
     df_single_partition.write.mode('overwrite').format("parquet").save(output_file)
     logging.info(f"Concatenated parquet files into {output_file}")
+
+
+def read_parquet_with_spark(file_path, file_name):
+    """
+    Reads a Parquet file into a Spark DataFrame.
+    """
+    try:
+        logging.info(f"Starting to read the {file_name} Parquet file from {file_path}.")
+        df = spark.read.format("parquet").load(file_path)
+        logging.info(f"Successfully read the {file_name} Parquet file from {file_path} into a Spark DataFrame.")
+        return df
+    
+    except Exception as e:
+        logging.error(f"An unexpected error occurred while reading the {file_name} Parquet file from {file_path}: {e}")
+        return None
 
 def read_excel_with_spark(file_path, file_name, sheet_name=None):
     """
@@ -87,6 +105,51 @@ def read_excel_with_spark(file_path, file_name, sheet_name=None):
             return None
     except Exception as e:
         logging.error(f"An unexpected error occurred while reading the {file_name} Excel file: {e}")
+        return None
+
+def populate_fact_supply_chain_table(fact_supply_chain_df, part_df, material_price_df, machine_df):
+    """
+    Transforms and populates the fact_supply_chain_table with data from multiple source DataFrames.
+    Applies necessary transformations and joins to create a final DataFrame with the required schema.
+    """
+    try:
+        logging.info("Starting to transform DataFrame for fact_supply_chain table.")
+        fact_supply_chain_df = fact_supply_chain_df.withColumn('unique_id', monotonically_increasing_id())
+
+        fact_supply_chain_df = fact_supply_chain_df.alias('fact').join(
+            part_df.select('id', 'materialId').alias('part_info'),
+            col('fact.partId') == col('part_info.id'),
+            'inner'
+        )
+        
+        fact_supply_chain_df = fact_supply_chain_df.join(
+            material_price_df.select('id', 'materialId').alias('material_price'),
+            col('part_info.materialId') == col('material_price.materialId'),
+            'inner'
+        )
+
+        fact_supply_chain_df = fact_supply_chain_df.join(
+            machine_df.select('machineId').alias('machine'),
+            col('fact.machineId') == col('machine.machineId'),
+            'inner'
+        )
+
+        output_df = fact_supply_chain_df.select(
+            col('fact.unique_id').alias('id'),
+            col('fact.timeOfProduction'),
+            col('fact.var5').alias('isDamaged'),
+            col('fact.partId'),
+            lit(None).alias('contractId'),
+            col('part_info.materialId'),
+            col('material_price.id').alias('materialPriceId'),
+            col('machine.machineId').alias('machineId'),
+        )
+
+        logging.info("Successfully transformed and merged DataFrame for fact_supply_chain table.")
+        return output_df
+
+    except Exception as e:
+        logging.error(f"An error occurred while transforming the DataFrame for fact_supply_chain table: {e}")
         return None
 
 def populate_dim_material_price_table(material_df, price_col='prices', date_format='MM-dd-yyyy'):
@@ -199,28 +262,29 @@ if __name__ == "__main__":
                 ]
         )
     
-    input_path = '../../data/machines'
-    output_path = '../../data/machines_parquet/'
-    final_output_path = '../../data/machines_all_parquet/'
-
-    spark = create_spark_session()
-    convert_csv_to_parquet(input_path, output_path)
-    concatenate_parquet_files(output_path, final_output_path)
-
     load_dotenv('../../.env')
     server = os.getenv('DB_HOST')
     database = os.getenv('DB_NAME')
     username = os.getenv('DB_USER')
     password = os.getenv('DB_PASSWORD')
 
+    input_path = '../../data/machines'
+    output_path = '../../data/machines_parquet/'
+    final_output_path = '../../data/machines_parquet/machines_all_parquet/'
+
+    spark = create_spark_session()
+    convert_csv_to_parquet(input_path, output_path)
+    concatenate_parquet_files(output_path, final_output_path)
 
     material_df = read_excel_with_spark("../../data/material-data.xlsx" , "Material")
     part_information_df = read_excel_with_spark("../../data/part-reference.xlsx", "Part Information")
     sales_df = read_excel_with_spark("../../data/sales.xlsx", "Sales")
+    supply_chain_df = read_parquet_with_spark(final_output_path, 'Supply Chain')
     
     material_price_df = populate_dim_material_price_table(material_df)
     part_df = populate_dim_part_information_table(part_information_df)
     machine_df = populate_dim_machine_table(part_df)
+    supply_chain_df = populate_fact_supply_chain_table(supply_chain_df, part_df, material_price_df, machine_df)
 
     material_df = material_df.withColumn('id', col('id').cast(ShortType())) \
                             .select('id', 'name')
@@ -228,8 +292,8 @@ if __name__ == "__main__":
                                             .select('id', 'defaultPrice', 'timeToProduce')
 
     try: 
-        target_df = [material_df, material_price_df, part_information_df, machine_df]
-        target_tables = ['dim_material', 'dim_material_prices', 'dim_part_information', 'dim_machine']
+        target_df = [material_df, material_price_df, part_information_df, machine_df, supply_chain_df]
+        target_tables = ['dim_material', 'dim_material_prices', 'dim_part_information', 'dim_machine', 'fact_supply_chain']
 
         for t_df, t_name in zip(target_df, target_tables):
             export_data_into_dwh_table(t_df, server, database, username, password, t_name)
