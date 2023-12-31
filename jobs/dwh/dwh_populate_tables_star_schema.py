@@ -98,7 +98,7 @@ def populate_dim_material_price_table(material_df, price_col='prices', date_form
     in the format specified by the date_format parameter. An auto-increment 'id' column is also added.
     """    
     try:
-        logging.info("Transforming DataFrame for dim_material_prices table.")
+        logging.info("Starting to transform DataFrame for dim_material_prices table.")
         dim_schema = ArrayType(StructType([
             StructField("price", DoubleType()),
             StructField("d", StringType())
@@ -153,9 +153,16 @@ def populate_dim_machine_table(part_information_df):
     Transforms and enriches the machine DataFrame by extracting the unique material ids of the part information 
     transformed and leveraged DataFrame in order to ensure referential integrity in both sides.
     """
-    return part_information_df.select("machineId") \
-                            .dropDuplicates() \
-                            .orderBy('machineId', ascending=True)
+    try:
+        logging.info("Starting to transform DataFrame for dim_machine table.")
+        machine_df = part_information_df.select("machineId") \
+                                        .dropDuplicates() \
+                                        .orderBy('machineId', ascending=True)
+        
+        logging.info("Successfully transformed DataFrame for dim_machine table.")
+        return machine_df
+    except Exception as e:
+        logging.error(f"An error occurred while transforming the DataFrame for dim_machine table: {e}")
 
 def export_data_into_dwh_table(df, server, database, username, password, table_name):
     """
