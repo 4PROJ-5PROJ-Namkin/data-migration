@@ -1,5 +1,7 @@
 import datetime
 import ast
+import random
+import uuid
 
 def parse_date(date_str):
     """
@@ -25,10 +27,23 @@ def string_to_int_list(string_list):
 
 def convert_timestamp_to_date(timestamp):
     """
-    A UDF (User Defined Function) for converting a timestamp in milliseconds 
-    to a datetime object. This function takes an integer timestamp 
-    (representing the number of milliseconds since the Unix epoch, 
-    January 1, 1970) and converts it into a human-readable datetime format.
+    A UDF (User Defined Function) for converting a timestamp in milliseconds to a datetime object. This function takes 
+    an integer timestamp (representing the number of milliseconds since the Unix epoch, January 1, 1970) and converts it
+    into a human-readable datetime format.
     """
-    return datetime.datetime.fromtimestamp(timestamp / 1000.0)
+    return datetime.datetime.fromtimestamp(timestamp)
 
+def generate_uuid():
+    """
+    A UDF (User Defined Function) that generates a random UUID.
+    """
+    return str(uuid.uuid4())
+
+def generate_random_date(year):
+    """
+    A UDF (User Defined Function) that generates a random date within a given year.
+    """
+    start_date = datetime.date(year, 1, 1)
+    end_date = datetime.date(year, 12, 31)
+    random_date = start_date + datetime.timedelta(days=random.randint(0, (end_date - start_date).days))
+    return random_date

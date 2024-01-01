@@ -146,3 +146,12 @@
 2023-12-31 21:26:10,945 - INFO - Table fact_supply_chain created successfully.
 2023-12-31 21:26:10,956 - INFO - Query executed successfully.
 2023-12-31 21:26:10,956 - INFO - Connection to the data warehouse closed.
+2024-01-01 16:42:34,678 - INFO - Connection to the data warehouse established successfully.
+2024-01-01 16:42:34,689 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-01 16:42:34,702 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-01 16:42:34,711 - INFO - Table dim_material_prices already exists. Skipping creation.
+2024-01-01 16:42:34,725 - INFO - Table dim_sales already exists. Skipping creation.
+2024-01-01 16:42:34,738 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-01 16:42:34,747 - INFO - Table fact_supply_chain created successfully.
+2024-01-01 16:42:34,772 - INFO - Query executed successfully.
+2024-01-01 16:42:34,772 - INFO - Connection to the data warehouse closed.

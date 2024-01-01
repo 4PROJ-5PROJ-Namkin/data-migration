@@ -41,7 +41,7 @@ dim_queries_ddl = {
 
 fact_query_ddl = {
     'fields': {
-        'id': 'BIGINT',
+        'id': 'uniqueidentifier',
         'machineId': 'INT',
         'timeOfProduction': 'datetime2(7)',
         'isDamaged': 'BIT',
