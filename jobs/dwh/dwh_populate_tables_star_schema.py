@@ -1,27 +1,31 @@
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
-from pyspark.sql.functions import udf, from_json, explode, col, to_date, count, monotonically_increasing_id, regexp_replace, lit, date_format, year, sum as sum_, max as max_
+from pyspark.sql.functions import udf, from_json, explode, col, to_date, count, monotonically_increasing_id, regexp_replace, lit, date_format, year, sum as sum_, max as max_, expr, month, dayofmonth, quarter
 from pyspark.sql.types import ArrayType, StructType, StructField, StringType, DoubleType, DateType, ShortType, LongType, IntegerType, TimestampType
 import os
 import logging
 from py4j.protocol import Py4JJavaError
 from dotenv import load_dotenv
-from dwh_prototype_udf_utils import parse_date, string_to_int_list, convert_timestamp_to_date, generate_uuid, generate_random_date
+from dwh_prototype_udf_utils import parse_date, string_to_int_list, convert_timestamp_to_date, generate_random_date
 
 def create_spark_session():
     """
     Initialize and return a Spark session with specific configurations.
     """
-    spark = SparkSession.builder \
-            .appName("NamkinProductionDwhStarSchema") \
-            .config("spark.driver.host", "localhost") \
-            .master("local[*]") \
-            .config("spark.executor.memory", "4g") \
-            .config("spark.driver.memory", "2g") \
-            .config("spark.sql.shuffle.partitions", "50") \
-            .config("spark.executor.cores", "4") \
-            .getOrCreate()
-    return spark
+    try:
+        spark = SparkSession.builder \
+                .appName("NamkinProductionDwhStarSchema") \
+                .config("spark.driver.host", "localhost") \
+                .master("local[*]") \
+                .config("spark.executor.memory", "4g") \
+                .config("spark.driver.memory", "2g") \
+                .config("spark.sql.shuffle.partitions", "50") \
+                .config("spark.executor.cores", "4") \
+                .getOrCreate()
+        logging.info("Spark session created successfully.")
+        return spark
+    except Exception as e:
+        logging.error(f'An unexpected error occurred while initializing the Spark Session: {e}')
 
 def convert_csv_to_parquet(input_path, output_path, delimiter=",", header=True, inferSchema=True, partitionBy=None):
     """
@@ -116,41 +120,40 @@ def populate_fact_supply_chain_table(fact_supply_chain_df, part_df, material_pri
     try:
         logging.info("Starting to transform DataFrame for fact_supply_chain table.")
         convert_timestamp_to_date_udf = udf(convert_timestamp_to_date, TimestampType())
-        generate_uuid_udf = udf(generate_uuid, StringType())
         
-        fact_supply_chain_df = fact_supply_chain_df.withColumn('unique_id', generate_uuid_udf()) \
+        fact_supply_chain_df = fact_supply_chain_df.withColumn('unitId', monotonically_increasing_id()) \
                                                 .withColumn("timeOfProduction", convert_timestamp_to_date_udf(col("timeOfProduction"))) \
                                                 .withColumn("timeOfProduction", date_format("timeOfProduction", "yyyy-MM-dd HH:mm:ss.SSS"))
 
         fact_supply_chain_df = fact_supply_chain_df.alias('fact').join(
-            part_df.select('id', 'materialId', 'machineId').alias('part_info'),
+            part_df.select('id', 'materialId', 'machineId', 'defaultPrice').alias('part_info'),
             (col('fact.partId') == col('part_info.id')) &
             (col('fact.machineId') == col('part_info.machineId')),
             'inner'
         )
         
         fact_supply_chain_df = fact_supply_chain_df.join(
-            material_price_df.select('id', 'materialId', 'date').alias('material_price'),
+            material_price_df.select('id', 'materialId', 'date', 'price').alias('material_price'),
             (col('part_info.materialId') == col('material_price.materialId')) & 
             (year(col('material_price.date')) == year(col('fact.timeOfProduction'))),
             'inner'
         )
 
         fact_supply_chain_df = fact_supply_chain_df.join(
-            machine_df.select('machineId').alias('machine'),
-            col('fact.machineId') == col('machine.machineId'),
+            machine_df.select('id').alias('machine'),
+            col('fact.machineId') == col('machine.id'),
             'inner'
         )
 
         output_df = fact_supply_chain_df.select(
-            col('fact.unique_id').alias('id'),
-            col('fact.timeOfProduction'),
-            col('fact.var5').alias('isDamaged'),
+            col('machine.id').alias('machineId'),
             col('fact.partId'),
-            col('fact.order').alias('contractId'),
+            col('fact.unitId'),
             col('part_info.materialId'),
             col('material_price.id').alias('materialPriceId'),
-            col('machine.machineId').alias('machineId'),
+            col('material_price.price').alias('materialPrice'),
+            col('part_info.defaultPrice').alias('partDefaultPrice'),
+            col('fact.var5').alias('isDamaged'),
         )
 
         logging.info("Successfully transformed and merged DataFrame for fact_supply_chain table.")
@@ -169,7 +172,7 @@ def populate_dim_material_price_table(material_df, price_col='prices', date_form
     in the format specified by the date_format parameter. The original materialId is preserved.
     """
     try:
-        logging.info("Transforming DataFrame for dim_material_prices table.")
+        logging.info("Starting to transform DataFrame for dim_material_prices table.")
         dim_schema = ArrayType(StructType([
             StructField("price", DoubleType()),
             StructField("d", StringType())
@@ -230,7 +233,7 @@ def populate_dim_machine_table(part_information_df):
     """
     try:
         logging.info("Starting to transform DataFrame for dim_machine table.")
-        machine_df = part_information_df.select("machineId") \
+        machine_df = part_information_df.select(part_information_df["machineId"].alias("id")) \
                                         .dropDuplicates() \
                                         .orderBy('machineId', ascending=True)
         
@@ -239,14 +242,35 @@ def populate_dim_machine_table(part_information_df):
     except Exception as e:
         logging.error(f"An error occurred while transforming the DataFrame for dim_machine table: {e}")
 
-def populate_dim_sales_table(supply_chain_df, part_df):
+def populate_dim_unit_table(supply_chain_df):
     """
-    Transforms and prepares a DataFrame for the dim_sales table. This function performs
+    Transforms and populates the dim_unit_table with data by inducing a monothonical id generation and
+    formatting the timeOfProduction field into a valid datetime format.
+    """
+    try:
+        logging.info("Starting to transform DataFrame for dim_unit_table table.")
+        convert_timestamp_to_date_udf = udf(convert_timestamp_to_date, TimestampType())
+        
+        unit_df = supply_chain_df.select('timeOfProduction')
+        unit_df = unit_df.withColumn('id', monotonically_increasing_id()) \
+                        .withColumn("timeOfProduction", convert_timestamp_to_date_udf(col("timeOfProduction"))) \
+                        .withColumn("timeOfProduction", date_format("timeOfProduction", "yyyy-MM-dd HH:mm:ss.SSS")) \
+        
+        logging.info("Successfully transformed DataFrame for dim_unit table.")
+        return unit_df
+
+    except Exception as e:
+        logging.error(f"An error occurred while transforming the DataFrame for dim_unit table: {e}")
+        return None
+
+def populate_fact_sales_table(supply_chain_df, part_df):
+    """
+    Transforms and prepares a DataFrame for the fact_sales table. This function performs
     several operations including counting quantities of parts, calculating total cash,
     determining the maximum production year, and generating formatted client names.
     """
     try:
-        logging.info("Transforming DataFrame for dim_sales table.")
+        logging.info("Starting to transform DataFrame for fact_sales table.")
         random_date_udf = udf(generate_random_date, DateType())
         convert_timestamp_to_date_udf = udf(convert_timestamp_to_date, TimestampType())
 
@@ -258,7 +282,7 @@ def populate_dim_sales_table(supply_chain_df, part_df):
 
         max_year_df = supply_chain_df.withColumn("timeOfProduction", convert_timestamp_to_date_udf(col("timeOfProduction"))) \
                                     .withColumn("timeOfProduction", date_format("timeOfProduction", "yyyy-MM-dd HH:mm:ss.SSS")) \
-                                    .groupBy("order") \
+                                    .groupBy("order", "partId") \
                                     .agg(max_(year(col("timeOfProduction"))).alias("maxYear"))
 
         sales_df = cost_df.join(max_year_df, "order")
@@ -266,18 +290,45 @@ def populate_dim_sales_table(supply_chain_df, part_df):
         sales_df = sales_df.withColumn("clientName", F.expr("concat('CLIENT NO_', order)"))
         
         final_sales_df = sales_df.select(
-            col("order").alias("contractNumber"),
+            col("order").alias("clientId"),
+            "partId",
             "clientName",
             "cash",
             "date"
         )
 
-        logging.info("Successfully transformed DataFrame for dim_sales table.")
+        logging.info("Successfully transformed DataFrame for fact_sales table.")
         return final_sales_df
 
     except Exception as e:
-        logging.error(f"An error occurred while transforming the DataFrame for dim_sales table: {e}")
+        logging.error(f"An error occurred while transforming the DataFrame for fact_sales table: {e}")
         return None
+
+def populate_dim_time_table():
+    """
+    Generates a 'dim_time' table with IDs ranging from January 1, 1920 to January 1, 2099.
+    The ID is formatted as 'YYYYMMDD'. For example, January 1, 1920 would be 19200101.
+    Additional fields for year, month, day, semester, and quarter are derived from the ID.
+    """
+    try:
+        logging.info('Starting to initialize DataFrame for dim_time table.')
+        start_date = '1920-01-01'
+        end_date = '2099-01-01'
+        
+        dates_df = spark.range(start=0, end=365*179+44).select(F.expr(f"add_months(date '{start_date}', int(id))").alias('date')).withColumn('date', col('date').cast(DateType()))
+
+        dim_time_df = dates_df.withColumn("year", year(col("date"))) \
+                            .withColumn("month", month(col("date"))) \
+                            .withColumn("day", dayofmonth(col("date"))) \
+                            .withColumn("quarter", quarter(col("date"))) \
+                            .withColumn("semester", expr("CASE WHEN quarter IN (1, 2) THEN 1 ELSE 2 END")) \
+                            .withColumn("id", expr("concat(year(date), lpad(month(date), 2, '0'), lpad(day(date), 2, '0'))").cast("int"))
+
+        dim_time_df = dim_time_df.select("id", "year", "month", "day", "semester", "quarter")
+        logging.info('Successfully transformer DataFrame for dim_time table.')
+        return dim_time_df
+    except Exception as e:
+        logging.error(f"An error occurred while transforming the DataFrame for dim_time table: {e}")
 
 def export_data_into_dwh_table(df, server, database, username, password, table_name):
     """
@@ -336,17 +387,22 @@ if __name__ == "__main__":
     material_price_df = populate_dim_material_price_table(material_df)
     part_df = populate_dim_part_information_table(part_information_df)
     machine_df = populate_dim_machine_table(part_df)
-    sales_df = populate_dim_sales_table(supply_chain_df, part_df)
+    sales_df = populate_fact_sales_table(supply_chain_df, part_df)
+    unit_df = populate_dim_unit_table(supply_chain_df)
+    time_df = populate_dim_time_table()
     supply_chain_df = populate_fact_supply_chain_table(supply_chain_df, part_df, material_price_df, machine_df)
 
     material_df = material_df.withColumn('id', col('id').cast(ShortType())) \
                             .select('id', 'name')
+    material_price_df = material_price_df.select('id', 'date')
     part_information_df = part_information_df.withColumn('id', col('id').cast(ShortType())) \
-                                            .select('id', 'defaultPrice', 'timeToProduce')
+                                            .select('id', 'timeToProduce')
+    client_df = sales_df.select(col("clientId").alias("id"), "clientName").distinct()
+    sales_df = sales_df.select('partId', 'clientId', 'cash')
 
     try: 
-        target_df = [material_df, material_price_df, part_information_df, machine_df, sales_df, supply_chain_df]
-        target_tables = ['dim_material', 'dim_material_prices', 'dim_part_information', 'dim_machine', 'dim_sales' , 'fact_supply_chain']
+        target_df = [material_df, material_price_df, part_information_df, machine_df, client_df, unit_df, time_df, sales_df, supply_chain_df]
+        target_tables = ['dim_material', 'dim_material_prices', 'dim_part_information', 'dim_machine', 'dim_client', 'dim_unit', 'dim_time', 'fact_sales', 'fact_supply_chain']
 
         for t_df, t_name in zip(target_df, target_tables):
             export_data_into_dwh_table(t_df, server, database, username, password, t_name)

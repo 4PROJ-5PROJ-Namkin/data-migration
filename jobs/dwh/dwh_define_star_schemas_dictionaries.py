@@ -2,7 +2,6 @@ dim_queries_ddl = {
     'part_information': {
         'fields': {
             'id': 'INT',
-            'defaultPrice': 'FLOAT',
             'timeToProduce': 'FLOAT',
         },
         'id': 'id'
@@ -17,65 +16,69 @@ dim_queries_ddl = {
     'material_prices': {
         'fields': {
             'id': 'BIGINT',
-            'price': 'VARCHAR(255)',
             'date': 'DATE',
         },
         'id': 'id'
     },
-    'sales': {
+    'client': {
         'fields': {
-            'contractNumber': 'INT',
+            'id': 'INT',
             'clientName': 'VARCHAR(255)',
-            'date': 'DATE',
-            'cash': 'FLOAT'
         },
-        'id': 'contractNumber'
+        'id': 'id'
     },
     'machine': {
         'fields': {
-            'machineId': 'INT',
+            'id': 'INT',
         },
-        'id': 'machineId'
-    },            
+        'id': 'id'
+    },
+    'unit': {
+        'fields': {
+            'id': 'BIGINT',
+            'timeOfProduction': 'datetime2(7)'
+        },
+        'id': 'id'
+    },
+    'time': {
+        'fields': {
+            'id': 'INT',
+            'year': 'SMALLINT',
+            'month': 'TINYINT',
+            'day': 'TINYINT',
+            'semester': 'TINYINT',
+            'quarter': 'TINYINT',
+        },
+        'id': 'id'
+    }            
 }
 
-fact_query_ddl = {
-    'fields': {
-        'id': 'uniqueidentifier',
-        'machineId': 'INT',
-        'timeOfProduction': 'datetime2(7)',
-        'isDamaged': 'BIT',
-        'partId': 'INT',
-        'contractId': 'INT',
-        'materialId': 'INT',
-        'materialPriceId': 'BIGINT',
+fact_queries_ddl = {
+    'supply_chain': {    
+        'fields': {
+            'machineId': 'INT',
+            'partId': 'INT',
+            'unitId': 'BIGINT',
+            'materialId': 'INT',
+            'materialPriceId': 'BIGINT',
+            'isDamaged': 'BIT',
+            'partDefaultPrice': 'FLOAT',
+            'materialPrice': 'FLOAT',
+        },
+        'cluster': {
+            'pk': ['machineId', 'partId', 'unitId', 'materialId' ,'materialPriceId',],
+            'constraint': 'PK_FACT_SUPPLY_CHAIN_INTEGRITY'
+        }
     },
-    'ref': [
-        {
-            'table': 'part_information',
-            'pk': 'id',
-            'fk': 'partId'
+   'sales': {    
+        'fields': {
+            'partId': 'INT',
+            'clientId': 'INT',
+            'cash': 'FLOAT',
         },
-        {
-            'table': 'material',
-            'pk': 'id',
-            'fk': 'materialId'
-        }, 
-        {
-            'table': 'material_prices',
-            'pk': 'id',
-            'fk': 'materialPriceId'
-        },
-        {
-            'table': 'sales',
-            'pk': 'contractNumber',
-            'fk': 'contractId'
-        },
-        {
-            'table': 'machine',
-            'pk': 'machineId',
-            'fk': 'machineId'
-        },
-    ],
-    'id': 'id',
+        'cluster': {
+            'pk': ['partId', 'clientId',],
+            'constraint': 'PK_FACT_SALES_INTEGRITY'
+        }
+    },
 }

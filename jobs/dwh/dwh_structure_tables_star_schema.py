@@ -1,7 +1,7 @@
 import pyodbc
 import logging
 from dotenv import load_dotenv
-from dwh_define_star_schemas_dictionaries import dim_queries_ddl, fact_query_ddl
+from dwh_define_star_schemas_dictionaries import dim_queries_ddl, fact_queries_ddl
 import os
 
 class DataWarehouseManager:
@@ -131,25 +131,24 @@ class DataWarehouseManager:
         dim_table = f"CREATE TABLE dim_{table_name.lower()} (\n    {fields_str}\n)"
         return dim_table
     
-    def prepare_fact_table_sql(self, table_name, fields, primary_key, reference_tables):
+    def prepare_fact_table_sql(self, table_name, fields, cluster):
         """
         Generate a SQL CREATE TABLE statement for a fact table.
 
         :param table_name: Name of the fact table.
         :param fields: Dictionary of fields and their types.
-        :param primary_key: The field to be used as the primary key.
-        :param reference_tables: List of dictionaries for foreign key references.
+        :param cluster: Dictionary with 'pk' as a list of fields for the clustered primary key 
+                        and 'constraint' as the name of the constraint.
         :return: A SQL CREATE TABLE statement as a string.
         """
         fields_sql = [f"{field} {data_type}" for field, data_type in fields.items()]
-        fields_sql.append(f"PRIMARY KEY ({primary_key})")
 
-        for dim_table in reference_tables:
-            fields_sql.append(f"FOREIGN KEY ({dim_table['fk']}) REFERENCES dim_{dim_table['table']}({dim_table['pk']})")
+        pk_fields = ", ".join([f"{field} ASC" for field in cluster['pk']])
+        fields_sql.append(f"CONSTRAINT [{cluster['constraint']}] PRIMARY KEY CLUSTERED ({pk_fields})")
         
         fields_str = ",\n    ".join(fields_sql)
-        dim_table = f"CREATE TABLE fact_{table_name.lower()} (\n    {fields_str}\n)"
-        return dim_table
+        create_table_sql = f"CREATE TABLE fact_{table_name.lower()} (\n    {fields_str}\n)"
+        return create_table_sql
 
     def generate_massive_insert_query(self, table_name, column_names, records):
         """
@@ -186,11 +185,9 @@ if __name__ == "__main__":
     for dim_table, dim_fields in dim_queries_ddl.items():
         dim_query = db_manager.prepare_dimension_table_sql(dim_table, dim_fields['fields'], dim_fields['id'])
         db_manager.execute_query(dim_query)
-
-    fact_query = db_manager.prepare_fact_table_sql(table_name='supply_chain',
-                                                   fields=fact_query_ddl['fields'],
-                                                   primary_key=fact_query_ddl['id'],
-                                                   reference_tables=fact_query_ddl['ref']
-                                                   )
-    db_manager.execute_query(fact_query)
+    
+    for fact_table, fact_fields in fact_queries_ddl.items():
+        fact_query = db_manager.prepare_fact_table_sql(fact_table, fact_fields['fields'], fact_fields['cluster'])
+        db_manager.execute_query(fact_query)
+    
     db_manager.close_connection()

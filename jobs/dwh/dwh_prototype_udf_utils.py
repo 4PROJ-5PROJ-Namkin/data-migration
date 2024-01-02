@@ -33,12 +33,6 @@ def convert_timestamp_to_date(timestamp):
     """
     return datetime.datetime.fromtimestamp(timestamp)
 
-def generate_uuid():
-    """
-    A UDF (User Defined Function) that generates a random UUID.
-    """
-    return str(uuid.uuid4())
-
 def generate_random_date(year):
     """
     A UDF (User Defined Function) that generates a random date within a given year.

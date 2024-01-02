@@ -155,3 +155,77 @@
 2024-01-01 16:42:34,747 - INFO - Table fact_supply_chain created successfully.
 2024-01-01 16:42:34,772 - INFO - Query executed successfully.
 2024-01-01 16:42:34,772 - INFO - Connection to the data warehouse closed.
+2024-01-01 21:43:29,651 - INFO - Connection to the data warehouse established successfully.
+2024-01-01 21:44:44,584 - INFO - Connection to the data warehouse established successfully.
+2024-01-01 22:17:15,296 - INFO - Connection to the data warehouse established successfully.
+2024-01-01 22:17:25,805 - INFO - Connection to the data warehouse established successfully.
+2024-01-01 22:19:36,748 - INFO - Connection to the data warehouse established successfully.
+2024-01-01 22:20:05,479 - INFO - Connection to the data warehouse established successfully.
+2024-01-01 22:20:23,347 - INFO - Connection to the data warehouse established successfully.
+2024-01-01 22:20:23,412 - INFO - Table dim_part_information created successfully.
+2024-01-01 22:20:23,435 - INFO - Query executed successfully.
+2024-01-01 22:20:23,447 - INFO - Table dim_material created successfully.
+2024-01-01 22:20:23,451 - INFO - Query executed successfully.
+2024-01-01 22:20:23,461 - INFO - Table dim_material_prices created successfully.
+2024-01-01 22:20:23,465 - INFO - Query executed successfully.
+2024-01-01 22:20:23,476 - INFO - Table dim_client created successfully.
+2024-01-01 22:20:23,480 - INFO - Query executed successfully.
+2024-01-01 22:20:23,492 - INFO - Table dim_machine created successfully.
+2024-01-01 22:20:23,497 - INFO - Query executed successfully.
+2024-01-01 22:21:28,992 - INFO - Connection to the data warehouse established successfully.
+2024-01-01 22:21:29,053 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-01 22:21:29,063 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-01 22:21:29,077 - INFO - Table dim_material_prices already exists. Skipping creation.
+2024-01-01 22:21:29,089 - INFO - Table dim_client already exists. Skipping creation.
+2024-01-01 22:21:29,099 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-01 22:21:29,109 - INFO - Table dim_time created successfully.
+2024-01-01 22:21:29,130 - INFO - Query executed successfully.
+2024-01-01 22:21:29,131 - INFO - Table fact_sales created successfully.
+2024-01-01 22:21:29,138 - INFO - Query executed successfully.
+2024-01-01 22:21:29,139 - INFO - Connection to the data warehouse closed.
+2024-01-01 22:22:12,759 - INFO - Connection to the data warehouse established successfully.
+2024-01-01 22:22:12,800 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-01 22:22:12,813 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-01 22:22:12,824 - INFO - Table dim_material_prices already exists. Skipping creation.
+2024-01-01 22:22:12,835 - INFO - Table dim_client already exists. Skipping creation.
+2024-01-01 22:22:12,847 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-01 22:22:12,857 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-01 22:22:12,871 - INFO - Table fact_supply_chain created successfully.
+2024-01-01 22:22:12,895 - INFO - Query executed successfully.
+2024-01-01 22:22:12,896 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-01 22:22:12,896 - INFO - Connection to the data warehouse closed.
+2024-01-01 22:49:42,092 - INFO - Connection to the data warehouse established successfully.
+2024-01-01 22:49:42,110 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-01 22:49:42,123 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-01 22:49:42,134 - INFO - Table dim_material_prices already exists. Skipping creation.
+2024-01-01 22:49:42,147 - INFO - Table dim_client already exists. Skipping creation.
+2024-01-01 22:49:42,160 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-01 22:49:42,174 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-01 22:49:42,187 - INFO - Table fact_supply_chain created successfully.
+2024-01-01 22:49:42,197 - INFO - Query executed successfully.
+2024-01-01 22:49:42,198 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-01 22:49:42,199 - INFO - Connection to the data warehouse closed.
+2024-01-01 23:31:41,263 - INFO - Connection to the data warehouse established successfully.
+2024-01-01 23:31:41,277 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-01 23:31:41,287 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-01 23:31:41,296 - INFO - Table dim_material_prices already exists. Skipping creation.
+2024-01-01 23:31:41,308 - INFO - Table dim_client already exists. Skipping creation.
+2024-01-01 23:31:41,320 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-01 23:31:41,328 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-01 23:31:41,338 - INFO - Table fact_supply_chain created successfully.
+2024-01-01 23:31:41,350 - INFO - Query executed successfully.
+2024-01-01 23:31:41,351 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-01 23:31:41,351 - INFO - Connection to the data warehouse closed.
+2024-01-02 01:40:30,855 - INFO - Connection to the data warehouse established successfully.
+2024-01-02 01:40:30,880 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-02 01:40:30,893 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-02 01:40:30,905 - INFO - Table dim_material_prices already exists. Skipping creation.
+2024-01-02 01:40:30,917 - INFO - Table dim_client already exists. Skipping creation.
+2024-01-02 01:40:30,928 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-02 01:40:30,938 - INFO - Table dim_unit created successfully.
+2024-01-02 01:40:30,945 - INFO - Query executed successfully.
+2024-01-02 01:40:30,945 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-02 01:40:30,956 - INFO - Table fact_supply_chain created successfully.
+2024-01-02 01:40:30,962 - INFO - Query executed successfully.
+2024-01-02 01:40:30,962 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-02 01:40:30,963 - INFO - Connection to the data warehouse closed.
