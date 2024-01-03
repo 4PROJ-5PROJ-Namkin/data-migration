@@ -653,3 +653,83 @@
 2024-01-03 01:59:00,023 - INFO - Connection to the data warehouse established successfully.
 2024-01-03 01:59:00,033 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
 2024-01-03 01:59:00,033 - INFO - Probing node bootstrap-0 broker version
+2024-01-03 02:06:31,811 - INFO - Connection to the data warehouse established successfully.
+2024-01-03 02:06:31,821 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 02:06:31,822 - INFO - Probing node bootstrap-0 broker version
+2024-01-03 02:06:31,822 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 02:06:31,984 - INFO - Broker version identified as 2.5.0
+2024-01-03 02:06:31,984 - INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2024-01-03 02:06:31,985 - INFO - Updating subscribed topics to: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 02:06:31,985 - INFO - Subscribed to topics: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 02:06:31,985 - INFO - Starting to consume messages from ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 02:06:32,233 - WARNING - Topic machines is not available during auto-create initialization
+2024-01-03 02:06:32,233 - WARNING - Topic material is not available during auto-create initialization
+2024-01-03 02:06:32,233 - WARNING - Topic material_prices is not available during auto-create initialization
+2024-01-03 02:06:32,233 - WARNING - Topic supply_chain is not available during auto-create initialization
+2024-01-03 02:06:32,233 - WARNING - Topic part_information is not available during auto-create initialization
+2024-01-03 02:06:32,343 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 02:06:32,344 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 02:06:32,344 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-03 02:06:32,884 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-03 02:06:32,885 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-03 02:06:32,885 - INFO - Starting new heartbeat thread
+2024-01-03 02:06:32,885 - INFO - Revoking previously assigned partitions set() for group g2
+2024-01-03 02:06:32,886 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 02:06:32,886 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 02:06:33,000 - INFO - (Re-)joining group g2
+2024-01-03 02:06:33,063 - INFO - Elected group leader -- performing partition assignments using range
+2024-01-03 02:06:33,064 - WARNING - No partition metadata for topic machines
+2024-01-03 02:06:33,065 - WARNING - No partition metadata for topic material
+2024-01-03 02:06:33,066 - WARNING - No partition metadata for topic part_information
+2024-01-03 02:06:33,066 - WARNING - No partition metadata for topic supply_chain
+2024-01-03 02:06:33,066 - WARNING - No partition metadata for topic material_prices
+2024-01-03 02:06:33,131 - INFO - Successfully joined group g2 with generation 1
+2024-01-03 02:06:33,131 - INFO - Updated partition assignment: []
+2024-01-03 02:06:33,131 - INFO - Setting newly assigned partitions set() for group g2
+2024-01-03 02:06:33,131 - INFO - Revoking previously assigned partitions set() for group g2
+2024-01-03 02:06:33,131 - INFO - (Re-)joining group g2
+2024-01-03 02:06:33,137 - INFO - Elected group leader -- performing partition assignments using range
+2024-01-03 02:06:33,140 - INFO - Successfully joined group g2 with generation 2
+2024-01-03 02:06:33,140 - INFO - Updated partition assignment: [TopicPartition(topic='machines', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='supply_chain', partition=0)]
+2024-01-03 02:06:33,141 - INFO - Setting newly assigned partitions {TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='machines', partition=0)} for group g2
+2024-01-03 02:06:48,150 - DEBUG - Message received from part_information and from partition 0
+2024-01-03 02:06:48,151 - INFO - Message received from part_information and from partition 0 at offset 0 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 29}
+2024-01-03 02:06:48,151 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 02:06:48,172 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
+2024-01-03 02:08:11,906 - INFO - Closing the consumer for topic: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 02:08:11,910 - INFO - Stopping heartbeat thread
+2024-01-03 02:08:11,910 - INFO - Leaving consumer group (g2).
+2024-01-03 02:08:11,921 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-03 02:08:11,921 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-03 02:12:29,943 - INFO - Connection to the data warehouse established successfully.
+2024-01-03 02:12:29,950 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 02:12:29,951 - INFO - Probing node bootstrap-0 broker version
+2024-01-03 02:12:29,951 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 02:12:30,068 - INFO - Broker version identified as 2.5.0
+2024-01-03 02:12:30,068 - INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2024-01-03 02:12:30,069 - INFO - Updating subscribed topics to: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 02:12:30,069 - INFO - Subscribed to topics: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 02:12:30,069 - INFO - Starting to consume messages from ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 02:12:30,072 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-03 02:12:30,072 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-03 02:12:30,072 - INFO - Starting new heartbeat thread
+2024-01-03 02:12:30,072 - INFO - Revoking previously assigned partitions set() for group g2
+2024-01-03 02:12:30,073 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 02:12:30,074 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 02:12:30,074 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-03 02:12:30,186 - INFO - (Re-)joining group g2
+2024-01-03 02:12:30,194 - INFO - Elected group leader -- performing partition assignments using range
+2024-01-03 02:12:30,196 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 02:12:30,196 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 02:12:30,199 - INFO - Successfully joined group g2 with generation 4
+2024-01-03 02:12:30,200 - INFO - Updated partition assignment: [TopicPartition(topic='machines', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='supply_chain', partition=0)]
+2024-01-03 02:12:30,200 - INFO - Setting newly assigned partitions {TopicPartition(topic='part_information', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='supply_chain', partition=0)} for group g2
+2024-01-03 02:12:34,087 - DEBUG - Message received from part_information and from partition 0
+2024-01-03 02:12:34,087 - INFO - Message received from part_information and from partition 0 at offset 1 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 30}
+2024-01-03 02:12:34,087 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 02:12:34,096 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
+2024-01-03 02:12:46,690 - INFO - Closing the consumer for topic: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 02:12:46,696 - INFO - Stopping heartbeat thread
+2024-01-03 02:12:46,697 - INFO - Leaving consumer group (g2).
+2024-01-03 02:12:46,700 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-03 02:12:46,700 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
