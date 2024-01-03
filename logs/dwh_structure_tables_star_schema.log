@@ -229,3 +229,136 @@
 2024-01-02 01:40:30,962 - INFO - Query executed successfully.
 2024-01-02 01:40:30,962 - INFO - Table fact_sales already exists. Skipping creation.
 2024-01-02 01:40:30,963 - INFO - Connection to the data warehouse closed.
+2024-01-02 22:04:17,641 - INFO - Connection to the data warehouse established successfully.
+2024-01-02 22:04:17,672 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-02 22:04:17,682 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-02 22:04:17,697 - INFO - Table dim_material_prices already exists. Skipping creation.
+2024-01-02 22:04:17,708 - INFO - Table dim_client created successfully.
+2024-01-02 22:04:17,728 - INFO - Query executed successfully.
+2024-01-02 22:04:17,740 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-02 22:04:17,752 - INFO - Table dim_unit created successfully.
+2024-01-02 22:04:17,755 - INFO - Query executed successfully.
+2024-01-02 22:04:17,756 - INFO - Table dim_time created successfully.
+2024-01-02 22:04:17,759 - INFO - Query executed successfully.
+2024-01-02 22:04:17,773 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-02 22:04:17,774 - INFO - Table fact_sales created successfully.
+2024-01-02 22:04:17,779 - INFO - Query executed successfully.
+2024-01-02 22:04:17,779 - INFO - Connection to the data warehouse closed.
+2024-01-02 22:22:31,824 - INFO - Connection to the data warehouse established successfully.
+2024-01-02 22:22:31,863 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-02 22:22:31,877 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-02 22:22:31,885 - INFO - Table dim_material_prices already exists. Skipping creation.
+2024-01-02 22:22:31,896 - INFO - Table dim_client already exists. Skipping creation.
+2024-01-02 22:22:31,911 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-02 22:22:31,923 - INFO - Table dim_unit already exists. Skipping creation.
+2024-01-02 22:22:31,924 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-02 22:22:31,934 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-02 22:22:31,935 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-02 22:22:31,940 - INFO - Connection to the data warehouse closed.
+2024-01-02 22:32:39,466 - INFO - Connection to the data warehouse established successfully.
+2024-01-02 22:32:39,486 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-02 22:32:39,495 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-02 22:32:39,508 - INFO - Table dim_material_prices already exists. Skipping creation.
+2024-01-02 22:32:39,523 - INFO - Table dim_client already exists. Skipping creation.
+2024-01-02 22:32:39,534 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-02 22:32:39,540 - INFO - Table dim_unit already exists. Skipping creation.
+2024-01-02 22:32:39,541 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-02 22:32:39,553 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-02 22:32:39,554 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-02 22:32:39,554 - INFO - Connection to the data warehouse closed.
+2024-01-03 01:42:37,746 - INFO - Connection to the data warehouse established successfully.
+2024-01-03 01:42:37,799 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-03 01:42:37,809 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-03 01:42:37,823 - INFO - Table dim_material_prices already exists. Skipping creation.
+2024-01-03 01:42:37,837 - INFO - Table dim_client already exists. Skipping creation.
+2024-01-03 01:42:37,852 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-03 01:42:37,868 - INFO - Table dim_unit already exists. Skipping creation.
+2024-01-03 01:42:37,868 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-03 01:42:37,887 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-03 01:42:37,890 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-03 01:42:37,900 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
+2024-01-03 01:42:37,900 - INFO - Connection to the data warehouse closed.
+2024-01-03 01:55:11,654 - INFO - Connection to the data warehouse established successfully.
+2024-01-03 01:55:11,663 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 01:55:11,663 - INFO - Probing node bootstrap-0 broker version
+2024-01-03 01:55:11,664 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 01:55:11,772 - INFO - Broker version identified as 2.5.0
+2024-01-03 01:55:11,773 - INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2024-01-03 01:55:11,774 - INFO - Updating subscribed topics to: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 01:55:11,774 - INFO - Subscribed to topics: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 01:55:11,775 - INFO - Starting to consume messages from ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 01:55:11,777 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-03 01:55:11,777 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-03 01:55:11,777 - INFO - Starting new heartbeat thread
+2024-01-03 01:55:11,778 - INFO - Revoking previously assigned partitions set() for group g2
+2024-01-03 01:55:11,778 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 01:55:11,779 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 01:55:11,779 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-03 01:55:11,891 - INFO - (Re-)joining group g2
+2024-01-03 01:55:11,894 - INFO - Elected group leader -- performing partition assignments using range
+2024-01-03 01:55:11,895 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 01:55:11,896 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 01:55:11,897 - INFO - Successfully joined group g2 with generation 21
+2024-01-03 01:55:11,897 - INFO - Updated partition assignment: [TopicPartition(topic='machines', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='supply_chain', partition=0)]
+2024-01-03 01:55:11,898 - INFO - Setting newly assigned partitions {TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='part_information', partition=0)} for group g2
+2024-01-03 01:55:11,905 - DEBUG - Message received from supply_chain and from partition 0
+2024-01-03 01:55:11,905 - INFO - Message received from supply_chain and from partition 0 at offset 4 : {'timeOfProduction': '2023-10-10T00:00:00.000Z', 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'id': 'dbde6a6b-26a7-43ed-a2d0-bc0ec97fdc50'}
+2024-01-03 01:55:11,905 - INFO - Starting to ingest Kafka part information messages in the dedicated DWH table.
+2024-01-03 01:55:11,909 - INFO - Successfully executed massive insert for table dim_unit with 1 records.
+2024-01-03 01:56:08,659 - INFO - Connection to the data warehouse established successfully.
+2024-01-03 01:56:08,667 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 01:56:08,667 - INFO - Probing node bootstrap-0 broker version
+2024-01-03 01:56:08,668 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 01:56:08,781 - INFO - Broker version identified as 2.5.0
+2024-01-03 01:56:08,782 - INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2024-01-03 01:56:08,783 - INFO - Updating subscribed topics to: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 01:56:08,783 - INFO - Subscribed to topics: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 01:56:08,783 - INFO - Starting to consume messages from ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 01:56:08,785 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-03 01:56:08,785 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-03 01:56:08,785 - INFO - Starting new heartbeat thread
+2024-01-03 01:56:08,785 - INFO - Revoking previously assigned partitions set() for group g2
+2024-01-03 01:56:08,786 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 01:56:08,786 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 01:56:08,787 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-03 01:56:08,903 - INFO - (Re-)joining group g2
+2024-01-03 01:56:08,909 - INFO - Elected group leader -- performing partition assignments using range
+2024-01-03 01:56:08,910 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 01:56:08,910 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 01:56:08,912 - INFO - Successfully joined group g2 with generation 23
+2024-01-03 01:56:08,912 - INFO - Updated partition assignment: [TopicPartition(topic='machines', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='supply_chain', partition=0)]
+2024-01-03 01:56:08,912 - INFO - Setting newly assigned partitions {TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='supply_chain', partition=0)} for group g2
+2024-01-03 01:56:09,031 - DEBUG - Message received from supply_chain and from partition 0
+2024-01-03 01:56:09,031 - INFO - Message received from supply_chain and from partition 0 at offset 4 : {'timeOfProduction': '2023-10-10T00:00:00.000Z', 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'id': 'dbde6a6b-26a7-43ed-a2d0-bc0ec97fdc50'}
+2024-01-03 01:56:09,032 - INFO - Starting to ingest Kafka part information messages in the dedicated DWH table.
+2024-01-03 01:56:09,035 - INFO - Successfully executed massive insert for table dim_unit with 1 records.
+2024-01-03 01:57:06,442 - INFO - Connection to the data warehouse established successfully.
+2024-01-03 01:57:06,450 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 01:57:06,451 - INFO - Probing node bootstrap-0 broker version
+2024-01-03 01:57:06,451 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 01:57:06,563 - INFO - Broker version identified as 2.5.0
+2024-01-03 01:57:06,563 - INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2024-01-03 01:57:06,564 - INFO - Updating subscribed topics to: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 01:57:06,564 - INFO - Subscribed to topics: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 01:57:06,564 - INFO - Starting to consume messages from ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+2024-01-03 01:57:06,565 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-03 01:57:06,566 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-03 01:57:06,566 - INFO - Starting new heartbeat thread
+2024-01-03 01:57:06,566 - INFO - Revoking previously assigned partitions set() for group g2
+2024-01-03 01:57:06,567 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 01:57:06,568 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 01:57:06,568 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-03 01:57:06,683 - INFO - (Re-)joining group g2
+2024-01-03 01:57:06,684 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 01:57:06,685 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 01:57:08,068 - INFO - Elected group leader -- performing partition assignments using range
+2024-01-03 01:57:08,072 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-03 01:57:08,073 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-03 01:57:08,073 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-03 01:57:08,073 - INFO - Successfully joined group g2 with generation 24
+2024-01-03 01:57:08,074 - INFO - Updated partition assignment: [TopicPartition(topic='machines', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='supply_chain', partition=0)]
+2024-01-03 01:57:08,074 - INFO - Setting newly assigned partitions {TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='part_information', partition=0)} for group g2
+2024-01-03 01:57:08,291 - DEBUG - Message received from supply_chain and from partition 0
+2024-01-03 01:57:08,292 - INFO - Message received from supply_chain and from partition 0 at offset 4 : {'timeOfProduction': '2023-10-10T00:00:00.000Z', 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'id': 'dbde6a6b-26a7-43ed-a2d0-bc0ec97fdc50'}
+2024-01-03 01:57:08,292 - INFO - Starting to ingest Kafka part information messages in the dedicated DWH table.
+2024-01-03 01:57:08,296 - INFO - Successfully executed massive insert for table dim_unit with 1 records.

@@ -1,7 +1,6 @@
 import datetime
 import ast
 import random
-import uuid
 
 def parse_date(date_str):
     """

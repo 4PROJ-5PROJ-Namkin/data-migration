@@ -1,7 +1,6 @@
 import pyodbc
 import logging
 from dotenv import load_dotenv
-from dwh_define_star_schemas_dictionaries import dim_queries_ddl, fact_queries_ddl
 import os
 
 class DataWarehouseManager:
@@ -150,27 +149,31 @@ class DataWarehouseManager:
         create_table_sql = f"CREATE TABLE fact_{table_name.lower()} (\n    {fields_str}\n)"
         return create_table_sql
 
-    def generate_massive_insert_query(self, table_name, column_names, records):
+    def generate_and_execute_massive_insert(self, table_name, column_names, records):
         """
-        Generate a SQL query for a massive bulk insertion.
+        Generates and executes a SQL query for a massive bulk insertion using executemany.
+
+        This function creates an INSERT INTO SQL statement and uses executemany to 
+        insert multiple records into the specified table in a single operation. 
+        This is more efficient for large volumes of data compared to executing 
+        individual INSERT statements for each record.
 
         :param table_name: Name of the table to insert into.
         :param column_names: List of column names in the order corresponding to the records.
         :param records: List of tuples, each tuple representing a record to be inserted.
-        :return: SQL query string for massive bulk insertion.
         """
         try:
-            placeholders = ', '.join(['?' for _ in column_names])
-            insert_query = f"INSERT INTO {table_name} ({', '.join(column_names)}) VALUES "
-            value_placeholders = ', '.join([f'({placeholders})' for _ in records])
-            insert_query += value_placeholders
-
-            logging.info(f"Generated massive insert query for table {table_name} with {len(records)} records.")
-            
-            return insert_query
+            placeholders = ', '.join('?' * len(column_names))
+            insert_query = f"INSERT INTO {table_name} ({', '.join(column_names)}) VALUES ({placeholders})"
+            cursor = self.connection.cursor()
+            cursor.executemany(insert_query, records)
+            self.connection.commit()
+            logging.info(f"Successfully executed massive insert for table {table_name} with {len(records)} records.")
         except Exception as e:
-            logging.error(f"Error generating massive insert query: {str(e)}")
-            return None
+            logging.error(f"Error executing massive insert query: {str(e)}")
+            self.connection.rollback()
+        finally:
+            cursor.close()
 
 if __name__ == "__main__":
     load_dotenv('../../.env')
@@ -182,6 +185,8 @@ if __name__ == "__main__":
     db_manager = DataWarehouseManager(server, database, username, password)
     db_manager.connect()
 
+    from dwh_define_star_schemas_dictionaries import dim_queries_ddl, fact_queries_ddl
+    
     for dim_table, dim_fields in dim_queries_ddl.items():
         dim_query = db_manager.prepare_dimension_table_sql(dim_table, dim_fields['fields'], dim_fields['id'])
         db_manager.execute_query(dim_query)
@@ -190,4 +195,21 @@ if __name__ == "__main__":
         fact_query = db_manager.prepare_fact_table_sql(fact_table, fact_fields['fields'], fact_fields['cluster'])
         db_manager.execute_query(fact_query)
     
+        # Assurez-vous que dwh_manager est connecté à la base de données
+    # ...
+
+    # Définissez le nom de la table, les noms des colonnes et les enregistrements à insérer
+    table_name = 'dim_part_information'
+    column_names = ['id', 'timeToProduce']
+    records = [
+        (100, 360)
+    ]
+
+# Exécutez la méthode pour insérer les données
+    db_manager.generate_and_execute_massive_insert(table_name, column_names, records)
+
+        
     db_manager.close_connection()
+else:
+        from .dwh_define_star_schemas_dictionaries import dim_queries_ddl, fact_queries_ddl
+

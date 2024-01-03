@@ -1,8 +1,12 @@
 import json
 import logging
 import os
+import sys
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from dotenv import load_dotenv
 from kafka import KafkaConsumer
+from dwh.dwh_structure_tables_star_schema import DataWarehouseManager
+from kafka_process_data_schema_topics_messages import execute_ruling_topic_processor
 
 class KafkaConsumerClient:
     """
@@ -30,7 +34,7 @@ class KafkaConsumerClient:
 
     def configure_logging(self):
         """Configures the logging settings for the consumer."""
-        log_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'logs', 'kafka_consumer.log'))
+        log_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'logs', 'kafka_consume_topics_messages.log'))
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
@@ -47,13 +51,14 @@ class KafkaConsumerClient:
         self.consumer.subscribe(self.topics)
         self.logger.info(f"Subscribed to topics: {self.topics}")
 
-    def consume_messages(self):
+    def consume_messages(self, dwh_manager):
         """Consumes and processes messages from the subscribed topics."""
         try:
             self.logger.info(f"Starting to consume messages from {self.topics}")
             for message in self.consumer:
                 self.logger.debug(f"Message received from {message.topic} and from partition {message.partition}")
                 self.logger.info(f"Message received from {message.topic} and from partition {message.partition} at offset {message.offset} : {message.value}")
+                execute_ruling_topic_processor(dwh_manager, message.topic, message.value)
         except Exception as e:
             self.logger.error(f"An error occurred while consuming messages: {e}")
         finally:
@@ -70,6 +75,14 @@ if __name__ == "__main__":
     topic_names = ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
     group_id = 'g2'
 
+    server = os.getenv('DB_HOST')
+    database = os.getenv('DB_NAME')
+    username = os.getenv('DB_USER')
+    password = os.getenv('DB_PASSWORD')
+
+    db_manager = DataWarehouseManager(server, database, username, password)
+    db_manager.connect()
+
     consumer_client = KafkaConsumerClient(servers=kafka_servers, topics=topic_names, group_id=group_id)
     consumer_client.subscribe()
-    consumer_client.consume_messages()
+    consumer_client.consume_messages(db_manager)
