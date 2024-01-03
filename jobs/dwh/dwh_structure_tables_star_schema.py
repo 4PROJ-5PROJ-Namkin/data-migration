@@ -194,20 +194,6 @@ if __name__ == "__main__":
     for fact_table, fact_fields in fact_queries_ddl.items():
         fact_query = db_manager.prepare_fact_table_sql(fact_table, fact_fields['fields'], fact_fields['cluster'])
         db_manager.execute_query(fact_query)
-    
-        # Assurez-vous que dwh_manager est connecté à la base de données
-    # ...
-
-    # Définissez le nom de la table, les noms des colonnes et les enregistrements à insérer
-    table_name = 'dim_part_information'
-    column_names = ['id', 'timeToProduce']
-    records = [
-        (100, 360)
-    ]
-
-# Exécutez la méthode pour insérer les données
-    db_manager.generate_and_execute_massive_insert(table_name, column_names, records)
-
         
     db_manager.close_connection()
 else:
