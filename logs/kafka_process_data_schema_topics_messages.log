@@ -48,8 +48,8 @@
 2024-01-03 00:03:59,721 - INFO - Connection to the data warehouse established successfully.
 2024-01-03 00:05:32,640 - INFO - Connection to the data warehouse established successfully.
 2024-01-03 00:09:16,116 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 00:09:16,137 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers le mot clé 'FROM'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de préparer les instructions. (8180)")
-2024-01-03 00:09:16,138 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers le mot clé 'FROM'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de préparer les instructions. (8180)")
+2024-01-03 00:09:16,137 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers le mot clï¿½ 'FROM'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de prï¿½parer les instructions. (8180)")
+2024-01-03 00:09:16,138 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers le mot clï¿½ 'FROM'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de prï¿½parer les instructions. (8180)")
 2024-01-03 00:09:16,139 - ERROR - An unexpected error occurred while processing the message from the part_information topic: 'NoneType' object is not iterable
 2024-01-03 00:09:24,472 - INFO - Connection to the data warehouse established successfully.
 2024-01-03 00:09:52,288 - INFO - Connection to the data warehouse established successfully.
@@ -58,20 +58,20 @@
 2024-01-03 00:15:10,520 - INFO - Connection to the data warehouse established successfully.
 2024-01-03 00:28:55,604 - INFO - Connection to the data warehouse established successfully.
 2024-01-03 00:29:14,598 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 00:29:22,846 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 00:29:22,846 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 00:31:02,651 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 00:31:10,783 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 00:31:10,783 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 00:31:10,801 - INFO - Generated massive insert query for table fact_supply_chain with 1 records.
 2024-01-03 00:38:57,606 - INFO - Connection to the data warehouse established successfully.
 2024-01-03 00:38:57,613 - INFO - Generated massive insert query for table dim_unit with 1 records.
 2024-01-03 01:04:53,804 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:04:53,805 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:04:53,805 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:04:53,806 - ERROR - An unexpected error occurred while processing the message from the part_information topic: local variable 'table_name' referenced before assignment
 2024-01-03 01:06:54,261 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:06:54,261 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:06:54,261 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:06:54,263 - ERROR - An unexpected error occurred while processing the message from the part_information topic: local variable 'table_name' referenced before assignment
 2024-01-03 01:07:55,712 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:07:55,713 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:07:55,713 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:07:55,716 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers '<'. (102) (SQLExecDirectW)")
 2024-01-03 01:07:55,716 - INFO - Generated massive insert query for table dim_part_information with 1 records.
 2024-01-03 01:14:22,384 - INFO - Connection to the data warehouse established successfully.
@@ -115,7 +115,7 @@
 2024-01-03 01:14:23,935 - INFO - Setting newly assigned partitions {TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0)} for group g2
 2024-01-03 01:14:44,386 - DEBUG - Message received from part_information and from partition 0
 2024-01-03 01:14:44,386 - INFO - Message received from part_information and from partition 0 at offset 0 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 12}
-2024-01-03 01:14:44,386 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:14:44,386 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:14:44,387 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers '<'. (102) (SQLExecDirectW)")
 2024-01-03 01:14:44,387 - INFO - Generated massive insert query for table dim_part_information with 1 records.
 2024-01-03 01:18:04,215 - INFO - Closing the consumer for topic: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
@@ -125,14 +125,14 @@
 2024-01-03 01:18:04,238 - ERROR - Fetch to node 1001 failed: Cancelled: <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>
 2024-01-03 01:18:04,238 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
 2024-01-03 01:18:44,054 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:18:44,054 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:18:44,054 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:18:44,055 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers '<'. (102) (SQLExecDirectW)")
 2024-01-03 01:18:44,056 - INFO - Generated massive insert query for table dim_part_information with 1 records.
 2024-01-03 01:19:44,267 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:19:44,268 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:19:44,268 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:19:44,269 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers '<'. (102) (SQLExecDirectW)")
 2024-01-03 01:20:16,108 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:20:16,109 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:20:16,109 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:21:26,944 - INFO - Connection to the data warehouse established successfully.
 2024-01-03 01:21:26,952 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
 2024-01-03 01:21:26,952 - INFO - Probing node bootstrap-0 broker version
@@ -158,15 +158,15 @@
 2024-01-03 01:21:27,195 - INFO - Setting newly assigned partitions {TopicPartition(topic='part_information', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='machines', partition=0)} for group g2
 2024-01-03 01:21:36,874 - DEBUG - Message received from part_information and from partition 0
 2024-01-03 01:21:36,874 - INFO - Message received from part_information and from partition 0 at offset 1 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 13}
-2024-01-03 01:21:36,874 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:21:36,874 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:21:36,877 - INFO - Generated massive insert query for table dim_part_information with 1 records.
 2024-01-03 01:21:39,661 - DEBUG - Message received from part_information and from partition 0
 2024-01-03 01:21:39,662 - INFO - Message received from part_information and from partition 0 at offset 2 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 14}
-2024-01-03 01:21:39,662 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:21:39,662 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:21:39,663 - INFO - Generated massive insert query for table dim_part_information with 1 records.
 2024-01-03 01:22:06,611 - DEBUG - Message received from part_information and from partition 0
 2024-01-03 01:22:06,611 - INFO - Message received from part_information and from partition 0 at offset 3 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 15}
-2024-01-03 01:22:06,611 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:22:06,611 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:22:06,615 - INFO - Generated massive insert query for table dim_part_information with 1 records.
 2024-01-03 01:24:33,098 - INFO - Closing the consumer for topic: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
 2024-01-03 01:24:33,103 - INFO - Stopping heartbeat thread
@@ -174,7 +174,7 @@
 2024-01-03 01:24:33,106 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
 2024-01-03 01:24:33,106 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
 2024-01-03 01:25:37,753 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:25:37,754 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:25:37,754 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:25:37,760 - INFO - Generated massive insert query for table dim_part_information with 1 records.
 2024-01-03 01:25:37,765 - INFO - Connection to the data warehouse established successfully.
 2024-01-03 01:25:37,774 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
@@ -219,30 +219,30 @@
 2024-01-03 01:25:40,046 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
 2024-01-03 01:25:40,047 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
 2024-01-03 01:25:44,817 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:25:44,817 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:25:44,817 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:25:44,818 - INFO - Generated massive insert query for table dim_part_information with 1 records.
 2024-01-03 01:30:41,772 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:30:41,772 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:30:41,772 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:30:41,776 - ERROR - An unexpected error occurred while processing the message from the part_information topic: 'DataWarehouseManager' object has no attribute 'generate_and_execute_massive_insert'
 2024-01-03 01:31:07,788 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:31:07,788 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
-2024-01-03 01:31:07,838 - ERROR - Error executing massive insert query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Colonne, paramètre ou variable #1\xa0: type de données READONLY introuvable. (2715) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de préparer les instructions. (8180); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Le paramètre ou la variable '@P1' a un type de données non valide. (2724)")
+2024-01-03 01:31:07,788 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
+2024-01-03 01:31:07,838 - ERROR - Error executing massive insert query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Colonne, paramï¿½tre ou variable #1\xa0: type de donnï¿½es READONLY introuvable. (2715) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de prï¿½parer les instructions. (8180); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Le paramï¿½tre ou la variable '@P1' a un type de donnï¿½es non valide. (2724)")
 2024-01-03 01:35:19,685 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:35:19,685 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
-2024-01-03 01:35:19,695 - ERROR - Error executing massive insert query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Colonne, paramètre ou variable #1\xa0: type de données READONLY introuvable. (2715) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de préparer les instructions. (8180); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Le paramètre ou la variable '@P1' a un type de données non valide. (2724)")
+2024-01-03 01:35:19,685 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
+2024-01-03 01:35:19,695 - ERROR - Error executing massive insert query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Colonne, paramï¿½tre ou variable #1\xa0: type de donnï¿½es READONLY introuvable. (2715) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de prï¿½parer les instructions. (8180); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Le paramï¿½tre ou la variable '@P1' a un type de donnï¿½es non valide. (2724)")
 2024-01-03 01:43:54,499 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:43:54,500 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:43:54,500 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:44:35,638 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:44:35,638 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
-2024-01-03 01:44:35,652 - ERROR - Error executing massive insert query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Colonne, paramètre ou variable #1\xa0: type de données READONLY introuvable. (2715) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de préparer les instructions. (8180); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Le paramètre ou la variable '@P1' a un type de données non valide. (2724)")
+2024-01-03 01:44:35,638 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
+2024-01-03 01:44:35,652 - ERROR - Error executing massive insert query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Colonne, paramï¿½tre ou variable #1\xa0: type de donnï¿½es READONLY introuvable. (2715) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de prï¿½parer les instructions. (8180); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Le paramï¿½tre ou la variable '@P1' a un type de donnï¿½es non valide. (2724)")
 2024-01-03 01:46:06,700 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:46:06,701 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:46:06,701 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:46:13,745 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:46:13,746 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:46:13,746 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:46:20,507 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:46:20,508 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:46:20,508 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:48:28,104 - INFO - Connection to the data warehouse established successfully.
-2024-01-03 01:48:28,105 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:48:28,105 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:48:28,116 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
 2024-01-03 01:49:30,864 - INFO - Connection to the data warehouse established successfully.
 2024-01-03 01:49:30,874 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
@@ -269,7 +269,7 @@
 2024-01-03 01:49:31,123 - INFO - Setting newly assigned partitions {TopicPartition(topic='machines', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='supply_chain', partition=0)} for group g2
 2024-01-03 01:49:35,638 - DEBUG - Message received from part_information and from partition 0
 2024-01-03 01:49:35,638 - INFO - Message received from part_information and from partition 0 at offset 4 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 16}
-2024-01-03 01:49:35,638 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:49:35,638 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:49:35,648 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
 2024-01-03 01:50:11,178 - DEBUG - Message received from supply_chain and from partition 0
 2024-01-03 01:50:11,179 - INFO - Message received from supply_chain and from partition 0 at offset 0 : {'timeOfProduction': '2023-10-10T00:00:00.000Z', 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'id': 'd2f10ece-70ea-459e-aa29-68ad62287cce'}
@@ -304,7 +304,7 @@
 2024-01-03 01:50:46,955 - INFO - Setting newly assigned partitions {TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='machines', partition=0)} for group g2
 2024-01-03 01:50:48,826 - DEBUG - Message received from supply_chain and from partition 0
 2024-01-03 01:50:48,826 - INFO - Message received from supply_chain and from partition 0 at offset 1 : {'timeOfProduction': '2023-10-10T00:00:00.000Z', 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'id': '54a9ebf9-55a5-4df4-97fa-940816dd9e39'}
-2024-01-03 01:50:48,826 - INFO - Starting to ingest Kafka part information messages in the dedicated DWH table.
+2024-01-03 01:50:48,826 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
 2024-01-03 01:50:48,828 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers '<'. (102) (SQLExecDirectW)")
 2024-01-03 01:50:48,828 - ERROR - An unexpected error occurred while processing the message from the supply_chain topic: 'NoneType' object is not subscriptable
 2024-01-03 01:51:13,988 - INFO - Closing the consumer for topic: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
@@ -337,7 +337,7 @@
 2024-01-03 01:51:15,612 - INFO - Setting newly assigned partitions {TopicPartition(topic='material', partition=0), TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='material_prices', partition=0)} for group g2
 2024-01-03 01:51:17,322 - DEBUG - Message received from supply_chain and from partition 0
 2024-01-03 01:51:17,322 - INFO - Message received from supply_chain and from partition 0 at offset 2 : {'timeOfProduction': '2023-10-10T00:00:00.000Z', 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'id': 'dc5f19b6-2961-4e61-bbf4-76749b7cfd29'}
-2024-01-03 01:51:17,322 - INFO - Starting to ingest Kafka part information messages in the dedicated DWH table.
+2024-01-03 01:51:17,322 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
 2024-01-03 01:51:17,339 - INFO - Successfully executed massive insert for table dim_unit with 1 records.
 2024-01-03 01:51:23,368 - INFO - Closing the consumer for topic: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
 2024-01-03 01:51:23,371 - INFO - Stopping heartbeat thread
@@ -383,7 +383,7 @@
 2024-01-03 01:52:35,781 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
 2024-01-03 01:52:39,016 - DEBUG - Message received from supply_chain and from partition 0
 2024-01-03 01:52:39,016 - INFO - Message received from supply_chain and from partition 0 at offset 3 : {'timeOfProduction': '2023-10-10T00:00:00.000Z', 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'id': '46be9e07-0fa2-4d83-8583-9c2f6cad5513'}
-2024-01-03 01:52:39,016 - INFO - Starting to ingest Kafka part information messages in the dedicated DWH table.
+2024-01-03 01:52:39,016 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
 2024-01-03 01:52:39,025 - INFO - Successfully executed massive insert for table dim_unit with 1 records.
 2024-01-03 01:53:51,875 - INFO - Closing the consumer for topic: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
 2024-01-03 01:53:51,880 - INFO - Stopping heartbeat thread
@@ -429,7 +429,7 @@
 2024-01-03 01:53:53,713 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
 2024-01-03 01:53:57,091 - DEBUG - Message received from supply_chain and from partition 0
 2024-01-03 01:53:57,091 - INFO - Message received from supply_chain and from partition 0 at offset 4 : {'timeOfProduction': '2023-10-10T00:00:00.000Z', 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'id': 'dbde6a6b-26a7-43ed-a2d0-bc0ec97fdc50'}
-2024-01-03 01:53:57,091 - INFO - Starting to ingest Kafka part information messages in the dedicated DWH table.
+2024-01-03 01:53:57,091 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
 2024-01-03 01:53:57,097 - INFO - Successfully executed massive insert for table dim_unit with 1 records.
 2024-01-03 01:57:55,845 - INFO - Connection to the data warehouse established successfully.
 2024-01-03 01:57:55,854 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
@@ -456,31 +456,31 @@
 2024-01-03 01:58:01,088 - INFO - Setting newly assigned partitions {TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='supply_chain', partition=0)} for group g2
 2024-01-03 01:58:01,198 - DEBUG - Message received from part_information and from partition 0
 2024-01-03 01:58:01,199 - INFO - Message received from part_information and from partition 0 at offset 5 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 17}
-2024-01-03 01:58:01,199 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:58:01,199 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:58:01,207 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
 2024-01-03 01:58:01,207 - DEBUG - Message received from part_information and from partition 0
 2024-01-03 01:58:01,207 - INFO - Message received from part_information and from partition 0 at offset 6 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 18}
-2024-01-03 01:58:01,207 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:58:01,207 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:58:01,210 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
 2024-01-03 01:58:01,210 - DEBUG - Message received from part_information and from partition 0
 2024-01-03 01:58:01,210 - INFO - Message received from part_information and from partition 0 at offset 7 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 19}
-2024-01-03 01:58:01,210 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:58:01,210 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:58:01,213 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
 2024-01-03 01:58:01,213 - DEBUG - Message received from part_information and from partition 0
 2024-01-03 01:58:01,213 - INFO - Message received from part_information and from partition 0 at offset 8 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 20}
-2024-01-03 01:58:01,214 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:58:01,214 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:58:01,216 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
 2024-01-03 01:58:01,216 - DEBUG - Message received from part_information and from partition 0
 2024-01-03 01:58:01,216 - INFO - Message received from part_information and from partition 0 at offset 9 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 21}
-2024-01-03 01:58:01,216 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:58:01,216 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:58:01,218 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
 2024-01-03 01:58:01,219 - DEBUG - Message received from part_information and from partition 0
 2024-01-03 01:58:01,219 - INFO - Message received from part_information and from partition 0 at offset 10 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 22}
-2024-01-03 01:58:01,219 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 01:58:01,219 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 01:58:01,222 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
 2024-01-03 01:58:01,222 - DEBUG - Message received from supply_chain and from partition 0
 2024-01-03 01:58:01,222 - INFO - Message received from supply_chain and from partition 0 at offset 4 : {'timeOfProduction': '2023-10-10T00:00:00.000Z', 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'id': 'dbde6a6b-26a7-43ed-a2d0-bc0ec97fdc50'}
-2024-01-03 01:58:01,222 - INFO - Starting to ingest Kafka part information messages in the dedicated DWH table.
+2024-01-03 01:58:01,222 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
 2024-01-03 01:58:01,224 - INFO - Successfully executed massive insert for table dim_unit with 1 records.
 2024-01-03 01:58:45,081 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: Socket EVENT_READ without in-flight-requests
 2024-01-03 01:58:45,081 - WARNING - Node 1001 connection failed -- refreshing metadata
@@ -694,7 +694,7 @@
 2024-01-03 02:06:33,141 - INFO - Setting newly assigned partitions {TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='machines', partition=0)} for group g2
 2024-01-03 02:06:48,150 - DEBUG - Message received from part_information and from partition 0
 2024-01-03 02:06:48,151 - INFO - Message received from part_information and from partition 0 at offset 0 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 29}
-2024-01-03 02:06:48,151 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 02:06:48,151 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 02:06:48,172 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
 2024-01-03 02:08:11,906 - INFO - Closing the consumer for topic: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
 2024-01-03 02:08:11,910 - INFO - Stopping heartbeat thread
@@ -726,10 +726,485 @@
 2024-01-03 02:12:30,200 - INFO - Setting newly assigned partitions {TopicPartition(topic='part_information', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='supply_chain', partition=0)} for group g2
 2024-01-03 02:12:34,087 - DEBUG - Message received from part_information and from partition 0
 2024-01-03 02:12:34,087 - INFO - Message received from part_information and from partition 0 at offset 1 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 30}
-2024-01-03 02:12:34,087 - INFO - Starting to ingest Kafka supply chain messages in the dedicated DWH table.
+2024-01-03 02:12:34,087 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
 2024-01-03 02:12:34,096 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
 2024-01-03 02:12:46,690 - INFO - Closing the consumer for topic: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
 2024-01-03 02:12:46,696 - INFO - Stopping heartbeat thread
 2024-01-03 02:12:46,697 - INFO - Leaving consumer group (g2).
 2024-01-03 02:12:46,700 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
 2024-01-03 02:12:46,700 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-04 17:55:58,605 - INFO - Connection to the data warehouse established successfully.
+2024-01-04 17:55:58,623 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-04 17:55:58,624 - INFO - Probing node bootstrap-0 broker version
+2024-01-04 17:55:58,625 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-04 17:55:58,733 - INFO - Broker version identified as 2.5.0
+2024-01-04 17:55:58,734 - INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2024-01-04 17:55:58,736 - INFO - Updating subscribed topics to: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain', 'sales']
+2024-01-04 17:55:58,736 - INFO - Subscribed to topics: ['material', 'material_prices', 'part_information', 'machines', 'supply_chain', 'sales']
+2024-01-04 17:55:58,737 - INFO - Starting to consume messages from ['material', 'material_prices', 'part_information', 'machines', 'supply_chain', 'sales']
+2024-01-04 17:55:58,745 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-04 17:55:58,745 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-04 17:55:58,746 - INFO - Starting new heartbeat thread
+2024-01-04 17:55:58,746 - INFO - Revoking previously assigned partitions set() for group g2
+2024-01-04 17:55:58,747 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-04 17:55:58,749 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-04 17:55:58,749 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-04 17:55:58,864 - INFO - (Re-)joining group g2
+2024-01-04 17:55:58,866 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-04 17:55:58,867 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-04 17:55:58,910 - WARNING - Topic sales is not available during auto-create initialization
+2024-01-04 17:55:58,946 - INFO - Elected group leader -- performing partition assignments using range
+2024-01-04 17:55:58,947 - WARNING - No partition metadata for topic sales
+2024-01-04 17:55:58,965 - INFO - Successfully joined group g2 with generation 6
+2024-01-04 17:55:58,966 - INFO - Updated partition assignment: [TopicPartition(topic='machines', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='supply_chain', partition=0)]
+2024-01-04 17:55:58,967 - INFO - Setting newly assigned partitions {TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='part_information', partition=0)} for group g2
+2024-01-04 17:55:58,979 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-04 17:55:58,981 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-04 17:55:58,981 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-04 17:55:59,016 - DEBUG - Message received from part_information and from partition 0
+2024-01-04 17:55:59,017 - INFO - Message received from part_information and from partition 0 at offset 2 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 31}
+2024-01-04 17:55:59,017 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
+2024-01-04 17:55:59,076 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
+2024-01-04 17:55:59,091 - INFO - Revoking previously assigned partitions {TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='part_information', partition=0)} for group g2
+2024-01-04 17:55:59,091 - INFO - (Re-)joining group g2
+2024-01-04 17:55:59,098 - INFO - Elected group leader -- performing partition assignments using range
+2024-01-04 17:55:59,103 - INFO - Successfully joined group g2 with generation 7
+2024-01-04 17:55:59,103 - INFO - Updated partition assignment: [TopicPartition(topic='machines', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='sales', partition=0), TopicPartition(topic='supply_chain', partition=0)]
+2024-01-04 17:55:59,104 - INFO - Setting newly assigned partitions {TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='sales', partition=0)} for group g2
+2024-01-04 17:56:11,216 - DEBUG - Message received from part_information and from partition 0
+2024-01-04 17:56:11,217 - INFO - Message received from part_information and from partition 0 at offset 3 : {'defaultPrice': '14999.99', 'timeToProduce': 360, 'id': 32}
+2024-01-04 17:56:11,217 - INFO - Starting to ingest Kafka supply chain messages in the dedicated ODS table.
+2024-01-04 17:56:11,219 - INFO - Successfully executed massive insert for table dim_part_information with 1 records.
+2024-01-04 20:58:26,360 - WARNING - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> timed out after 305000 ms. Closing connection.
+2024-01-04 20:58:26,382 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. [Error 7] RequestTimedOutError: Request timed out after 305000 ms
+2024-01-04 20:58:26,386 - ERROR - Fetch to node 1001 failed: [Error 7] RequestTimedOutError: Request timed out after 305000 ms
+2024-01-04 20:58:26,388 - INFO - Closing idle connection coordinator-1001, last active 5538888 ms ago
+2024-01-04 20:58:26,388 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-04 20:58:26,389 - WARNING - Heartbeat session expired, marking coordinator dead
+2024-01-04 20:58:26,389 - WARNING - Marking the coordinator dead (node coordinator-1001) for group g2: Heartbeat session expired.
+2024-01-04 20:58:26,411 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-04 20:58:26,414 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-04 20:58:26,661 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-04 20:58:26,662 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-04 20:58:26,664 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-04 20:58:26,665 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-04 20:58:27,188 - WARNING - Auto offset commit failed for group g2: NodeNotReadyError: coordinator-1001
+2024-01-05 03:02:39,212 - WARNING - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> timed out after 305000 ms. Closing connection.
+2024-01-05 03:02:39,356 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. [Error 7] RequestTimedOutError: Request timed out after 305000 ms
+2024-01-05 03:02:39,398 - ERROR - Fetch to node 1001 failed: [Error 7] RequestTimedOutError: Request timed out after 305000 ms
+2024-01-05 03:02:39,398 - INFO - Closing idle connection coordinator-1001, last active 12106565 ms ago
+2024-01-05 03:02:39,398 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-05 03:02:39,399 - WARNING - Heartbeat session expired, marking coordinator dead
+2024-01-05 03:02:39,399 - WARNING - Marking the coordinator dead (node coordinator-1001) for group g2: Heartbeat session expired.
+2024-01-05 03:02:39,402 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 03:02:39,403 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 03:02:39,522 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-05 03:02:39,522 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-05 03:02:39,523 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 03:02:39,525 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 11:47:13,062 - WARNING - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> timed out after 305000 ms. Closing connection.
+2024-01-05 11:47:13,063 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. [Error 7] RequestTimedOutError: Request timed out after 305000 ms
+2024-01-05 11:47:13,064 - INFO - Closing idle connection coordinator-1001, last active 31473538 ms ago
+2024-01-05 11:47:13,064 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-05 11:47:13,064 - WARNING - Auto offset commit failed for group g2: NodeNotReadyError: coordinator-1001
+2024-01-05 11:47:13,129 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 11:47:13,130 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 11:47:13,131 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 11:47:13,131 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 11:47:13,131 - WARNING - Heartbeat session expired, marking coordinator dead
+2024-01-05 11:47:13,132 - WARNING - Marking the coordinator dead (node coordinator-1001) for group g2: Heartbeat session expired.
+2024-01-05 11:47:13,133 - WARNING - Auto offset commit failed for group g2: NodeNotReadyError: coordinator-1001
+2024-01-05 11:47:14,077 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-05 11:47:14,077 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-05 12:17:14,237 - WARNING - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> timed out after 305000 ms. Closing connection.
+2024-01-05 12:17:14,258 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. [Error 7] RequestTimedOutError: Request timed out after 305000 ms
+2024-01-05 12:17:14,259 - ERROR - Fetch to node 1001 failed: [Error 7] RequestTimedOutError: Request timed out after 305000 ms
+2024-01-05 12:17:14,259 - WARNING - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> timed out after 305000 ms. Closing connection.
+2024-01-05 12:17:14,260 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. [Error 7] RequestTimedOutError: Request timed out after 305000 ms
+2024-01-05 12:17:14,261 - ERROR - Error sending OffsetCommitRequest_v2 to node coordinator-1001 [[Error 7] RequestTimedOutError: Request timed out after 305000 ms]
+2024-01-05 12:17:14,261 - WARNING - Marking the coordinator dead (node coordinator-1001) for group g2: [Error 7] RequestTimedOutError: Request timed out after 305000 ms.
+2024-01-05 12:17:14,262 - WARNING - Auto offset commit failed for group g2: [Error 7] RequestTimedOutError: Request timed out after 305000 ms
+2024-01-05 12:17:14,263 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 12:17:14,263 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 12:17:14,414 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-05 12:17:14,414 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-05 12:17:14,414 - WARNING - Marking the coordinator dead (node coordinator-1001) for group g2: Node Disconnected.
+2024-01-05 12:17:14,415 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 12:17:14,416 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 12:17:14,439 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-05 12:17:14,439 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-05 21:21:42,227 - WARNING - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> timed out after 305000 ms. Closing connection.
+2024-01-05 21:21:42,235 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. [Error 7] RequestTimedOutError: Request timed out after 305000 ms
+2024-01-05 21:21:42,236 - ERROR - Fetch to node 1001 failed: [Error 7] RequestTimedOutError: Request timed out after 305000 ms
+2024-01-05 21:21:42,237 - WARNING - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> timed out after 305000 ms. Closing connection.
+2024-01-05 21:21:42,238 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. [Error 7] RequestTimedOutError: Request timed out after 305000 ms
+2024-01-05 21:21:42,238 - ERROR - Error sending OffsetCommitRequest_v2 to node coordinator-1001 [[Error 7] RequestTimedOutError: Request timed out after 305000 ms]
+2024-01-05 21:21:42,239 - WARNING - Marking the coordinator dead (node coordinator-1001) for group g2: [Error 7] RequestTimedOutError: Request timed out after 305000 ms.
+2024-01-05 21:21:42,239 - WARNING - Auto offset commit failed for group g2: [Error 7] RequestTimedOutError: Request timed out after 305000 ms
+2024-01-05 21:21:42,240 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 21:21:42,240 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 21:21:42,406 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-05 21:21:42,407 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-05 21:21:42,407 - WARNING - Marking the coordinator dead (node coordinator-1001) for group g2: Node Disconnected.
+2024-01-05 21:21:42,408 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 21:21:42,409 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 21:21:42,440 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-05 21:21:42,440 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-05 23:19:08,506 - WARNING - Heartbeat session expired, marking coordinator dead
+2024-01-05 23:19:08,546 - WARNING - Marking the coordinator dead (node coordinator-1001) for group g2: Heartbeat session expired.
+2024-01-05 23:19:20,961 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:20,963 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:20,966 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:20,975 - ERROR - Fetch to node 1001 failed: KafkaConnectionError: socket disconnected
+2024-01-05 23:19:20,977 - ERROR - Error sending GroupCoordinatorRequest_v0 to node 1001 [KafkaConnectionError: socket disconnected]
+2024-01-05 23:19:20,978 - ERROR - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:20,979 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:20,980 - WARNING - Node coordinator-1001 connection failed -- refreshing metadata
+2024-01-05 23:19:20,980 - ERROR - Error sending HeartbeatRequest_v1 to node coordinator-1001 [KafkaConnectionError: socket disconnected]
+2024-01-05 23:19:20,981 - ERROR - Error sending OffsetCommitRequest_v2 to node coordinator-1001 [KafkaConnectionError: socket disconnected]
+2024-01-05 23:19:20,982 - ERROR - Error sending HeartbeatRequest_v1 to node coordinator-1001 [KafkaConnectionError: socket disconnected]
+2024-01-05 23:19:20,982 - ERROR - Error sending HeartbeatRequest_v1 to node coordinator-1001 [KafkaConnectionError: socket disconnected]
+2024-01-05 23:19:20,994 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:20,996 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:21,004 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Error receiving network data closing socket
+Traceback (most recent call last):
+  File "C:\Users\othma\AppData\Local\Programs\Python\Python38\lib\site-packages\kafka\conn.py", line 1090, in _recv
+    data = self._sock.recv(self.config['sock_chunk_bytes'])
+ConnectionResetError: [WinError 10054] Une connexion existante a dï¿½ ï¿½tre fermï¿½e par lï¿½hï¿½te distant
+2024-01-05 23:19:21,058 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: [WinError 10054] Une connexion existante a dï¿½ ï¿½tre fermï¿½e par lï¿½hï¿½te distant
+2024-01-05 23:19:21,060 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:21,062 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:21,064 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:52,630 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:52,632 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:52,632 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:52,633 - ERROR - Error sending GroupCoordinatorRequest_v0 to node 1001 [KafkaConnectionError: socket disconnected]
+2024-01-05 23:19:52,811 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:52,813 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:52,814 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:52,815 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:52,816 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:52,982 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:52,984 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:52,985 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:52,985 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:52,986 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:53,156 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:53,157 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:53,159 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:53,160 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:53,161 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:53,326 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:53,330 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:53,336 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:53,338 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:53,338 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:53,512 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:53,514 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:53,516 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:53,516 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:53,517 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:53,684 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:53,685 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:53,688 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:53,689 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:53,690 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:53,854 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:53,856 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:53,858 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:53,858 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:53,859 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:54,024 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:54,026 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:54,031 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:54,031 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:54,033 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:54,196 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:54,198 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:54,201 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:54,201 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:54,202 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:54,367 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:54,372 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:54,374 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:54,375 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:54,376 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:54,542 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:54,543 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:54,545 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:54,546 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:54,546 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:54,713 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:54,715 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:54,716 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:54,717 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:54,718 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:54,885 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:54,887 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:54,888 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:54,889 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:54,890 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:55,057 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:55,059 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:55,060 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:55,060 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:55,061 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:55,228 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:55,231 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:55,232 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:55,233 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:55,233 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:55,400 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:55,402 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:55,404 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:55,405 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:55,406 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:55,569 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:55,571 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:55,573 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:55,573 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:55,574 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:55,740 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:55,742 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:55,744 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:55,744 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:55,745 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:55,912 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:55,913 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:55,916 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:55,917 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:55,917 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:56,082 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:56,084 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:56,086 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:56,086 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:56,087 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:56,252 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:56,254 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:56,256 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:56,256 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:56,257 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:56,425 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:56,427 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:56,429 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:56,429 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:56,430 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:56,597 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:56,599 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:56,600 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:56,601 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:56,601 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:56,769 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:56,771 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:56,773 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:56,773 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:56,774 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:56,944 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:56,946 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:56,950 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:56,950 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:56,951 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:57,114 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:57,116 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:57,118 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:57,119 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:57,119 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:57,287 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:57,291 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:57,292 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:57,292 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:57,293 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:57,472 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:57,474 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:57,476 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:57,476 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:57,477 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:57,644 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:57,646 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:57,647 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:57,648 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:57,648 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:57,818 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:57,819 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:57,820 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:57,821 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:57,821 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:57,989 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:57,991 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:57,992 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:57,992 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:57,993 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:58,159 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:58,160 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:58,163 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:58,163 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:58,164 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:58,328 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:58,330 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:58,332 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:58,332 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:58,333 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:58,498 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:58,499 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:58,500 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:58,501 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:58,501 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:58,668 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:58,670 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:58,672 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:58,672 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:58,673 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:58,840 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:58,842 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:58,843 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:58,844 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:58,845 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:59,012 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:59,014 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:59,015 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:59,016 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:59,016 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:59,189 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:59,190 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:59,194 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:59,195 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:59,195 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:59,367 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:59,369 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:59,371 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:59,372 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:59,372 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:59,537 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:59,538 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:59,541 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:59,541 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:59,542 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:59,709 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:59,710 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:59,715 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:59,715 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:59,716 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:19:59,880 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:19:59,882 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:19:59,888 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:19:59,888 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:19:59,889 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:20:00,070 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:20:00,072 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:20:00,074 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:20:00,074 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:20:00,075 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:20:00,240 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:20:00,242 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:20:00,243 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:20:00,244 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:20:00,244 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:20:00,411 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:20:00,413 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:20:00,415 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:20:00,415 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:20:00,416 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:20:00,582 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:20:00,585 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:20:00,588 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:20:00,589 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:20:00,590 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:20:00,754 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:20:00,756 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:20:00,757 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:20:00,758 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:20:00,758 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:20:00,926 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:20:00,928 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-05 23:20:00,930 - ERROR - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2024-01-05 23:20:00,930 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2024-01-05 23:20:00,931 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:20:01,096 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:25:06,137 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-05 23:25:06,138 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-05 23:25:06,139 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:25:06,201 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:30:11,223 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-05 23:30:11,224 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-05 23:30:11,225 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:30:11,292 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:35:16,298 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-05 23:35:16,300 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-05 23:35:16,301 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:35:16,363 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:40:21,415 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-05 23:40:21,416 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-05 23:40:21,417 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:40:21,478 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:45:26,537 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-05 23:45:26,539 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-05 23:45:26,539 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:45:26,601 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:50:31,627 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-05 23:50:31,628 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-05 23:50:31,629 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:50:31,690 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-05 23:55:36,711 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-05 23:55:36,712 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-05 23:55:36,712 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-05 23:55:36,776 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 00:00:41,828 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 00:00:41,829 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 00:00:41,829 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 00:00:41,895 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 00:05:46,913 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 00:05:46,914 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 00:05:46,914 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 00:05:46,978 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 00:10:51,990 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 00:10:51,990 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 00:10:51,991 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 00:10:52,052 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 00:15:57,083 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 00:15:57,083 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 00:15:57,084 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 00:15:57,148 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 00:21:02,189 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 00:21:02,190 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 00:21:02,190 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 00:21:02,253 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 00:26:07,273 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 00:26:07,274 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 00:26:07,276 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 00:26:07,335 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 00:31:12,362 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 00:31:12,366 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 00:31:12,368 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 00:31:12,424 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 00:36:17,432 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 00:36:17,433 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 00:36:17,433 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 00:36:17,494 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 00:41:22,536 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 00:41:22,538 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 00:41:22,539 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 00:41:22,601 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 00:46:27,636 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 00:46:27,636 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 00:46:27,636 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 00:46:27,700 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 00:51:32,735 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 00:51:32,736 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 00:51:32,737 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 00:51:32,796 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 00:56:37,854 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 00:56:37,859 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 00:56:37,860 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 00:56:37,918 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 01:01:42,958 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 01:01:42,959 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 01:01:42,959 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 01:01:43,026 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 03:11:38,102 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 03:11:38,947 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 03:11:38,952 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 09:55:47,030 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-06 11:51:40,077 - ERROR - Connection attempt to <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> timed out
+2024-01-06 11:51:40,180 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: timeout
+2024-01-06 11:51:40,194 - WARNING - Node 1001 connection failed -- refreshing metadata
+2024-01-06 11:51:40,279 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]

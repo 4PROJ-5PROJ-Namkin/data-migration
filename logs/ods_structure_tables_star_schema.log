@@ -56,7 +56,7 @@
 2023-12-29 13:57:57,291 - INFO - Table dim_material_prices already exists. Skipping creation.
 2023-12-29 13:57:57,304 - INFO - Table dim_sales already exists. Skipping creation.
 2023-12-29 13:57:57,320 - INFO - Table dim_machine already exists. Skipping creation.
-2023-12-29 13:57:57,358 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers le mot clé 'order'. (156) (SQLExecDirectW)")
+2023-12-29 13:57:57,358 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers le mot clï¿½ 'order'. (156) (SQLExecDirectW)")
 2023-12-29 13:57:57,360 - INFO - Connection to the data warehouse closed.
 2023-12-29 13:59:12,447 - INFO - Connection to the data warehouse established successfully.
 2023-12-29 13:59:12,505 - INFO - Table dim_part_information already exists. Skipping creation.
@@ -64,7 +64,7 @@
 2023-12-29 13:59:12,539 - INFO - Table dim_material_prices already exists. Skipping creation.
 2023-12-29 13:59:12,553 - INFO - Table dim_sales already exists. Skipping creation.
 2023-12-29 13:59:12,569 - INFO - Table dim_machine already exists. Skipping creation.
-2023-12-29 13:59:12,613 - ERROR - An error occurred while executing the query: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Le nom de colonne 'id' n'existe pas dans la table ou la vue cible. (1911) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de créer la contrainte ou l'index. Voir les erreurs précédentes. (1750)")
+2023-12-29 13:59:12,613 - ERROR - An error occurred while executing the query: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Le nom de colonne 'id' n'existe pas dans la table ou la vue cible. (1911) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de crï¿½er la contrainte ou l'index. Voir les erreurs prï¿½cï¿½dentes. (1750)")
 2023-12-29 13:59:12,614 - INFO - Connection to the data warehouse closed.
 2023-12-29 14:02:34,912 - INFO - Connection to the data warehouse established successfully.
 2023-12-29 14:02:34,940 - INFO - Table dim_part_information already exists. Skipping creation.
@@ -72,7 +72,7 @@
 2023-12-29 14:02:34,967 - INFO - Table dim_material_prices already exists. Skipping creation.
 2023-12-29 14:02:34,978 - INFO - Table dim_sales already exists. Skipping creation.
 2023-12-29 14:02:34,991 - INFO - Table dim_machine already exists. Skipping creation.
-2023-12-29 14:02:35,016 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]La clé étrangère 'FK__fact_supp__partI__6FE99F9F' fait référence à la table non valide 'part_information'. (1767) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de créer la contrainte ou l'index. Voir les erreurs précédentes. (1750)")
+2023-12-29 14:02:35,016 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]La clï¿½ ï¿½trangï¿½re 'FK__fact_supp__partI__6FE99F9F' fait rï¿½fï¿½rence ï¿½ la table non valide 'part_information'. (1767) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de crï¿½er la contrainte ou l'index. Voir les erreurs prï¿½cï¿½dentes. (1750)")
 2023-12-29 14:02:35,016 - INFO - Connection to the data warehouse closed.
 2023-12-29 14:06:11,475 - INFO - Connection to the data warehouse established successfully.
 2023-12-29 14:06:11,514 - INFO - Table dim_part_information already exists. Skipping creation.
@@ -303,7 +303,7 @@
 2024-01-03 01:55:11,898 - INFO - Setting newly assigned partitions {TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='part_information', partition=0)} for group g2
 2024-01-03 01:55:11,905 - DEBUG - Message received from supply_chain and from partition 0
 2024-01-03 01:55:11,905 - INFO - Message received from supply_chain and from partition 0 at offset 4 : {'timeOfProduction': '2023-10-10T00:00:00.000Z', 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'id': 'dbde6a6b-26a7-43ed-a2d0-bc0ec97fdc50'}
-2024-01-03 01:55:11,905 - INFO - Starting to ingest Kafka part information messages in the dedicated DWH table.
+2024-01-03 01:55:11,905 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
 2024-01-03 01:55:11,909 - INFO - Successfully executed massive insert for table dim_unit with 1 records.
 2024-01-03 01:56:08,659 - INFO - Connection to the data warehouse established successfully.
 2024-01-03 01:56:08,667 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
@@ -330,7 +330,7 @@
 2024-01-03 01:56:08,912 - INFO - Setting newly assigned partitions {TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='supply_chain', partition=0)} for group g2
 2024-01-03 01:56:09,031 - DEBUG - Message received from supply_chain and from partition 0
 2024-01-03 01:56:09,031 - INFO - Message received from supply_chain and from partition 0 at offset 4 : {'timeOfProduction': '2023-10-10T00:00:00.000Z', 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'id': 'dbde6a6b-26a7-43ed-a2d0-bc0ec97fdc50'}
-2024-01-03 01:56:09,032 - INFO - Starting to ingest Kafka part information messages in the dedicated DWH table.
+2024-01-03 01:56:09,032 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
 2024-01-03 01:56:09,035 - INFO - Successfully executed massive insert for table dim_unit with 1 records.
 2024-01-03 01:57:06,442 - INFO - Connection to the data warehouse established successfully.
 2024-01-03 01:57:06,450 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
@@ -360,5 +360,65 @@
 2024-01-03 01:57:08,074 - INFO - Setting newly assigned partitions {TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='machines', partition=0), TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='part_information', partition=0)} for group g2
 2024-01-03 01:57:08,291 - DEBUG - Message received from supply_chain and from partition 0
 2024-01-03 01:57:08,292 - INFO - Message received from supply_chain and from partition 0 at offset 4 : {'timeOfProduction': '2023-10-10T00:00:00.000Z', 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'id': 'dbde6a6b-26a7-43ed-a2d0-bc0ec97fdc50'}
-2024-01-03 01:57:08,292 - INFO - Starting to ingest Kafka part information messages in the dedicated DWH table.
+2024-01-03 01:57:08,292 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
 2024-01-03 01:57:08,296 - INFO - Successfully executed massive insert for table dim_unit with 1 records.
+2024-01-03 23:39:47,144 - INFO - Connection to the data warehouse established successfully.
+2024-01-03 23:39:47,175 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-03 23:39:47,193 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-03 23:39:47,210 - INFO - Table dim_material_prices already exists. Skipping creation.
+2024-01-03 23:39:47,226 - INFO - Table dim_client created successfully.
+2024-01-03 23:39:47,233 - INFO - Query executed successfully.
+2024-01-03 23:39:47,248 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-03 23:39:47,259 - INFO - Table dim_unit already exists. Skipping creation.
+2024-01-03 23:39:47,260 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-03 23:39:47,274 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-03 23:39:47,274 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-03 23:39:47,275 - INFO - Connection to the data warehouse closed.
+2024-01-09 19:07:06,330 - INFO - Connection to the data warehouse established successfully.
+2024-01-09 19:07:20,556 - INFO - Connection to the data warehouse established successfully.
+2024-01-09 19:07:20,694 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-09 19:07:20,707 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-09 19:07:20,722 - INFO - Table dim_material_prices already exists. Skipping creation.
+2024-01-09 19:07:20,745 - INFO - Table dim_client already exists. Skipping creation.
+2024-01-09 19:07:20,763 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-09 19:07:20,780 - INFO - Table dim_unit already exists. Skipping creation.
+2024-01-09 19:07:20,782 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-09 19:07:20,798 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-09 19:07:20,800 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-09 19:07:20,802 - INFO - Connection to the data warehouse closed.
+2024-01-09 19:22:35,030 - INFO - Connection to the data warehouse established successfully.
+2024-01-09 19:22:35,038 - INFO - Connection to the data warehouse closed.
+2024-01-09 19:23:07,561 - ERROR - An error occurred while connecting to the data warehouse: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]ï¿½chec de l\'ouverture de session de l\'utilisateur\xa0\'namkin\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible d\'ouvrir la base de donnï¿½es "ODS_PRODUCTION_PROD" demandï¿½e par la connexion. La connexion a ï¿½chouï¿½. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]ï¿½chec de l\'ouverture de session de l\'utilisateur\xa0\'namkin\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible d\'ouvrir la base de donnï¿½es "ODS_PRODUCTION_PROD" demandï¿½e par la connexion. La connexion a ï¿½chouï¿½. (4060)')
+2024-01-09 19:41:00,424 - ERROR - An error occurred while connecting to the data warehouse: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]ï¿½chec de l\'ouverture de session de l\'utilisateur\xa0\'namkin\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible d\'ouvrir la base de donnï¿½es "ODS_PRODUCTION_PROD" demandï¿½e par la connexion. La connexion a ï¿½chouï¿½. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]ï¿½chec de l\'ouverture de session de l\'utilisateur\xa0\'namkin\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible d\'ouvrir la base de donnï¿½es "ODS_PRODUCTION_PROD" demandï¿½e par la connexion. La connexion a ï¿½chouï¿½. (4060)')
+2024-01-09 19:47:19,484 - ERROR - An error occurred while connecting to the data warehouse: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]ï¿½chec de l\'ouverture de session de l\'utilisateur\xa0\'namkin\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible d\'ouvrir la base de donnï¿½es "ODS_PRODUCTION_PROD" demandï¿½e par la connexion. La connexion a ï¿½chouï¿½. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]ï¿½chec de l\'ouverture de session de l\'utilisateur\xa0\'namkin\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible d\'ouvrir la base de donnï¿½es "ODS_PRODUCTION_PROD" demandï¿½e par la connexion. La connexion a ï¿½chouï¿½. (4060)')
+2024-01-09 19:56:15,600 - ERROR - An error occurred while connecting to the data warehouse: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]ï¿½chec de l\'ouverture de session de l\'utilisateur\xa0\'namkin\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible d\'ouvrir la base de donnï¿½es "ODS_PRODUCTION_PROD" demandï¿½e par la connexion. La connexion a ï¿½chouï¿½. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]ï¿½chec de l\'ouverture de session de l\'utilisateur\xa0\'namkin\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible d\'ouvrir la base de donnï¿½es "ODS_PRODUCTION_PROD" demandï¿½e par la connexion. La connexion a ï¿½chouï¿½. (4060)')
+2024-01-09 20:00:59,564 - ERROR - An error occurred while connecting to the data warehouse: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]ï¿½chec de l\'ouverture de session de l\'utilisateur\xa0\'namkin\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible d\'ouvrir la base de donnï¿½es "ODS_PRODUCTION_PROD" demandï¿½e par la connexion. La connexion a ï¿½chouï¿½. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]ï¿½chec de l\'ouverture de session de l\'utilisateur\xa0\'namkin\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible d\'ouvrir la base de donnï¿½es "ODS_PRODUCTION_PROD" demandï¿½e par la connexion. La connexion a ï¿½chouï¿½. (4060)')
+2024-01-09 20:01:36,912 - ERROR - An error occurred while connecting to the data warehouse: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]ï¿½chec de l\'ouverture de session de l\'utilisateur\xa0\'namkin\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible d\'ouvrir la base de donnï¿½es "ODS_PRODUCTION_PROD" demandï¿½e par la connexion. La connexion a ï¿½chouï¿½. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]ï¿½chec de l\'ouverture de session de l\'utilisateur\xa0\'namkin\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible d\'ouvrir la base de donnï¿½es "ODS_PRODUCTION_PROD" demandï¿½e par la connexion. La connexion a ï¿½chouï¿½. (4060)')
+2024-01-09 20:02:46,417 - INFO - Connection to the data warehouse established successfully.
+2024-01-09 20:02:46,422 - INFO - Connection to the data warehouse closed.
+2024-01-09 20:03:37,278 - INFO - Connection to the data warehouse established successfully.
+2024-01-09 20:03:37,304 - INFO - Table dim_part_information created successfully.
+2024-01-09 20:03:37,314 - INFO - Query executed successfully.
+2024-01-09 20:03:37,327 - INFO - Table dim_material created successfully.
+2024-01-09 20:03:37,332 - INFO - Query executed successfully.
+2024-01-09 20:03:37,332 - INFO - Table dim_contract created successfully.
+2024-01-09 20:03:37,336 - INFO - Query executed successfully.
+2024-01-09 20:03:37,346 - INFO - Table dim_machine created successfully.
+2024-01-09 20:03:37,351 - INFO - Query executed successfully.
+2024-01-09 20:03:37,363 - INFO - Table dim_time created successfully.
+2024-01-09 20:03:37,365 - INFO - Query executed successfully.
+2024-01-09 20:03:37,377 - INFO - Table fact_supply_chain created successfully.
+2024-01-09 20:03:37,382 - INFO - Query executed successfully.
+2024-01-09 20:03:37,394 - INFO - Table fact_sales created successfully.
+2024-01-09 20:03:37,397 - INFO - Query executed successfully.
+2024-01-09 20:03:37,398 - INFO - Connection to the data warehouse closed.
+2024-01-09 22:49:01,174 - INFO - Connection to the data warehouse established successfully.
+2024-01-09 22:49:01,196 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-09 22:49:01,205 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-09 22:49:01,205 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-09 22:49:01,214 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-09 22:49:01,224 - INFO - Table dim_time created successfully.
+2024-01-09 22:49:01,228 - INFO - Query executed successfully.
+2024-01-09 22:49:01,237 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-09 22:49:01,245 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-09 22:49:01,246 - INFO - Connection to the data warehouse closed.

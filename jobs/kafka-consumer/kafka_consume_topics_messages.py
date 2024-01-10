@@ -5,7 +5,7 @@ import sys
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from dotenv import load_dotenv
 from kafka import KafkaConsumer
-from dwh.dwh_structure_tables_star_schema import DataWarehouseManager
+from ods_structure_tables_star_schema import DataWarehouseManager
 from kafka_process_data_schema_topics_messages import execute_ruling_topic_processor
 
 class KafkaConsumerClient:
@@ -51,14 +51,14 @@ class KafkaConsumerClient:
         self.consumer.subscribe(self.topics)
         self.logger.info(f"Subscribed to topics: {self.topics}")
 
-    def consume_messages(self, dwh_manager):
+    def consume_messages(self, ods_manager):
         """Consumes and processes messages from the subscribed topics."""
         try:
             self.logger.info(f"Starting to consume messages from {self.topics}")
             for message in self.consumer:
                 self.logger.debug(f"Message received from {message.topic} and from partition {message.partition}")
                 self.logger.info(f"Message received from {message.topic} and from partition {message.partition} at offset {message.offset} : {message.value}")
-                execute_ruling_topic_processor(dwh_manager, message.topic, message.value)
+                execute_ruling_topic_processor(ods_manager, message.topic, message.value)
         except Exception as e:
             self.logger.error(f"An error occurred while consuming messages: {e}")
         finally:
@@ -72,7 +72,7 @@ class KafkaConsumerClient:
 if __name__ == "__main__":
     load_dotenv('../../.env')
     kafka_servers = [f"{os.getenv('KAFKA_HOSTNAME')}:{os.getenv('KAFKA_PORT')}"]
-    topic_names = ['material', 'material_prices', 'part_information', 'machines', 'supply_chain']
+    topic_names = ['material', 'material_prices', 'part_information', 'machines', 'supply_chain', 'sales']
     group_id = 'g2'
 
     server = os.getenv('DB_HOST')

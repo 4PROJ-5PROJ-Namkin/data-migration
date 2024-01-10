@@ -3,7 +3,7 @@ def append_kafka_message_to_tuples(message, tuple_lists):
     Parses a Kafka message and appends its data to each tuple in a list of lists of tuples.
     """
     message_values = tuple(message.values())
-    return [[tuple(tup) + tuple(message_values) for tup in lst] for lst in tuple_lists]
+    return [[tuple(tup) + message_values for tup in lst] for lst in tuple_lists]
 
 def filter_kafka_message_fields_to_push(message, fields_to_push):
     """
@@ -20,5 +20,5 @@ def reduce_list_records_structure(records):
     """
     return [tuple for set_records in records for tuple in set_records]
 
-def get_max_id_incremented(dwh_manager, id, table_name):
-    return dwh_manager.execute_query(f"""SELECT MAX({id}) + 1 FROM [DWH_PRODUCTION_PROD].[dbo].[{table_name}]""")
+def get_max_id_incremented(ods_manager, id, table_name):
+    return ods_manager.execute_query(f"""SELECT MAX({id}) + 1 FROM [ODS_PRODUCTION].[dbo].[{table_name}]""")

@@ -1,4 +1,5 @@
 import datetime
+from datetime import datetime
 import ast
 import random
 
@@ -40,3 +41,7 @@ def generate_random_date(year):
     end_date = datetime.date(year, 12, 31)
     random_date = start_date + datetime.timedelta(days=random.randint(0, (end_date - start_date).days))
     return random_date
+
+def get_current_datetime():
+    """Return the current date and time as a string in 'YYYY-MM-DD HH:MM:SS' format."""
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")

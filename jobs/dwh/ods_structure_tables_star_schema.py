@@ -20,7 +20,7 @@ class DataWarehouseManager:
         self.username = username
         self.password = password
 
-        log_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'logs', 'dwh_structure_tables_star_schema.log'))
+        log_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'logs', 'ods_structure_tables_star_schema.log'))
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
@@ -39,9 +39,9 @@ class DataWarehouseManager:
                 f'UID={self.username};'
                 f'PWD={self.password};'
             )
-            logging.info("Connection to the data warehouse established successfully.")
+            logging.info("Connection to the ODS (Operational Data Store) established successfully.")
         except Exception as e:
-            logging.error(f"An error occurred while connecting to the data warehouse: {e}")
+            logging.error(f"An error occurred while connecting to the ODS (Operational Data Store): {e}")
 
     def close_connection(self):
         """
@@ -53,7 +53,7 @@ class DataWarehouseManager:
         """
         if self.connection:
             self.connection.close()
-            logging.info("Connection to the data warehouse closed.")
+            logging.info("Connection to the ODS (Operational Data Store) closed.")
 
     def check_table_exists(self, dim_name):
         """
@@ -76,9 +76,9 @@ class DataWarehouseManager:
 
     def execute_query(self, query, params=None):
         """
-        Executes a given SQL query on the connected data warehouse.
+        Executes a given SQL query on the connected ODS (Operational Data Store).
 
-        Before execution, it checks if the connection to the data warehouse is established.
+        Before execution, it checks if the connection to the ODS (Operational Data Store) is established.
         If the query is a 'CREATE' statement, it checks if the table already exists and
         skips creation if so. For 'SELECT' queries, it fetches and returns the results.
         For other types of queries, it executes the query and commits the changes.
@@ -88,7 +88,7 @@ class DataWarehouseManager:
         :return: The result of 'SELECT' queries, None for others.
         """
         if not self.connection:
-            logging.warning("Connection not established. Please connect to the data warehouse first.")
+            logging.warning("Connection not established. Please connect to the ODS (Operational Data Store) first.")
             return
 
         if query.strip().lower().startswith('create'):
@@ -141,10 +141,10 @@ class DataWarehouseManager:
         :return: A SQL CREATE TABLE statement as a string.
         """
         fields_sql = [f"{field} {data_type}" for field, data_type in fields.items()]
-
-        pk_fields = ", ".join([f"{field} ASC" for field in cluster['pk']])
-        fields_sql.append(f"CONSTRAINT [{cluster['constraint']}] PRIMARY KEY CLUSTERED ({pk_fields})")
-        
+        if cluster and len(cluster) > 0:
+            pk_fields = ", ".join([f"{field} ASC" for field in cluster['pk']])
+            fields_sql.append(f"CONSTRAINT [{cluster['constraint']}] PRIMARY KEY CLUSTERED ({pk_fields})")
+            
         fields_str = ",\n    ".join(fields_sql)
         create_table_sql = f"CREATE TABLE fact_{table_name.lower()} (\n    {fields_str}\n)"
         return create_table_sql
@@ -185,7 +185,7 @@ if __name__ == "__main__":
     db_manager = DataWarehouseManager(server, database, username, password)
     db_manager.connect()
 
-    from dwh_define_star_schemas_dictionaries import dim_queries_ddl, fact_queries_ddl
+    from ods_define_star_schemas_dictionaries import dim_queries_ddl, fact_queries_ddl
     
     for dim_table, dim_fields in dim_queries_ddl.items():
         dim_query = db_manager.prepare_dimension_table_sql(dim_table, dim_fields['fields'], dim_fields['id'])
@@ -197,5 +197,5 @@ if __name__ == "__main__":
         
     db_manager.close_connection()
 else:
-        from .dwh_define_star_schemas_dictionaries import dim_queries_ddl, fact_queries_ddl
+        from .ods_define_star_schemas_dictionaries import dim_queries_ddl, fact_queries_ddl
 

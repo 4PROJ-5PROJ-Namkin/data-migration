@@ -123,12 +123,12 @@
 2023-12-29 19:00:56,898 - root - INFO - Successfully transformed DataFrame for dim_time table.
 2023-12-29 19:00:57,097 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
 2023-12-29 19:04:09,655 - root - INFO - Successfully transformed DataFrame for fact_supply_chain table.
-2023-12-29 19:04:15,235 - root - INFO - Data inserted into the DWH dim_material table successfully.
-2023-12-29 19:04:22,021 - root - INFO - Data inserted into the DWH dim_material_prices table successfully.
-2023-12-29 19:04:29,432 - root - INFO - Data inserted into the DWH dim_part_information table successfully.
-2023-12-29 19:04:32,507 - root - INFO - Data inserted into the DWH dim_machine table successfully.
-2023-12-29 19:04:52,789 - root - INFO - Data inserted into the DWH dim_client table successfully.
-2023-12-29 19:27:21,897 - root - INFO - Data inserted into the DWH dim_unit table successfully.
-2023-12-29 19:27:45,262 - root - INFO - Data inserted into the DWH dim_time table successfully.
-2023-12-29 19:30:10,673 - root - INFO - Data inserted into the DWH fact_sales table successfully.
-2023-12-29 19:59:11,322 - root - INFO - Data inserted into the DWH fact_supply_chain table successfully.
+2023-12-29 19:04:15,235 - root - INFO - Data inserted into the ODS dim_material table successfully.
+2023-12-29 19:04:22,021 - root - INFO - Data inserted into the ODS dim_material_prices table successfully.
+2023-12-29 19:04:29,432 - root - INFO - Data inserted into the ODS dim_part_information table successfully.
+2023-12-29 19:04:32,507 - root - INFO - Data inserted into the ODS dim_machine table successfully.
+2023-12-29 19:04:52,789 - root - INFO - Data inserted into the ODS dim_client table successfully.
+2023-12-29 19:27:21,897 - root - INFO - Data inserted into the ODS dim_unit table successfully.
+2023-12-29 19:27:45,262 - root - INFO - Data inserted into the ODS dim_time table successfully.
+2023-12-29 19:30:10,673 - root - INFO - Data inserted into the ODS fact_sales table successfully.
+2023-12-29 19:59:11,322 - root - INFO - Data inserted into the ODS fact_supply_chain table successfully.
