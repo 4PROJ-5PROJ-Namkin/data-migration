@@ -3,3 +3,4 @@ jobs/ods/test_1.py
 jobs/ods/dwh_bulk_massive_insertions_query.py
 logs/dwh_bulk_insert.log
 data/machines_parquet/*
+data-migration/jobs/ods/test.py
