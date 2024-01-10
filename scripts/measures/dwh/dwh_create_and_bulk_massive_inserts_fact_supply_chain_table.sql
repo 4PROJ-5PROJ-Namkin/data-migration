@@ -38,3 +38,17 @@ INNER JOIN
 ON main.timeId = GarbageCount.timeId
 ORDER BY MachineProduction.machineId;
 
+ALTER TABLE [DWH_PRODUCTION].[dbo].[fact_supply_chain]
+ALTER COLUMN timeId INT NOT NULL;
+
+ALTER TABLE [DWH_PRODUCTION].[dbo].[fact_supply_chain]
+ALTER COLUMN machineId INT NOT NULL;
+
+ALTER TABLE [DWH_PRODUCTION].[dbo].[fact_supply_chain]
+ALTER COLUMN partId INT NOT NULL;
+
+ALTER TABLE [DWH_PRODUCTION].[dbo].[fact_supply_chain]
+ALTER COLUMN materialId INT NOT NULL;
+
+ALTER TABLE [DWH_PRODUCTION].[dbo].[fact_supply_chain]
+ADD CONSTRAINT PK_FACT_SUPPLY_CHAIN PRIMARY KEY CLUSTERED (timeId, machineId, partId, materialId);
