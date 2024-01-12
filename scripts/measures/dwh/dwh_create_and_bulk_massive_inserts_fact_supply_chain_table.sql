@@ -1,10 +1,10 @@
 SELECT DISTINCT
-	MachineProduction.machineId,
+    MachineProduction.machineId,
 	PartProduction.partId,
     main.materialId,
 	MachineProduction.timeId,
 	main.materialPrice,
-    main.materialDate,
+    main.materialPriceDate,
     main.partDefaultPrice,
 	MachineProduction.CountProductionMachine,
     PartProduction.CountProductionPart,

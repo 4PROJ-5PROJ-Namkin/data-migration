@@ -5,7 +5,7 @@ import sys
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from dotenv import load_dotenv
 from kafka import KafkaConsumer
-from ods_structure_tables_star_schema import DataWarehouseManager
+from ods.ods_structure_tables_star_schema import DataWarehouseManager
 from kafka_process_data_schema_topics_messages import execute_ruling_topic_processor
 
 class KafkaConsumerClient:
@@ -72,7 +72,7 @@ class KafkaConsumerClient:
 if __name__ == "__main__":
     load_dotenv('../../.env')
     kafka_servers = [f"{os.getenv('KAFKA_HOSTNAME')}:{os.getenv('KAFKA_PORT')}"]
-    topic_names = ['material', 'material_prices', 'part_information', 'machines', 'supply_chain', 'sales']
+    topic_names = ['material', 'material_prices', 'part_information', 'machine', 'supply_chain', 'sales']
     group_id = 'g2'
 
     server = os.getenv('DB_HOST')

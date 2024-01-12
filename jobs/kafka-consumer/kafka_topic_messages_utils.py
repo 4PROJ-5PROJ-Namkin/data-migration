@@ -22,3 +22,12 @@ def reduce_list_records_structure(records):
 
 def get_max_id_incremented(ods_manager, id, table_name):
     return ods_manager.execute_query(f"""SELECT MAX({id}) + 1 FROM [ODS_PRODUCTION].[dbo].[{table_name}]""")
+
+def get_dim_ods_table_id(ods_manager, id, id_param, table_name):
+    query = f"""SELECT {id} FROM [ODS_PRODUCTION].[dbo].[{table_name}] WHERE trsc{id[0].upper()}{id[1:]} = ?"""
+    dim_table_record_fetched = ods_manager.execute_query(query, id_param)
+    return dim_table_record_fetched if len(dim_table_record_fetched) > 0 else get_max_id_incremented(ods_manager, id, table_name)
+
+def delete_dim_ods_table_records(ods_manager, id, id_param, table_name):
+    query = f"""DELETE FROM [ODS_PRODUCTION].[dbo].[{table_name}] WHERE trsc{id[0].upper()}{id[1:]} = ?"""
+    return ods_manager.execute_query(query, id_param)

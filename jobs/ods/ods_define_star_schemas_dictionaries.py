@@ -1,4 +1,6 @@
 import os
+from dotenv import load_dotenv
+load_dotenv('../../.env')
 
 dim_queries_ddl = {
     'part_information': {
@@ -8,7 +10,7 @@ dim_queries_ddl = {
             'timeToProduce': 'FLOAT',
             **({'lastUpdate': 'datetime2(7)'} if 'ODS' in os.getenv('DB_NAME').upper() else {}),
         },
-        'id': 'partId'
+        'id': 'partId' if 'DWH' in os.getenv('DB_NAME').upper() else {}
     },
     'material': {
         'fields': {
@@ -17,7 +19,7 @@ dim_queries_ddl = {
             'name': 'VARCHAR(255)',
             **({'lastUpdate': 'datetime2(7)'} if 'ODS' in os.getenv('DB_NAME').upper() else {}),
         },
-        'id': 'materialId'
+        'id': 'materialId' if 'DWH' in os.getenv('DB_NAME').upper() else {}
     },        
     'contract': {
         'fields': {
@@ -26,7 +28,7 @@ dim_queries_ddl = {
             'clientName': 'VARCHAR(255)',
             **({'lastUpdate': 'datetime2(7)'} if 'ODS' in os.getenv('DB_NAME').upper() else {}),
         },
-        'id': 'contractId'
+        'id': 'contractId' if 'DWH' in os.getenv('DB_NAME').upper() else {}
     },
     'machine': {
         'fields': {
@@ -34,7 +36,7 @@ dim_queries_ddl = {
             'machineId': 'INT',
             **({'lastUpdate': 'datetime2(7)'} if 'ODS' in os.getenv('DB_NAME').upper() else {}),
         },
-        'id': 'machineId'
+        'id': 'machineId' if 'DWH' in os.getenv('DB_NAME').upper() else {}
     },
     'time': {
         'fields': {
@@ -46,7 +48,7 @@ dim_queries_ddl = {
             'semester': 'TINYINT',
             'quarter': 'TINYINT',
         },
-        'id': 'timeId'
+        'id': 'timeId' if 'DWH' in os.getenv('DB_NAME').upper() else {}
     }            
 }
 
@@ -62,7 +64,7 @@ fact_queries_ddl = {
             'timeOfProduction': 'DATE',
             'materialPrice': 'FLOAT',
             'timeId': 'INT',
-            'materialDate': 'DATE',
+            'materialPriceDate': 'DATE',
             'partDefaultPrice': 'FLOAT',
             'isDamaged': 'BIT',
             **({'lastUpdate': 'datetime2(7)'} if 'ODS' in os.getenv('DB_NAME').upper() else {}),

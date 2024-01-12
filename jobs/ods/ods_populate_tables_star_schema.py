@@ -152,7 +152,7 @@ def populate_fact_supply_chain_table(fact_supply_chain_df, part_df, material_pri
             F.col('fact.timeOfProduction'),
             F.col('material_price.price').alias('materialPrice'),
             F.col('fact.timeId'),
-            F.col('material_price.date').alias('materialDate'),
+            F.col('material_price.date').alias('materialPriceDate'),
             F.col('part_info.defaultPrice').alias('partDefaultPrice'),
             F.col('fact.var5').alias('isDamaged'),
             col('fact.lastUpdate')

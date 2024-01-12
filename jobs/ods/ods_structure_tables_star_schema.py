@@ -125,7 +125,8 @@ class DataWarehouseManager:
         :return: A SQL CREATE TABLE statement as a string.
         """
         fields_sql = [f"{field} {data_type}" for field, data_type in fields.items()]
-        fields_sql.append(f"PRIMARY KEY ({primary_key})")
+        if primary_key and len(primary_key) > 0:
+            fields_sql.append(f"PRIMARY KEY ({primary_key})")
         fields_str = ",\n    ".join(fields_sql)
         dim_table = f"CREATE TABLE dim_{table_name.lower()} (\n    {fields_str}\n)"
         return dim_table
