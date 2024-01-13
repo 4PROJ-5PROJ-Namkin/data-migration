@@ -2,7 +2,7 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 import logging
-from kafka_topic_messages_utils import append_kafka_message_to_tuples, filter_kafka_message_fields_to_push, reduce_list_records_structure, get_max_id_incremented, get_dim_ods_table_id, delete_dim_ods_table_records
+from kafka_topic_messages_utils import append_kafka_message_to_tuples, filter_kafka_message_fields_to_push, get_max_id_incremented, get_ods_table_id, delete_ods_table_records
 
 log_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'logs', 'kafka_process_data_schema_topics_messages.log'))
 logging.basicConfig(
@@ -22,42 +22,45 @@ def process_supply_chain_topic_messages(ods_manager, message):
     It performs a series of queries and inserts into the ODS (Operational Data Store).  
     """
     try:
-        part_id_rows = """SELECT partId FROM [ODS_PRODUCTION].[dbo].[fact_sales] WHERE trscContractId = ?"""
-        
-        remaining_fields_rows = """
-                            SELECT 
-                                machineId, 
-                                partId,
+        supply_chain_query = """
+                            SELECT DISTINCT
                                 materialId,
-                                timeId,
+                                materialPrice,
                                 materialPriceDate,
-                                partDefaultPrice, 
-                                materialPrice
+                                partDefaultPrice 
                             FROM 
                                 [ODS_PRODUCTION].[dbo].fact_supply_chain
                             WHERE 
-                                fact_supply_chain.partId = ?
+                                [fact_supply_chain].[partId] = ?
                             AND
-                                YEAR(fact_supply_chain.materialPriceDate) = YEAR(?)
-                """
-        
+                                YEAR([fact_supply_chain].[materialPriceDate]) = YEAR(?)
+                            """
+        material_operational_id = f"""SELECT trscMaterialId FROM [ODS_PRODUCTION].[dbo].[dim_material] WHERE materialId = ?"""
+
         logging.info('Starting to ingest Kafka part information messages in the dedicated ODS table.')
 
-        part_id_fetched = ods_manager.execute_query(part_id_rows, (message['order'], message['timeOfProduction']))
-        if part_id_fetched:
+        materials_fetched = ods_manager.execute_query(supply_chain_query, (message['partId'], message['timeOfProduction']))
+        if materials_fetched:
+            tuple_materials = [tuple(material) for material in materials_fetched]
+            for idx, material in enumerate(materials_fetched):
+                trsc_material_id = ods_manager.execute_query(material_operational_id, (material[0],))[0][0]
+                operational_material_id = trsc_material_id if trsc_material_id is not None else get_max_id_incremented(ods_manager, 'trscMaterialId', 'dim_material')[0][0] + idx
+                tuple_materials[idx] += (operational_material_id,)
+            
+            message['machineIdODS'] = get_ods_table_id(ods_manager, 'machineId', message['machineId'], 'fact_supply_chain')[0][0]
+            message['partIdODS'] = get_ods_table_id(ods_manager, 'partId', message['partId'], 'fact_supply_chain')[0][0]
+            message['timeId'] = int(message['timeOfProduction'].split('T')[0].replace('-', ''))
             message['isDamaged'] = message['var5']
 
-            supply_chain_result = [ods_manager.execute_query(remaining_fields_rows, (part_id[0],)) for part_id in part_id_fetched]
-            message_to_append = filter_kafka_message_fields_to_push(message, ['var5'])
-            records = append_kafka_message_to_tuples(message_to_append, supply_chain_result)
+            message_to_append = filter_kafka_message_fields_to_push(message, ['machineIdODS', 'partIdODS', 'materialIdODS', 'timeId', 'machineId', 'partId', 'timeOfProduction', 'isDamaged', 'lastUpdate'])
+            records = append_kafka_message_to_tuples(message_to_append, tuple_materials)
 
             table_name = 'fact_supply_chain'
-            fields = ['machineId', 'partId', 'materialId', 'timeId', 'materialPriceDate', 'partDefaultPrice', 'materialPrice', 'isDamaged']
-            records = reduce_list_records_structure(records)
+            fields = ['materialId', 'materialPrice', 'materialPriceDate', 'partDefaultPrice', 'trscMaterialId', 'machineId', 'partId', 'timeId', 'trscMachineId', 'trscPartId', 'timeOfProduction', 'isDamaged', 'lastUpdate']
 
             ods_manager.generate_and_execute_massive_insert(table_name, fields, records)
         else:
-            logging.error(f"No additional data fetched for the supply chain message. Check if {message['order']} is a referenced order number.")
+            logging.error(f"No additional data fetched for the supply chain message. Check if {message['partId']} is a referenced part number.")
         
     except Exception as e:
         logging.error(f'An unexpected error occurred while processing the message from the supply_chain topic: {e}')
@@ -72,12 +75,12 @@ def process_part_topic_messages(ods_manager, message):
 
         if message['isDeleted']:
             logging.info(f'Successfully deleted records for table {table_name} in the dedicated ODS table.')
-            return delete_dim_ods_table_records(ods_manager, 'partId', message['id'], table_name)
+            return delete_ods_table_records(ods_manager, 'partId', message['id'], table_name)
 
         logging.info('Starting to ingest Kafka part_information messages in the dedicated ODS table.')
 
         fields = ["trscPartId", "partId", "timeToProduce", "lastUpdate"]
-        part_id = get_dim_ods_table_id(ods_manager, 'partId', message['id'], table_name)[0][0]
+        part_id = get_ods_table_id(ods_manager, 'partId', message['id'], table_name)[0][0]
         records = [
             (message['id'], part_id, float(message['timeToProduce']), message['lastUpdate']),
         ]
@@ -95,12 +98,12 @@ def process_machine_topic_messages(ods_manager, message):
 
         if message['isDeleted']:
             logging.info(f'Successfully deleted records for table {table_name} in the dedicated ODS table.')
-            return delete_dim_ods_table_records(ods_manager, 'machineId', message['id'], table_name)
+            return delete_ods_table_records(ods_manager, 'machineId', message['id'], table_name)
         
         logging.info('Starting to ingest Kafka machine messages in the dedicated ODS table.')
 
         fields = ['trscMachineId', 'machineId', 'lastUpdate']
-        machine_id = get_dim_ods_table_id(ods_manager, 'machineId', message['id'], table_name)[0][0]
+        machine_id = get_ods_table_id(ods_manager, 'machineId', message['id'], table_name)[0][0]
         records = [
             (message['id'], machine_id, message['lastUpdate'],),
         ]
@@ -118,12 +121,12 @@ def process_material_topic_messages(ods_manager, message):
 
         if message['isDeleted']:
             logging.info(f'Successfully deleted records for table {table_name} in the dedicated ODS table.')
-            return delete_dim_ods_table_records(ods_manager, 'materialId', message['id'], table_name)
+            return delete_ods_table_records(ods_manager, 'materialId', message['id'], table_name)
 
         logging.info('Starting to ingest Kafka material messages in the dedicated ODS table.')
 
         fields = ['trscMaterialId', 'materialId', 'name', 'lastUpdate']
-        material_id = get_dim_ods_table_id(ods_manager, 'materialId', message['id'], table_name)[0][0]
+        material_id = get_ods_table_id(ods_manager, 'materialId', message['id'], table_name)[0][0]
         records = [
             (message['id'], material_id, message['name'], message['lastUpdate']),
         ]
@@ -142,12 +145,12 @@ def process_contract_topic_messages(ods_manager, message):
 
         if message['isDeleted']:
             logging.info(f'Successfully deleted records for table {table_name} in the dedicated ODS table.')
-            return delete_dim_ods_table_records(ods_manager, 'contractId', message['id'], table_name)
+            return delete_ods_table_records(ods_manager, 'contractId', message['id'], table_name)
 
         logging.info('Starting to ingest Kafka contract messages in the dedicated ODS table.')
 
         fields = ["trscContractId", "contractId", "clientName", "lastUpdate"]
-        contract_id = get_dim_ods_table_id(ods_manager, 'contractId', message['id'], table_name)[0][0]
+        contract_id = get_ods_table_id(ods_manager, 'contractId', message['id'], table_name)[0][0]
         records = [
             (message['id'], contract_id, message['clientName'], message['lastUpdate']),
         ]
@@ -170,7 +173,6 @@ def execute_ruling_topic_processor(ods_manager, topic_name, message):
         'supply_chain': process_supply_chain_topic_messages,
         'machine': process_machine_topic_messages,
         'material': process_material_topic_messages,
-        'material_prices': process_supply_chain_topic_messages,
         'contract': process_contract_topic_messages
     }
 

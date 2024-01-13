@@ -1294,3 +1294,184 @@ ConnectionResetError: [WinError 10054] Une connexion existante a dï¿½ ï¿½tre fer
 2024-01-11 21:01:51,171 - INFO - Leaving consumer group (g2).
 2024-01-11 21:01:51,176 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
 2024-01-11 21:01:51,176 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-13 00:55:13,820 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 00:55:13,821 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 00:55:13,834 - ERROR - An error occurred while executing the query: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers le mot clé 'FROM'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de préparer les instructions. (8180)")
+2024-01-13 00:55:13,835 - ERROR - No additional data fetched for the supply chain message. Check if 15 is a referenced order number.
+2024-01-13 00:56:18,264 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 00:56:18,265 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 00:57:59,013 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 00:57:59,014 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:04:28,230 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:04:28,231 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:08:53,333 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:08:53,333 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:09:29,923 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:09:29,924 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:10:15,457 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:10:15,458 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:10:16,421 - ERROR - An unexpected error occurred while processing the message from the supply_chain topic: 'NoneType' object is not iterable
+2024-01-13 01:11:44,602 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:11:44,603 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:12:22,547 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:12:22,548 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:23:31,346 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:23:31,347 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:27:47,190 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:27:47,191 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:27:58,868 - ERROR - An unexpected error occurred while processing the message from the supply_chain topic: list indices must be integers or slices, not str
+2024-01-13 01:28:41,971 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:28:41,972 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:28:51,770 - ERROR - An unexpected error occurred while processing the message from the supply_chain topic: list indices must be integers or slices, not str
+2024-01-13 01:29:16,456 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:29:16,457 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:36:48,924 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:36:48,925 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:42:42,844 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:42:42,845 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:49:40,188 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:49:40,188 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:51:06,215 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:51:06,216 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:51:07,169 - ERROR - An unexpected error occurred while processing the message from the supply_chain topic: unsupported operand type(s) for +: 'NoneType' and 'int'
+2024-01-13 01:51:25,994 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:51:25,995 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:53:34,674 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:53:34,676 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:55:17,768 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:55:17,769 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:55:31,718 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:55:31,718 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 01:58:09,971 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 01:58:09,971 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:02:50,524 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:02:50,525 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:02:51,477 - ERROR - An unexpected error occurred while processing the message from the supply_chain topic: unsupported operand type(s) for +=: 'pyodbc.Row' and 'tuple'
+2024-01-13 02:04:03,954 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:04:03,955 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:04:48,822 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:04:48,824 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:07:43,855 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:07:43,856 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:08:18,930 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:08:18,931 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:13:01,897 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:13:01,898 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:13:14,107 - ERROR - Error executing massive insert query: ('The SQL contains 12 parameter markers, but 11 parameters were supplied', 'HY000')
+2024-01-13 02:13:38,722 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:13:38,723 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:14:16,128 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:14:16,129 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:14:27,744 - ERROR - Error executing massive insert query: ('The SQL contains 13 parameter markers, but 12 parameters were supplied', 'HY000')
+2024-01-13 02:16:24,703 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:16:24,704 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:21:16,071 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:21:16,071 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:24:46,263 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:24:46,263 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:24:57,020 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:24:57,060 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-13 02:24:57,061 - INFO - Probing node bootstrap-0 broker version
+2024-01-13 02:24:57,062 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-13 02:24:57,300 - INFO - Broker version identified as 2.5.0
+2024-01-13 02:24:57,301 - INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2024-01-13 02:24:57,302 - INFO - Updating subscribed topics to: ['material', 'material_prices', 'part_information', 'machine', 'supply_chain', 'sales']
+2024-01-13 02:24:57,303 - INFO - Subscribed to topics: ['material', 'material_prices', 'part_information', 'machine', 'supply_chain', 'sales']
+2024-01-13 02:24:57,303 - INFO - Starting to consume messages from ['material', 'material_prices', 'part_information', 'machine', 'supply_chain', 'sales']
+2024-01-13 02:24:57,702 - WARNING - Topic machine is not available during auto-create initialization
+2024-01-13 02:24:57,702 - WARNING - Topic sales is not available during auto-create initialization
+2024-01-13 02:24:57,702 - WARNING - Topic material is not available during auto-create initialization
+2024-01-13 02:24:57,702 - WARNING - Topic material_prices is not available during auto-create initialization
+2024-01-13 02:24:57,702 - WARNING - Topic supply_chain is not available during auto-create initialization
+2024-01-13 02:24:57,702 - WARNING - Topic part_information is not available during auto-create initialization
+2024-01-13 02:24:57,825 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-13 02:24:57,826 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-13 02:24:57,826 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-13 02:24:58,688 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-13 02:24:58,688 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-13 02:24:58,689 - INFO - Starting new heartbeat thread
+2024-01-13 02:24:58,689 - INFO - Revoking previously assigned partitions set() for group g2
+2024-01-13 02:24:58,690 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-13 02:24:58,690 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-13 02:24:58,805 - INFO - (Re-)joining group g2
+2024-01-13 02:24:58,898 - INFO - Elected group leader -- performing partition assignments using range
+2024-01-13 02:24:58,898 - WARNING - No partition metadata for topic supply_chain
+2024-01-13 02:24:58,899 - WARNING - No partition metadata for topic machine
+2024-01-13 02:24:58,899 - WARNING - No partition metadata for topic part_information
+2024-01-13 02:24:58,899 - WARNING - No partition metadata for topic material
+2024-01-13 02:24:58,899 - WARNING - No partition metadata for topic sales
+2024-01-13 02:24:58,900 - WARNING - No partition metadata for topic material_prices
+2024-01-13 02:24:58,989 - INFO - Successfully joined group g2 with generation 1
+2024-01-13 02:24:58,989 - INFO - Updated partition assignment: []
+2024-01-13 02:24:58,990 - INFO - Setting newly assigned partitions set() for group g2
+2024-01-13 02:24:58,990 - INFO - Revoking previously assigned partitions set() for group g2
+2024-01-13 02:24:58,990 - INFO - (Re-)joining group g2
+2024-01-13 02:24:58,998 - INFO - Elected group leader -- performing partition assignments using range
+2024-01-13 02:24:59,005 - INFO - Successfully joined group g2 with generation 2
+2024-01-13 02:24:59,005 - INFO - Updated partition assignment: [TopicPartition(topic='machine', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='sales', partition=0), TopicPartition(topic='supply_chain', partition=0)]
+2024-01-13 02:24:59,006 - INFO - Setting newly assigned partitions {TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='sales', partition=0), TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='machine', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='material', partition=0)} for group g2
+2024-01-13 02:25:01,029 - DEBUG - Message received from supply_chain and from partition 0
+2024-01-13 02:25:01,029 - INFO - Message received from supply_chain and from partition 0 at offset 0 : {'machineId': 1, 'timeOfProduction': '2023-12-10T00:00:00.000Z', 'partId': 10, 'order': 5, 'var1': 0, 'var2': 'string', 'var3': 'string', 'var4': 0, 'var5': False, 'machine': {'id': 1}, 'part': {'id': 10, 'defaultPrice': '14999.99', 'timeToProduce': 360}, 'id': '8db42484-e6fe-486a-a888-e699a1d644df', 'isDeleted': False, 'lastUpdate': '2024-01-13 01:25:00.0000000'}
+2024-01-13 02:25:12,158 - INFO - Closing the consumer for topic: ['material', 'material_prices', 'part_information', 'machine', 'supply_chain', 'sales']
+2024-01-13 02:25:12,163 - INFO - Stopping heartbeat thread
+2024-01-13 02:25:12,163 - INFO - Leaving consumer group (g2).
+2024-01-13 02:25:12,186 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-13 02:25:12,187 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-13 02:25:50,758 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:25:50,759 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:26:59,840 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:26:59,841 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:27:10,357 - ERROR - An unexpected error occurred while processing the message from the supply_chain topic: 'list' object has no attribute 'replace'
+2024-01-13 02:27:10,364 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:27:10,374 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-13 02:27:10,375 - INFO - Probing node bootstrap-0 broker version
+2024-01-13 02:27:10,376 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-13 02:27:10,491 - INFO - Broker version identified as 2.5.0
+2024-01-13 02:27:10,491 - INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2024-01-13 02:27:10,493 - INFO - Updating subscribed topics to: ['material', 'material_prices', 'part_information', 'machine', 'supply_chain', 'sales']
+2024-01-13 02:27:10,494 - INFO - Subscribed to topics: ['material', 'material_prices', 'part_information', 'machine', 'supply_chain', 'sales']
+2024-01-13 02:27:10,494 - INFO - Starting to consume messages from ['material', 'material_prices', 'part_information', 'machine', 'supply_chain', 'sales']
+2024-01-13 02:27:10,498 - INFO - Group coordinator for g2 is BrokerMetadata(nodeId='coordinator-1001', host='kafka', port=9092, rack=None)
+2024-01-13 02:27:10,498 - INFO - Discovered coordinator coordinator-1001 for group g2
+2024-01-13 02:27:10,499 - INFO - Starting new heartbeat thread
+2024-01-13 02:27:10,500 - INFO - Revoking previously assigned partitions set() for group g2
+2024-01-13 02:27:10,501 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-13 02:27:10,501 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-13 02:27:10,502 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-13 02:27:10,609 - INFO - (Re-)joining group g2
+2024-01-13 02:27:10,610 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-13 02:27:10,610 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-13 02:27:10,616 - INFO - Elected group leader -- performing partition assignments using range
+2024-01-13 02:27:10,617 - WARNING - No partition metadata for topic supply_chain
+2024-01-13 02:27:10,618 - WARNING - No partition metadata for topic material_prices
+2024-01-13 02:27:10,618 - WARNING - No partition metadata for topic material
+2024-01-13 02:27:10,618 - WARNING - No partition metadata for topic machine
+2024-01-13 02:27:10,618 - WARNING - No partition metadata for topic part_information
+2024-01-13 02:27:10,619 - WARNING - No partition metadata for topic sales
+2024-01-13 02:27:10,624 - INFO - Successfully joined group g2 with generation 4
+2024-01-13 02:27:10,624 - INFO - Updated partition assignment: []
+2024-01-13 02:27:10,624 - INFO - Setting newly assigned partitions set() for group g2
+2024-01-13 02:27:10,637 - INFO - Revoking previously assigned partitions set() for group g2
+2024-01-13 02:27:10,638 - INFO - (Re-)joining group g2
+2024-01-13 02:27:10,642 - INFO - Elected group leader -- performing partition assignments using range
+2024-01-13 02:27:10,648 - INFO - Successfully joined group g2 with generation 5
+2024-01-13 02:27:10,649 - INFO - Updated partition assignment: [TopicPartition(topic='machine', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='sales', partition=0), TopicPartition(topic='supply_chain', partition=0)]
+2024-01-13 02:27:10,649 - INFO - Setting newly assigned partitions {TopicPartition(topic='sales', partition=0), TopicPartition(topic='part_information', partition=0), TopicPartition(topic='supply_chain', partition=0), TopicPartition(topic='material', partition=0), TopicPartition(topic='material_prices', partition=0), TopicPartition(topic='machine', partition=0)} for group g2
+2024-01-13 02:27:10,654 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-13 02:27:10,655 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2024-01-13 02:27:10,656 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-13 02:27:18,743 - INFO - Closing the consumer for topic: ['material', 'material_prices', 'part_information', 'machine', 'supply_chain', 'sales']
+2024-01-13 02:27:18,749 - INFO - Stopping heartbeat thread
+2024-01-13 02:27:18,749 - INFO - Leaving consumer group (g2).
+2024-01-13 02:27:18,753 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-13 02:27:18,754 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-13 02:27:21,004 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:27:21,005 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:27:33,914 - ERROR - An unexpected error occurred while processing the message from the supply_chain topic: 'list' object has no attribute 'replace'
+2024-01-13 02:28:36,388 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:28:36,389 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:28:45,245 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:28:45,246 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:29:17,387 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 02:29:17,388 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 02:29:28,726 - INFO - Successfully executed massive insert for table fact_supply_chain with 2 records.
