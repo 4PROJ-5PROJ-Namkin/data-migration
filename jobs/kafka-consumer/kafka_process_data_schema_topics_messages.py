@@ -49,6 +49,7 @@ def process_supply_chain_topic_messages(ods_manager, message):
             
             message['machineIdODS'] = get_ods_table_id(ods_manager, 'machineId', message['machineId'], 'fact_supply_chain')[0][0]
             message['partIdODS'] = get_ods_table_id(ods_manager, 'partId', message['partId'], 'fact_supply_chain')[0][0]
+            
             message['timeId'] = int(message['timeOfProduction'].split('T')[0].replace('-', ''))
             message['isDamaged'] = message['var5']
 
