@@ -22,6 +22,17 @@ def process_supply_chain_topic_messages(ods_manager, message):
     It performs a series of queries and inserts into the ODS (Operational Data Store).  
     """
     try:
+        table_name = 'fact_supply_chain'
+        if message['isDeleted']:
+            logging.info(f'Attempting to delete records for table {table_name} in the dedicated ODS table.')
+            query_to_delete = f"""
+                                DELETE FROM [ODS_PRODUCTION].[dbo].[{table_name}] 
+                                WHERE [{table_name}].[trscMachineId] = ?
+                                AND [{table_name}].[trscPartId] = ?
+                                AND [{table_name}].[timeOfProduction] = ?
+                                """
+            return ods_manager.execute_query(query_to_delete, (message['machineId'], message['partId'], message['timeOfProduction'],))
+
         supply_chain_query = """
                             SELECT DISTINCT
                                 materialId,
@@ -47,16 +58,15 @@ def process_supply_chain_topic_messages(ods_manager, message):
                 operational_material_id = trsc_material_id if trsc_material_id is not None else get_max_id_incremented(ods_manager, 'trscMaterialId', 'dim_material')[0][0] + idx
                 tuple_materials[idx] += (operational_material_id,)
             
-            message['machineIdODS'] = get_ods_table_id(ods_manager, 'machineId', message['machineId'], 'fact_supply_chain')[0][0]
-            message['partIdODS'] = get_ods_table_id(ods_manager, 'partId', message['partId'], 'fact_supply_chain')[0][0]
+            message['machineIdODS'] = get_ods_table_id(ods_manager, 'machineId', message['machineId'], 'dim_machine')[0][0]
+            message['partIdODS'] = get_ods_table_id(ods_manager, 'partId', message['partId'], 'dim_part_information')[0][0]
             
             message['timeId'] = int(message['timeOfProduction'].split('T')[0].replace('-', ''))
             message['isDamaged'] = message['var5']
 
             message_to_append = filter_kafka_message_fields_to_push(message, ['machineIdODS', 'partIdODS', 'materialIdODS', 'timeId', 'machineId', 'partId', 'timeOfProduction', 'isDamaged', 'lastUpdate'])
             records = append_kafka_message_to_tuples(message_to_append, tuple_materials)
-
-            table_name = 'fact_supply_chain'
+            
             fields = ['materialId', 'materialPrice', 'materialPriceDate', 'partDefaultPrice', 'trscMaterialId', 'machineId', 'partId', 'timeId', 'trscMachineId', 'trscPartId', 'timeOfProduction', 'isDamaged', 'lastUpdate']
 
             ods_manager.generate_and_execute_massive_insert(table_name, fields, records)
@@ -75,7 +85,7 @@ def process_part_topic_messages(ods_manager, message):
         table_name = "dim_part_information"
 
         if message['isDeleted']:
-            logging.info(f'Successfully deleted records for table {table_name} in the dedicated ODS table.')
+            logging.info(f'Attempting to delete records for table {table_name} in the dedicated ODS table.')
             return delete_ods_table_records(ods_manager, 'partId', message['id'], table_name)
 
         logging.info('Starting to ingest Kafka part_information messages in the dedicated ODS table.')
@@ -98,7 +108,7 @@ def process_machine_topic_messages(ods_manager, message):
         table_name = 'dim_machine'
 
         if message['isDeleted']:
-            logging.info(f'Successfully deleted records for table {table_name} in the dedicated ODS table.')
+            logging.info(f'Attempting to delete records for table {table_name} in the dedicated ODS table.')
             return delete_ods_table_records(ods_manager, 'machineId', message['id'], table_name)
         
         logging.info('Starting to ingest Kafka machine messages in the dedicated ODS table.')
@@ -121,7 +131,7 @@ def process_material_topic_messages(ods_manager, message):
         table_name = 'dim_material'
 
         if message['isDeleted']:
-            logging.info(f'Successfully deleted records for table {table_name} in the dedicated ODS table.')
+            logging.info(f'Attempting to delete records for table {table_name} in the dedicated ODS table.')
             return delete_ods_table_records(ods_manager, 'materialId', message['id'], table_name)
 
         logging.info('Starting to ingest Kafka material messages in the dedicated ODS table.')
@@ -145,7 +155,7 @@ def process_contract_topic_messages(ods_manager, message):
         table_name = "dim_contract"
 
         if message['isDeleted']:
-            logging.info(f'Successfully deleted records for table {table_name} in the dedicated ODS table.')
+            logging.info(f'Attempting to delete records for table {table_name} in the dedicated ODS table.')
             return delete_ods_table_records(ods_manager, 'contractId', message['id'], table_name)
 
         logging.info('Starting to ingest Kafka contract messages in the dedicated ODS table.')
