@@ -186,7 +186,7 @@ def process_contract_topic_messages(ods_manager, message):
                         )
                         for part in message['parts']
                     ]
-        print(fact_records)
+
         ods_manager.generate_and_execute_massive_insert(fact_name, fact_fields, fact_records)
 
         dim_fields = ["trscContractId", "contractId", "clientName", "lastUpdate"]
