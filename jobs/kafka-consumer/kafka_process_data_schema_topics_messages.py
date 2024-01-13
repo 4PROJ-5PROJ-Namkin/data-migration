@@ -33,18 +33,18 @@ def process_supply_chain_topic_messages(ods_manager, message):
                                 """
             return ods_manager.execute_query(query_to_delete, (message['machineId'], message['partId'], message['timeOfProduction'],))
 
-        supply_chain_query = """
+        supply_chain_query = f"""
                             SELECT DISTINCT
                                 materialId,
                                 materialPrice,
                                 materialPriceDate,
                                 partDefaultPrice 
                             FROM 
-                                [ODS_PRODUCTION].[dbo].fact_supply_chain
+                                [ODS_PRODUCTION].[dbo].[{table_name}]
                             WHERE 
-                                [fact_supply_chain].[partId] = ?
+                                [{table_name}].[partId] = ?
                             AND
-                                YEAR([fact_supply_chain].[materialPriceDate]) = YEAR(?)
+                                YEAR([{table_name}].[materialPriceDate]) = YEAR(?)
                             """
         material_operational_id = f"""SELECT trscMaterialId FROM [ODS_PRODUCTION].[dbo].[dim_material] WHERE materialId = ?"""
 
