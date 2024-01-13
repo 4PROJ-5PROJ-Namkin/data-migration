@@ -1,0 +1,478 @@
+2024-01-13 16:22:18,582 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 16:22:18,583 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: nom_du_blob...
+2024-01-13 16:22:18,583 - root - INFO - Uploading file '../../../data/material-data.xlsx' to Azure Blob Storage...
+2024-01-13 16:22:18,603 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/nom_du_blob'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5411'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '8a22246d-b227-11ee-85ed-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 16:22:18,945 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sat, 13 Jan 2024 15:22:18 GMT'
+    'ETag': '"0x8DC144B6E6531FF"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '1f926af7-e01e-007b-2a34-46f04e000000'
+    'x-ms-client-request-id': '8a22246d-b227-11ee-85ed-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Sat, 13 Jan 2024 15:22:17 GMT'
+2024-01-13 16:22:18,947 - root - INFO - File '../../../data/material-data.xlsx' successfully uploaded as 'nom_du_blob' in container 'namkincontainerfiles'.
+2024-01-13 16:30:45,941 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 16:30:45,942 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: material-data.xlsx...
+2024-01-13 16:30:45,942 - root - INFO - Uploading file '../../../data\material-data.xlsx' to Azure Blob Storage...
+2024-01-13 16:30:45,947 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/material-data.xlsx'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5411'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b888d55a-b228-11ee-a070-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 16:30:46,254 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sat, 13 Jan 2024 15:30:46 GMT'
+    'ETag': '"0x8DC144C9CC71B73"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'a69f880e-d01e-00ab-7735-46cd18000000'
+    'x-ms-client-request-id': 'b888d55a-b228-11ee-a070-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Sat, 13 Jan 2024 15:30:45 GMT'
+2024-01-13 16:30:46,255 - root - INFO - File '../../../data\material-data.xlsx' successfully uploaded as 'material-data.xlsx' in container 'namkincontainerfiles'.
+2024-01-13 20:33:51,661 - root - INFO - Entering the Excel files path in the blob storage...
+2024-01-13 20:33:51,663 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 20:33:51,665 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: material-data.xlsx...
+2024-01-13 20:33:51,667 - root - INFO - Uploading file '../../../data\material-data.xlsx' to Azure Blob Storage...
+2024-01-13 20:33:51,725 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/material-data.xlsx'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5411'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'ae55a592-b24a-11ee-8b7e-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:33:52,140 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '4ee8b414-f01e-0083-4457-46acb0000000'
+    'x-ms-client-request-id': 'ae55a592-b24a-11ee-8b7e-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 19:33:50 GMT'
+2024-01-13 20:33:52,158 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:4ee8b414-f01e-0083-4457-46acb0000000
+Time:2024-01-13T19:33:51.8993264Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:4ee8b414-f01e-0083-4457-46acb0000000
+Time:2024-01-13T19:33:51.8993264Z</Message></Error>
+2024-01-13 20:37:53,784 - root - INFO - Entering 'machines' directory...
+2024-01-13 20:37:53,786 - root - INFO - Uploading CSV file from 'machines': machine-1-0.csv...
+2024-01-13 20:37:53,786 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 20:37:53,788 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: machine-1-0.csv...
+2024-01-13 20:37:53,797 - root - INFO - Uploading file '../../../data\machines\machine-1-0.csv' to Azure Blob Storage...
+2024-01-13 20:37:53,842 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-1-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13144344'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '3ea5d726-b24b-11ee-9aeb-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:49:10,013 - root - INFO - Entering directory: machines...
+2024-01-13 20:49:10,016 - root - INFO - Uploading file: machine-1-0.csv...
+2024-01-13 20:49:10,016 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 20:49:10,018 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: machine-1-0.csv...
+2024-01-13 20:49:10,018 - root - INFO - Uploading file '../../../data\machines\machine-1-0.csv' to Azure Blob Storage...
+2024-01-13 20:49:10,045 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-1-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13144344'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'd1b2393c-b24c-11ee-aa87-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:49:46,963 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-1-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13144344'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'e7b3c111-b24c-11ee-ace8-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:50:29,406 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-1-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13144344'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '00ffe58a-b24d-11ee-91b9-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:51:30,073 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-1-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13144344'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '2528d477-b24d-11ee-9c73-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:51:50,302 - root - ERROR - Error occurred during blob upload: ('Connection aborted.', timeout('The write operation timed out'))
+2024-01-13 20:51:50,304 - root - INFO - Uploading file: machine-10-0.csv...
+2024-01-13 20:51:50,304 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 20:51:50,308 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: machine-10-0.csv...
+2024-01-13 20:51:50,309 - root - INFO - Uploading file '../../../data\machines\machine-10-0.csv' to Azure Blob Storage...
+2024-01-13 20:51:50,357 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-10-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13490633'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '31402546-b24d-11ee-b877-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:52:27,588 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-10-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13490633'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '4770f27a-b24d-11ee-bc88-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:53:10,432 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-10-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13490633'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '60fa5f60-b24d-11ee-a1bb-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:54:12,068 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-10-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13490633'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '85b749fc-b24d-11ee-b0aa-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:54:32,302 - root - ERROR - Error occurred during blob upload: ('Connection aborted.', timeout('The write operation timed out'))
+2024-01-13 20:54:32,303 - root - INFO - Uploading file: machine-11-0.csv...
+2024-01-13 20:54:32,303 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 20:54:32,305 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: machine-11-0.csv...
+2024-01-13 20:54:32,307 - root - INFO - Uploading file '../../../data\machines\machine-11-0.csv' to Azure Blob Storage...
+2024-01-13 20:54:32,365 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-11-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13589701'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '91d05837-b24d-11ee-ac8c-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:55:09,432 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-11-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13589701'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'a7e87a4c-b24d-11ee-aa2c-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:55:52,086 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-11-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13589701'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'c154fd29-b24d-11ee-a4dc-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:56:52,134 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-11-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13589701'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'e51f8d68-b24d-11ee-b543-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:57:12,360 - root - ERROR - Error occurred during blob upload: The operation did not complete (write) (_ssl.c:2472)
+2024-01-13 20:57:12,362 - root - INFO - Uploading file: machine-12-0.csv...
+2024-01-13 20:57:12,362 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 20:57:12,363 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: machine-12-0.csv...
+2024-01-13 20:57:12,363 - root - INFO - Uploading file '../../../data\machines\machine-12-0.csv' to Azure Blob Storage...
+2024-01-13 20:57:12,388 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-12-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13587390'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'f1321c75-b24d-11ee-969b-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:57:51,600 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-12-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13587390'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '08916bd0-b24e-11ee-868d-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:58:38,041 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-12-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13587390'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '243fb988-b24e-11ee-857b-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 20:59:43,274 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-12-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13587390'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '4b215d04-b24e-11ee-863e-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 21:00:03,479 - root - ERROR - Error occurred during blob upload: The operation did not complete (write) (_ssl.c:2472)
+2024-01-13 21:00:03,480 - root - INFO - Uploading file: machine-13-0.csv...
+2024-01-13 21:00:03,480 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 21:00:03,483 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: machine-13-0.csv...
+2024-01-13 21:00:03,483 - root - INFO - Uploading file '../../../data\machines\machine-13-0.csv' to Azure Blob Storage...
+2024-01-13 21:00:03,509 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-13-0.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13596841'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '57310e5a-b24e-11ee-a58a-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 21:06:20,453 - root - INFO - Uploading file: material-data.xlsx...
+2024-01-13 21:06:20,453 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 21:06:20,454 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: material-data.xlsx...
+2024-01-13 21:06:20,454 - root - INFO - Uploading file '../../../data\material-data.xlsx' to Azure Blob Storage...
+2024-01-13 21:06:20,459 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/material-data.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5411'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '37df2432-b24f-11ee-93df-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 21:06:20,777 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '679176a8-301e-00ee-5a5b-4618fb000000'
+    'x-ms-client-request-id': '37df2432-b24f-11ee-93df-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 20:06:19 GMT'
+2024-01-13 21:06:20,780 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:679176a8-301e-00ee-5a5b-4618fb000000
+Time:2024-01-13T20:06:20.5387450Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:679176a8-301e-00ee-5a5b-4618fb000000
+Time:2024-01-13T20:06:20.5387450Z</Message></Error>
+2024-01-13 21:06:20,783 - root - INFO - Uploading file: part-reference.xlsx...
+2024-01-13 21:06:20,783 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 21:06:20,784 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: part-reference.xlsx...
+2024-01-13 21:06:20,784 - root - INFO - Uploading file '../../../data\part-reference.xlsx' to Azure Blob Storage...
+2024-01-13 21:06:20,797 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/part-reference.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '8420'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '3812c2c1-b24f-11ee-88f0-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 21:06:21,127 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sat, 13 Jan 2024 20:06:20 GMT'
+    'ETag': '"0x8DC14731C532C60"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'ff430d52-c01e-00ea-3b5b-4695fc000000'
+    'x-ms-client-request-id': '3812c2c1-b24f-11ee-88f0-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Sat, 13 Jan 2024 20:06:20 GMT'
+2024-01-13 21:06:21,130 - root - INFO - File '../../../data\part-reference.xlsx' successfully uploaded as 'part-reference.xlsx' in container 'namkincontainerfiles'.
+2024-01-13 21:06:21,132 - root - INFO - Uploading file: sales.xlsx...
+2024-01-13 21:06:21,133 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 21:06:21,134 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: sales.xlsx...
+2024-01-13 21:06:21,134 - root - INFO - Uploading file '../../../data\sales.xlsx' to Azure Blob Storage...
+2024-01-13 21:06:21,146 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/sales.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '4761'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '3847e18d-b24f-11ee-a380-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 21:06:21,453 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sat, 13 Jan 2024 20:06:21 GMT'
+    'ETag': '"0x8DC14731C8527D9"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f351a99b-b01e-00bd-3d5b-463bcf000000'
+    'x-ms-client-request-id': '3847e18d-b24f-11ee-a380-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Sat, 13 Jan 2024 20:06:20 GMT'
+2024-01-13 21:06:21,457 - root - INFO - File '../../../data\sales.xlsx' successfully uploaded as 'sales.xlsx' in container 'namkincontainerfiles'.
