@@ -152,21 +152,50 @@ def process_contract_topic_messages(ods_manager, message):
     This function is responsible for handling the processing of messages received from the contract topic.
     """
     try:
-        table_name = "dim_contract"
+        fact_name = "fact_sales"
+        dim_name = "dim_contract"
 
         if message['isDeleted']:
-            logging.info(f'Attempting to delete records for table {table_name} in the dedicated ODS table.')
-            return delete_ods_table_records(ods_manager, 'contractId', message['id'], table_name)
+            logging.info(f'Attempting to delete records for table {fact_name} in the dedicated ODS table.')
+            query_to_delete = f"""
+                                DELETE FROM [ODS_PRODUCTION].[dbo].[{fact_name}] 
+                                WHERE [{fact_name}].[trscContractId] = ?
+                                AND [{fact_name}].[trscPartId] = ?
+                                """
+            for part in message['parts']:
+                ods_manager.execute_query(query_to_delete, (message['contract_number'], part,))
+            
+            logging.info(f'Attempting to delete records for table {dim_name} in the dedicated ODS table.')
+            return delete_ods_table_records(ods_manager, 'contractId', message['contract_number'], dim_name)
 
-        logging.info('Starting to ingest Kafka contract messages in the dedicated ODS table.')
+        logging.info('Starting to ingest Kafka contract messages in the dedicated ODS tables.')
 
-        fields = ["trscContractId", "contractId", "clientName", "lastUpdate"]
-        contract_id = get_ods_table_id(ods_manager, 'contractId', message['id'], table_name)[0][0]
-        records = [
-            (message['id'], contract_id, message['clientName'], message['lastUpdate']),
+        total_cash = sum(cash * part for cash, part in zip(message['cash'], message['parts']))
+        contract_id = get_ods_table_id(ods_manager, 'contractId', message['contract_number'], dim_name)[0][0]
+
+        fact_fields = ["trscContractId", "trscPartId", "partId", "contractId", "cash", "date", "lastUpdate"]
+        fact_records = [
+                        (
+                            message['contract_number'],
+                            part,
+                            get_ods_table_id(ods_manager, 'partId', part, 'dim_part_information')[0][0],
+                            contract_id,
+                            total_cash,
+                            message['date'],
+                            message['lastUpdate']
+                        )
+                        for part in message['parts']
+                    ]
+        print(fact_records)
+        ods_manager.generate_and_execute_massive_insert(fact_name, fact_fields, fact_records)
+
+        dim_fields = ["trscContractId", "contractId", "clientName", "lastUpdate"]
+        dim_records = [
+             (message['contract_number'], contract_id, message['client_name'], message['lastUpdate'])
         ]
 
-        return ods_manager.generate_and_execute_massive_insert(table_name, fields, records)
+        return ods_manager.generate_and_execute_massive_insert(dim_name, dim_fields, dim_records)
+
     except Exception as e:
         logging.error(f'An unexpected error occurred while processing the message from the contract topic: {e}')
 
@@ -184,7 +213,7 @@ def execute_ruling_topic_processor(ods_manager, topic_name, message):
         'supply_chain': process_supply_chain_topic_messages,
         'machine': process_machine_topic_messages,
         'material': process_material_topic_messages,
-        'contract': process_contract_topic_messages
+        'sales': process_contract_topic_messages
     }
 
     processor = topic_processors.get(topic_name)

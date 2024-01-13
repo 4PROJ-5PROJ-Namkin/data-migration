@@ -1475,3 +1475,60 @@ ConnectionResetError: [WinError 10054] Une connexion existante a dï¿½ ï¿½tre fer
 2024-01-13 02:29:17,387 - INFO - Connection to the ODS (Operational Data Store) established successfully.
 2024-01-13 02:29:17,388 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
 2024-01-13 02:29:28,726 - INFO - Successfully executed massive insert for table fact_supply_chain with 2 records.
+2024-01-13 03:12:05,100 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 03:12:05,102 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 03:12:06,060 - ERROR - An error occurred while executing the query: ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nom d'objet 'ODS_PRODUCTION.dbo.dim_partId' non valide. (208) (SQLExecDirectW); [42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de préparer les instructions. (8180)")
+2024-01-13 03:12:06,061 - ERROR - An unexpected error occurred while processing the message from the supply_chain topic: object of type 'NoneType' has no len()
+2024-01-13 03:13:11,402 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 03:13:11,403 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 03:13:12,329 - ERROR - An error occurred while executing the query: ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nom d'objet 'ODS_PRODUCTION.dbo.dim_partId' non valide. (208) (SQLExecDirectW); [42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de préparer les instructions. (8180)")
+2024-01-13 03:13:12,329 - ERROR - An unexpected error occurred while processing the message from the supply_chain topic: object of type 'NoneType' has no len()
+2024-01-13 03:14:14,521 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 03:14:14,521 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 03:14:15,427 - ERROR - An error occurred while executing the query: ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nom d'objet 'ODS_PRODUCTION.dbo.dim_part' non valide. (208) (SQLExecDirectW); [42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Impossible de préparer les instructions. (8180)")
+2024-01-13 03:14:15,427 - ERROR - An unexpected error occurred while processing the message from the supply_chain topic: object of type 'NoneType' has no len()
+2024-01-13 03:14:25,390 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 03:14:25,391 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 03:14:26,246 - ERROR - Error executing massive insert query: ('The SQL contains 13 parameter markers, but 12 parameters were supplied', 'HY000')
+2024-01-13 03:14:50,873 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 03:14:50,874 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 03:16:54,942 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 03:16:54,943 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 03:17:20,562 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 03:17:20,563 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 03:17:21,464 - INFO - Successfully executed massive insert for table fact_supply_chain with 2 records.
+2024-01-13 03:27:26,613 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 03:27:26,614 - INFO - Attempting to delete records for table fact_supply_chain in the dedicated ODS table.
+2024-01-13 03:27:27,583 - INFO - Query executed successfully.
+2024-01-13 03:28:23,935 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 03:28:23,936 - INFO - Attempting to delete records for table fact_supply_chain in the dedicated ODS table.
+2024-01-13 03:28:24,800 - INFO - Query executed successfully.
+2024-01-13 03:29:11,191 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 03:29:11,191 - INFO - Attempting to delete records for table fact_supply_chain in the dedicated ODS table.
+2024-01-13 03:29:12,133 - INFO - Query executed successfully.
+2024-01-13 03:29:23,296 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 03:29:23,297 - INFO - Attempting to delete records for table fact_supply_chain in the dedicated ODS table.
+2024-01-13 03:29:24,112 - INFO - Query executed successfully.
+2024-01-13 03:29:39,175 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 03:29:39,175 - INFO - Starting to ingest Kafka part information messages in the dedicated ODS table.
+2024-01-13 03:29:40,128 - INFO - Successfully executed massive insert for table fact_supply_chain with 2 records.
+2024-01-13 03:29:59,079 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 03:29:59,079 - INFO - Attempting to delete records for table fact_supply_chain in the dedicated ODS table.
+2024-01-13 03:29:59,996 - INFO - Query executed successfully.
+2024-01-13 15:18:40,504 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 15:18:40,505 - ERROR - An unexpected error occurred while processing the message from the contract topic: 'isDeleted'
+2024-01-13 15:19:50,156 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 15:19:50,156 - INFO - Starting to ingest Kafka contract messages in the dedicated ODS tables.
+2024-01-13 15:24:59,271 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 15:24:59,272 - INFO - Starting to ingest Kafka contract messages in the dedicated ODS tables.
+2024-01-13 15:25:12,399 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 15:25:12,399 - INFO - Starting to ingest Kafka contract messages in the dedicated ODS tables.
+2024-01-13 15:25:12,410 - INFO - Successfully executed massive insert for table fact_sales with 3 records.
+2024-01-13 15:25:12,413 - INFO - Successfully executed massive insert for table dim_contract with 1 records.
+2024-01-13 15:26:44,598 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 15:26:44,598 - INFO - Attempting to delete records for table fact_sales in the dedicated ODS table.
+2024-01-13 15:26:44,643 - INFO - Query executed successfully.
+2024-01-13 15:26:44,655 - INFO - Query executed successfully.
+2024-01-13 15:26:44,671 - INFO - Query executed successfully.
+2024-01-13 15:26:44,671 - INFO - Attempting to delete records for table dim_contract in the dedicated ODS table.
+2024-01-13 15:26:44,683 - INFO - Query executed successfully.
