@@ -58,7 +58,6 @@ if __name__ == "__main__":
     account_name = os.getenv('AZURE_BLOB_STORAGE_ACCOUNT')
     account_key = os.getenv('AZURE_BLOB_ACCESS_KEY')
     container_name = os.getenv('AZURE_CONTAINER_NAME')
-    blob_name = 'nom_du_blob'
     data_directory = '../../../data'
 
     upload_directory(account_name, account_key, container_name, data_directory)
