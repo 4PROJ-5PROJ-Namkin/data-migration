@@ -215,5 +215,15 @@ Here's an example of the logging file for the ``ods_populate_tables_star_schema.
 2023-12-29 19:05:01,262 - root - INFO - Data inserted into the ODS dim_time table successfully.
 2023-12-29 19:05:10,673 - root - INFO - Data inserted into the ODS fact_sales table successfully.
 2023-12-29 19:14:31,322 - root - INFO - Data inserted into the ODS fact_supply_chain table successfully.
-
 ```
+### Data Warehousing - Star Schema Data Modeling
+In this section, we've followed the standards behind the Kimball Dimensional Modeling Database. 
+
+Kimball data modeling's approach optimizes data for efficient querying and analysis, focusing on ease of understanding and accessibility for business users whereas OLTP databases aren't ideal for analytics due to their normalized structure, which prioritizes transaction processing and data integrity but results in complex queries and slower performance for analytical purposes.
+
+<img width="100%" src="https://i.ibb.co/KmHr6Xx/dwh.png"></a>
+
+
+
+
+
