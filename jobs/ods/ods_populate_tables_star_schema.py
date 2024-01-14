@@ -174,7 +174,7 @@ def populate_dim_material_price_table(material_df, price_col='prices', date_form
     in the format specified by the date_format parameter. The original materialId is preserved.
     """
     try:
-        logging.info("Transforming DataFrame for dim_material_prices table.")
+        logging.info("Starting to transform DataFrame for dim_material_prices table.")
         dim_schema = ArrayType(StructType([
             StructField("price", DoubleType()),
             StructField("d", StringType())
@@ -255,7 +255,7 @@ def populate_fact_sales_table(supply_chain_df, part_df):
     determining the maximum production year, and generating formatted client names.
     """
     try:
-        logging.info("Transforming DataFrame for dim_sales table.")
+        logging.info("Starting to transform DataFrame for dim_sales table.")
         random_date_udf = udf(generate_random_date, DateType())
         convert_timestamp_to_date_udf = udf(convert_timestamp_to_date, TimestampType())
 
