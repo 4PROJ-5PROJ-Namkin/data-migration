@@ -34,12 +34,12 @@ if __name__ == "__main__":
             ]
     )
 
-env_path = os.path.join(os.path.dirname(__file__), '.env')
-load_dotenv(dotenv_path=env_path)
+    env_path = os.path.join(os.path.dirname(__file__), '.env')
+    load_dotenv(dotenv_path=env_path)
 
-parser = argparse.ArgumentParser(description="Run child Python jobs with optional arguments using concurrent threading.")
-parser.add_argument('jobs', nargs='+', help="List of jobs to run concurrently.")
-parser.add_argument('--job_args', nargs='*', help="Optional arguments to pass to each job.", default=[])
-args = parser.parse_args()
+    parser = argparse.ArgumentParser(description="Run child Python jobs with optional arguments using concurrent threading.")
+    parser.add_argument('jobs', nargs='+', help="List of jobs to run concurrently.")
+    parser.add_argument('--job_args', nargs='*', help="Optional arguments to pass to each job.", default=[])
+    args = parser.parse_args()
 
-execute_jobs_concurrently(args.jobs, args.job_args)
+    execute_jobs_concurrently(args.jobs, args.job_args)

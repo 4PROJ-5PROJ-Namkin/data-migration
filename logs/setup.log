@@ -10,3 +10,6 @@
 2024-01-14 01:35:26,488 - root - INFO - Executed ./jobs/ods/ods_structure_tables_star_schema.py successfully with arguments [].
 2024-01-14 01:35:27,716 - root - INFO - Executed ./scripts/infrastructure/files_storage/store_files_into_blob_container_azure.py successfully with arguments [].
 2024-01-14 01:36:54,108 - root - ERROR - Error executing ./jobs/kafka-consumer/kafka_consume_topics_messages.py: Command '['C:\\Users\\othma\\AppData\\Local\\Programs\\Python\\Python38\\python.exe', './jobs/kafka-consumer/kafka_consume_topics_messages.py']' returned non-zero exit status 3221225786.
+2024-01-14 02:14:19,013 - root - INFO - Executed ./jobs/ods/ods_structure_tables_star_schema.py successfully with arguments [].
+2024-01-14 02:14:25,810 - root - ERROR - Error executing ./scripts/infrastructure/files_storage/store_files_into_blob_container_azure.py: Command '['C:\\Users\\othma\\AppData\\Local\\Programs\\Python\\Python38\\python.exe', './scripts/infrastructure/files_storage/store_files_into_blob_container_azure.py']' returned non-zero exit status 3221225786.
+2024-01-14 02:14:26,110 - root - ERROR - Error executing ./jobs/kafka-consumer/kafka_consume_topics_messages.py: Command '['C:\\Users\\othma\\AppData\\Local\\Programs\\Python\\Python38\\python.exe', './jobs/kafka-consumer/kafka_consume_topics_messages.py']' returned non-zero exit status 3221225786.
