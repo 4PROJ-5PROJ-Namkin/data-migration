@@ -248,15 +248,23 @@ Before running the main job runner, please make sure that the Kafka broker is al
 If no broker is still unavailable, it only mean that the IP address cannot resolve the hostname. To solve this issue, follow these steps:
 #### In Windows:
 1. Type the following command:
-``notepad C:\Windows\System32\drivers\etc\hosts``
+```
+notepad C:\Windows\System32\drivers\etc\hosts
+```
 2. Add a new line and save the file:
-``127.0.0.1 kafka``
+```
+127.0.0.1 kafka
+```
 
 #### In Linux:
 1. Type the following command:
-`` sudo nano /etc/hosts``
+```
+sudo nano /etc/hosts
+```
 2. Add a new line and save the file:
-``127.0.0.1 kafka``
+```
+127.0.0.1 kafka
+```
 
 Finally, the Kafka Consumer will consume all the message from countless topics. Upsert or delete operation will be heavilly performed on the ODS.
 
