@@ -11,7 +11,6 @@ Install the software on your system and setup the environment variables in the P
 * [Python](https://www.python.org/downloads/)
 * [Java 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 * [Apache Spark](http://spark.apache.org/downloads.html)
-* Optional: [Anaconda](https://www.anaconda.com/distribution/#download-section)
 
 If you're familiar with Linux, you will have to export for example these environment variables:
 ```
@@ -44,6 +43,6 @@ poetry install --no-root
 All the jobs are restituted inside one main job runner. The ``setup.py`` file is a sort of handmade cronscheduler that runs concurrently all the subprocess defined as arguments passed to the main job runner. 
 
 3. Run this command to enable the job runner to run all the jobs concurrently:
-   ```
-   python setup.py ./jobs/ods/ods_structure_tables_star_schema.py ./jobs/ods/ods_populate_tables_star_schema.py.py ./jobs/kafka-consumer/kafka_consume_topics_messages.py ./scripts/infrastructure/files-storage/store_files_into_blob_container_azure.py
-   ```
+```
+python setup.py ./jobs/ods/ods_structure_tables_star_schema.py ./jobs/ods/ods_populate_tables_star_schema.py.py ./jobs/kafka-consumer/kafka_consume_topics_messages.py ./scripts/infrastructure/files-storage/store_files_into_blob_container_azure.py
+```
