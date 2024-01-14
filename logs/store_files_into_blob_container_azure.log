@@ -1107,3 +1107,22 @@ Request headers:
     'x-ms-client-request-id': '3e326ee7-b27a-11ee-b0d7-7413ea0e4ce5'
     'Authorization': 'REDACTED'
 A body is sent with the request
+2024-01-14 16:01:06,351 - root - INFO - Entering directory: machines...
+2024-01-14 16:01:06,352 - root - INFO - Uploading file: machine-1-0.csv...
+2024-01-14 16:01:06,353 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-14 16:01:06,354 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: machine-1-0.csv...
+2024-01-14 16:01:06,355 - root - INFO - Uploading file './scripts/infrastructure/files-storage\..\..\..\data\machines\machine-1-0.csv' to Azure Blob Storage...
+2024-01-14 16:01:06,389 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/machine-1-0.csv?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '13144344'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'be3f7d12-b2ed-11ee-bc41-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request

@@ -2288,3 +2288,12 @@ kafka.errors.CommitFailedError: CommitFailedError: Commit cannot be completed si
 2024-01-14 02:14:18,966 - INFO - Table fact_supply_chain already exists. Skipping creation.
 2024-01-14 02:14:18,978 - INFO - Table fact_sales already exists. Skipping creation.
 2024-01-14 02:14:18,980 - INFO - Connection to the ODS (Operational Data Store) closed.
+2024-01-14 16:01:05,969 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-14 16:01:06,009 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-14 16:01:06,019 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-14 16:01:06,020 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-14 16:01:06,032 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-14 16:01:06,044 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-14 16:01:06,055 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-14 16:01:06,066 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-14 16:01:06,067 - INFO - Connection to the ODS (Operational Data Store) closed.

@@ -1921,3 +1921,6 @@ ConnectionResetError: [WinError 10054] Une connexion existante a d� �tre fer
 2024-01-14 02:14:26,062 - INFO - Leaving consumer group (g2).
 2024-01-14 02:14:26,073 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
 2024-01-14 02:14:26,074 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-14 16:01:05,969 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-14 16:01:05,983 - INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to kafka:9092 [('127.0.0.1', 9092) IPv4]
+2024-01-14 16:01:05,984 - INFO - Probing node bootstrap-0 broker version
