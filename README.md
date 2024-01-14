@@ -70,4 +70,4 @@ All the jobs are restituted inside one main job runner. The ``setup.py`` file is
 python setup.py ./jobs/ods/ods_structure_tables_star_schema.py ./jobs/ods/ods_populate_tables_star_schema.py.py ./jobs/kafka-consumer/kafka_consume_topics_messages.py ./scripts/infrastructure/files-storage/store_files_into_blob_container_azure.py
 ```
 ## Data Migration Architecture
-<img width="100%" src="https://ibb.co/yg2ypFw">
+<a href="https://ibb.co/yg2ypFw"><img src="https://i.ibb.co/BTkZG2X/NAMKIN-DATA-ARCHITECTURE.jpg" alt="NAMKIN-DATA-ARCHITECTURE" border="0"></a>
