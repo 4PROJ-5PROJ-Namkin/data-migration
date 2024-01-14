@@ -221,7 +221,7 @@ In this section, we've followed the standards behind the Kimball Dimensional Mod
 
 Kimball data modeling's approach optimizes data for efficient querying and analysis, focusing on ease of understanding and accessibility for business users whereas OLTP databases aren't ideal for analytics due to their normalized structure, which prioritizes transaction processing and data integrity but results in complex queries and slower performance for analytical purposes.
 
-<img width="100%" src="https://i.ibb.co/KmHr6Xx/dwh.png"></a>
+<img src="https://i.ibb.co/PhjdGnM/dwh-3.png" alt="dwh-3" border="0"></a>
 
 
 
