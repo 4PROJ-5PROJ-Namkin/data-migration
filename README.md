@@ -242,7 +242,7 @@ Replication is supported by SQL Server's Replication Wizard to configure replica
 #### File version history
 All the files are persisted in an azure container using the Azure Blob Storage service. The blobs are persisted in a cool storage tier and the cluster is deployed on a LRS (Local Redundant Storage) strategy.
 
-#### Kafka Consumer System
+### Kafka Consumer System
 Before running the main job runner, please make sure that the Kafka broker is already up and that communication is established between the kafka producer and the kafka consumer. Check out the [back-end repository](https://github.com/4PROJ-5PROJ-Namkin/microservice-backend/tree/main) to launch the Kafka Broker.
 
 If no broker is still unavailable, it only mean that the IP address cannot resolve the hostname. To solve this issue, follow these steps:
