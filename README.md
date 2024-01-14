@@ -24,5 +24,7 @@ export PYSPARK_PYTHON=python3
 Hadoop and Spark are quite tedious to configure and some flaws might come insidiously if one dependency is incompatible.
 To resolve this kind of dependency conflict, working on a Databricks notebook might come handy in that case. 
 
-Using Databricks cluster make the dependencies easier to integrate and to unify.
+Using Databricks cluster makee the dependencies easier to integrate and to unify.
 Here's a link to try out the community edition even though some functionalities are limited: [Databricks Community Edition](https://docs.databricks.com/en/getting-started/community-edition.html)
+
+You'll also need a Azure account to ingest the files version history located in the data folder on azure container: [Microsoft Azure](https://portal.azure.com/)
