@@ -29,7 +29,7 @@ Here's a link to try out the community edition even though some functionalities 
 You'll also need a Azure account to ingest the files version history located in the data folder on azure container: [Microsoft Azure](https://portal.azure.com/)
 
 ### Database configuration
-Data storage solution is based on SQL Server so you'll have to follow few steps to start off the configuration and the basic database initialization:
+Data storage solution is based on SQL Server so you'll have to follow a few steps to start off the configuration and the basic database initialization:
 1. Download **SQL Server**:
    - Visit the [SQL Server download page](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
    - Select the appropriate edition of SQL Server (Express edition is free and sufficient for basic use) then launch the wizard installation.
@@ -70,4 +70,150 @@ All the jobs are restituted inside one main job runner. The ``setup.py`` file is
 python setup.py ./jobs/ods/ods_structure_tables_star_schema.py ./jobs/ods/ods_populate_tables_star_schema.py.py ./jobs/kafka-consumer/kafka_consume_topics_messages.py ./scripts/infrastructure/files-storage/store_files_into_blob_container_azure.py
 ```
 ## Data Migration Architecture
-<a href="https://ibb.co/yg2ypFw"><img src="https://i.ibb.co/BTkZG2X/NAMKIN-DATA-ARCHITECTURE.jpg" alt="NAMKIN-DATA-ARCHITECTURE" border="0"></a>
+![alt text](https://i.ibb.co/BTkZG2X/NAMKIN-DATA-ARCHITECTURE.jpg)
+### Global Pipeline
+The global pipeline regroups all the PyODBC/PySpark jobs by formatting the DDL scripts of the ODS tables and executing. This workflow is followed by populating the tables using several transformation, leverage, joins and filters on the relevant fields in the right records format to be finally inserted successfully in the dedicated ODS tables.
+
+On the other side, a Kafka consumer is exposed on a port in order to stream the messages from numerous partitions of the topics that mostly gather the transactional data from the targetted microservice API. A Kafka processor is then triggered depending on the topic message consumed, feeding the ODS tables.
+
+The Kafka processor is quite complex and intricate. Regarding the method HTTP provided, it'll perform a specific data leverage on the pinpointed topic message.
+
+The final step is to run a ready-to-use scripts to truncate the DWH table affected and bulk all the records from the updated ODS table. This'll guarantee that data quality is as fresh as it was before.
+
+### Logging and Error Handling in jobs
+Logs and exceptions are encapsulated on files setting the level of the message, the hierarchy of the subjob, the datetime of the event and the information provided. You'll find the files in the ``logs`` folder.
+
+Here's an example of the logging file for the ``ods_populate_tables_star_schema.log``:
+```
+2024-01-01 18:45:10,512 - root - INFO - Spark session created successfully.
+2024-01-01 18:45:10,512 - root - INFO - Starting to convert machine-1-0.csv CSV file to Parquet format.
+2024-01-01 18:45:10,718 - root - INFO - Converted machine-1-0.csv to Parquet format successfully.
+2024-01-01 18:45:10,718 - root - INFO - Starting to convert machine-10-0.csv CSV file to Parquet format.
+2024-01-01 18:45:10,872 - root - INFO - Converted machine-10-0.csv to Parquet format successfully.
+2024-01-01 18:45:10,873 - root - INFO - Starting to convert machine-11-0.csv CSV file to Parquet format.
+2024-01-01 18:45:11,032 - root - INFO - Converted machine-11-0.csv to Parquet format successfully.
+2024-01-01 18:45:11,033 - root - INFO - Starting to convert machine-12-0.csv CSV file to Parquet format.
+2024-01-01 18:45:11,213 - root - INFO - Converted machine-12-0.csv to Parquet format successfully.
+2024-01-01 18:45:11,213 - root - INFO - Starting to convert machine-13-0.csv CSV file to Parquet format.
+2024-01-01 18:45:11,370 - root - INFO - Converted machine-13-0.csv to Parquet format successfully.
+2024-01-01 18:45:11,370 - root - INFO - Starting to convert machine-14-0.csv CSV file to Parquet format.
+2024-01-01 18:45:11,525 - root - INFO - Converted machine-14-0.csv to Parquet format successfully.
+2024-01-01 18:45:11,525 - root - INFO - Starting to convert machine-15-0.csv CSV file to Parquet format.
+2024-01-01 18:45:11,683 - root - INFO - Converted machine-15-0.csv to Parquet format successfully.
+2024-01-01 18:45:11,683 - root - INFO - Starting to convert machine-16-0.csv CSV file to Parquet format.
+2024-01-01 18:45:11,842 - root - INFO - Converted machine-16-0.csv to Parquet format successfully.
+2024-01-01 18:45:11,843 - root - INFO - Starting to convert machine-17-0.csv CSV file to Parquet format.
+2024-01-01 18:45:11,998 - root - INFO - Converted machine-17-0.csv to Parquet format successfully.
+2024-01-01 18:45:11,999 - root - INFO - Starting to convert machine-18-0.csv CSV file to Parquet format.
+2024-01-01 18:45:12,159 - root - INFO - Converted machine-18-0.csv to Parquet format successfully.
+2024-01-01 18:45:12,159 - root - INFO - Starting to convert machine-19-0.csv CSV file to Parquet format.
+2024-01-01 18:45:12,307 - root - INFO - Converted machine-19-0.csv to Parquet format successfully.
+2024-01-01 18:45:12,307 - root - INFO - Starting to convert machine-2-0.csv CSV file to Parquet format.
+2024-01-01 18:45:12,464 - root - INFO - Converted machine-2-0.csv to Parquet format successfully.
+2024-01-01 18:45:12,464 - root - INFO - Starting to convert machine-20-0.csv CSV file to Parquet format.
+2024-01-01 18:45:12,625 - root - INFO - Converted machine-20-0.csv to Parquet format successfully.
+2024-01-01 18:45:12,625 - root - INFO - Starting to convert machine-21-0.csv CSV file to Parquet format.
+2024-01-01 18:45:12,772 - root - INFO - Converted machine-21-0.csv to Parquet format successfully.
+2024-01-01 18:45:12,772 - root - INFO - Starting to convert machine-22-0.csv CSV file to Parquet format.
+2024-01-01 18:45:12,927 - root - INFO - Converted machine-22-0.csv to Parquet format successfully.
+2024-01-01 18:45:12,927 - root - INFO - Starting to convert machine-23-0.csv CSV file to Parquet format.
+2024-01-01 18:45:13,084 - root - INFO - Converted machine-23-0.csv to Parquet format successfully.
+2024-01-01 18:45:13,084 - root - INFO - Starting to convert machine-24-0.csv CSV file to Parquet format.
+2024-01-01 18:45:13,240 - root - INFO - Converted machine-24-0.csv to Parquet format successfully.
+2024-01-01 18:45:13,240 - root - INFO - Starting to convert machine-25-0.csv CSV file to Parquet format.
+2024-01-01 18:45:13,394 - root - INFO - Converted machine-25-0.csv to Parquet format successfully.
+2024-01-01 18:45:13,394 - root - INFO - Starting to convert machine-26-0.csv CSV file to Parquet format.
+2024-01-01 18:45:13,546 - root - INFO - Converted machine-26-0.csv to Parquet format successfully.
+2024-01-01 18:45:13,546 - root - INFO - Starting to convert machine-27-0.csv CSV file to Parquet format.
+2024-01-01 18:45:13,703 - root - INFO - Converted machine-27-0.csv to Parquet format successfully.
+2024-01-01 18:45:13,703 - root - INFO - Starting to convert machine-28-0.csv CSV file to Parquet format.
+2024-01-01 18:45:13,856 - root - INFO - Converted machine-28-0.csv to Parquet format successfully.
+2024-01-01 18:45:13,856 - root - INFO - Starting to convert machine-29-0.csv CSV file to Parquet format.
+2024-01-01 18:45:14,010 - root - INFO - Converted machine-29-0.csv to Parquet format successfully.
+2024-01-01 18:45:14,010 - root - INFO - Starting to convert machine-3-0.csv CSV file to Parquet format.
+2024-01-01 18:45:14,161 - root - INFO - Converted machine-3-0.csv to Parquet format successfully.
+2024-01-01 18:45:14,161 - root - INFO - Starting to convert machine-30-0.csv CSV file to Parquet format.
+2024-01-01 18:45:14,318 - root - INFO - Converted machine-30-0.csv to Parquet format successfully.
+2024-01-01 18:45:14,318 - root - INFO - Starting to convert machine-31-0.csv CSV file to Parquet format.
+2024-01-01 18:45:14,472 - root - INFO - Converted machine-31-0.csv to Parquet format successfully.
+2024-01-01 18:45:14,473 - root - INFO - Starting to convert machine-32-0.csv CSV file to Parquet format.
+2024-01-01 18:45:14,630 - root - INFO - Converted machine-32-0.csv to Parquet format successfully.
+2024-01-01 18:45:14,631 - root - INFO - Starting to convert machine-33-0.csv CSV file to Parquet format.
+2024-01-01 18:45:14,785 - root - INFO - Converted machine-33-0.csv to Parquet format successfully.
+2024-01-01 18:45:14,785 - root - INFO - Starting to convert machine-34-0.csv CSV file to Parquet format.
+2024-01-01 18:45:14,940 - root - INFO - Converted machine-34-0.csv to Parquet format successfully.
+2024-01-01 18:45:14,940 - root - INFO - Starting to convert machine-35-0.csv CSV file to Parquet format.
+2024-01-01 18:45:15,094 - root - INFO - Converted machine-35-0.csv to Parquet format successfully.
+2024-01-01 18:45:15,094 - root - INFO - Starting to convert machine-36-0.csv CSV file to Parquet format.
+2024-01-01 18:45:15,247 - root - INFO - Converted machine-36-0.csv to Parquet format successfully.
+2024-01-01 18:45:15,247 - root - INFO - Starting to convert machine-37-0.csv CSV file to Parquet format.
+2024-01-01 18:45:15,405 - root - INFO - Converted machine-37-0.csv to Parquet format successfully.
+2024-01-01 18:45:15,406 - root - INFO - Starting to convert machine-38-0.csv CSV file to Parquet format.
+2024-01-01 18:45:15,567 - root - INFO - Converted machine-38-0.csv to Parquet format successfully.
+2024-01-01 18:45:15,567 - root - INFO - Starting to convert machine-39-0.csv CSV file to Parquet format.
+2024-01-01 18:45:15,724 - root - INFO - Converted machine-39-0.csv to Parquet format successfully.
+2024-01-01 18:45:15,724 - root - INFO - Starting to convert machine-4-0.csv CSV file to Parquet format.
+2024-01-01 18:45:15,871 - root - INFO - Converted machine-4-0.csv to Parquet format successfully.
+2024-01-01 18:45:15,871 - root - INFO - Starting to convert machine-40-0.csv CSV file to Parquet format.
+2024-01-01 18:45:16,024 - root - INFO - Converted machine-40-0.csv to Parquet format successfully.
+2024-01-01 18:45:16,024 - root - INFO - Starting to convert machine-41-0.csv CSV file to Parquet format.
+2024-01-01 18:45:16,175 - root - INFO - Converted machine-41-0.csv to Parquet format successfully.
+2024-01-01 18:45:16,175 - root - INFO - Starting to convert machine-42-0.csv CSV file to Parquet format.
+2024-01-01 18:45:16,356 - root - INFO - Converted machine-42-0.csv to Parquet format successfully.
+2024-01-01 18:45:16,356 - root - INFO - Starting to convert machine-43-0.csv CSV file to Parquet format.
+2024-01-01 18:45:16,508 - root - INFO - Converted machine-43-0.csv to Parquet format successfully.
+2024-01-01 18:45:16,508 - root - INFO - Starting to convert machine-44-0.csv CSV file to Parquet format.
+2024-01-01 18:45:16,657 - root - INFO - Converted machine-44-0.csv to Parquet format successfully.
+2024-01-01 18:45:16,658 - root - INFO - Starting to convert machine-45-0.csv CSV file to Parquet format.
+2024-01-01 18:45:16,819 - root - INFO - Converted machine-45-0.csv to Parquet format successfully.
+2024-01-01 18:45:16,820 - root - INFO - Starting to convert machine-46-0.csv CSV file to Parquet format.
+2024-01-01 18:45:16,977 - root - INFO - Converted machine-46-0.csv to Parquet format successfully.
+2024-01-01 18:45:16,978 - root - INFO - Starting to convert machine-47-0.csv CSV file to Parquet format.
+2024-01-01 18:45:17,136 - root - INFO - Converted machine-47-0.csv to Parquet format successfully.
+2024-01-01 18:45:17,136 - root - INFO - Starting to convert machine-48-0.csv CSV file to Parquet format.
+2024-01-01 18:45:17,287 - root - INFO - Converted machine-48-0.csv to Parquet format successfully.
+2024-01-01 18:45:17,288 - root - INFO - Starting to convert machine-49-0.csv CSV file to Parquet format.
+2024-01-01 18:45:17,448 - root - INFO - Converted machine-49-0.csv to Parquet format successfully.
+2024-01-01 18:45:17,448 - root - INFO - Starting to convert machine-5-0.csv CSV file to Parquet format.
+2024-01-01 18:45:17,602 - root - INFO - Converted machine-5-0.csv to Parquet format successfully.
+2024-01-01 18:45:17,602 - root - INFO - Starting to convert machine-50-0.csv CSV file to Parquet format.
+2024-01-01 18:45:17,762 - root - INFO - Converted machine-50-0.csv to Parquet format successfully.
+2024-01-01 18:45:17,762 - root - INFO - Starting to convert machine-6-0.csv CSV file to Parquet format.
+2024-01-01 18:45:17,919 - root - INFO - Converted machine-6-0.csv to Parquet format successfully.
+2024-01-01 18:45:17,919 - root - INFO - Starting to convert machine-7-0.csv CSV file to Parquet format.
+2024-01-01 18:45:18,072 - root - INFO - Converted machine-7-0.csv to Parquet format successfully.
+2024-01-01 18:45:18,072 - root - INFO - Starting to convert machine-8-0.csv CSV file to Parquet format.
+2024-01-01 18:45:18,226 - root - INFO - Converted machine-8-0.csv to Parquet format successfully.
+2024-01-01 18:45:18,226 - root - INFO - Starting to convert machine-9-0.csv CSV file to Parquet format.
+2024-01-01 18:45:18,380 - root - INFO - Converted machine-9-0.csv to Parquet format successfully.
+2024-01-01 18:45:23,159 - root - INFO - Concatenated parquet files into ../../data/machines_parquet/machine_all_parquet
+2024-01-01 18:45:25,142 - root - INFO - Starting to read the Material Excel file.
+2024-01-01 18:45:26,424 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2024-01-01 18:45:27,135 - root - INFO - Starting to read the Material Excel file.
+2024-01-01 18:45:30,543 - root - INFO - Successfully read the Material Excel file into a DataFrame.
+2024-01-01 18:45:33,109 - root - WARNING - The Sales Excel file is empty. Skipping file processing.
+2024-01-01 18:45:34,580 - root - INFO - Starting to read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet.
+2024-01-01 18:54:39,220 - root - INFO - Successfully read the Supply Chain Parquet file from ../../data/machines_parquet/machine_all_parquet into a DataFrame.
+2023-12-29 18:54:40,531 - root - INFO - Starting to transform DataFrame for dim_material_prices table.
+2023-12-29 18:54:41,534 - root - INFO - Successfully transformed DataFrame for dim_material_price table.
+2023-12-29 18:54:41,731 - root - INFO - Starting to transform DataFrame for dim_part_information table.
+2023-12-29 18:56:43,111 - root - INFO - Successfully transformed DataFrame for dim_part_information table.
+2023-12-29 18:56:44,034 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-29 18:56:46,171 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-29 18:56:47,194 - root - INFO - Starting to transform DataFrame for dim_machine table.
+2023-12-29 18:56:50,265 - root - INFO - Successfully transformed DataFrame for dim_machine table.
+2023-12-29 18:56:50,697 - root - INFO - Starting to transform DataFrame for fact_sales table.
+2023-12-29 18:58:50,209 - root - INFO - Successfully transformed DataFrame for fact_sales table.
+2023-12-29 19:00:14,123 - root - INFO - Starting to transform DataFrame for dim_time table.
+2023-12-29 19:00:56,898 - root - INFO - Successfully transformed DataFrame for dim_time table.
+2023-12-29 19:00:57,097 - root - INFO - Starting to transform DataFrame for fact_supply_chain table.
+2023-12-29 19:04:09,655 - root - INFO - Successfully transformed DataFrame for fact_supply_chain table.
+2023-12-29 19:04:15,235 - root - INFO - Data inserted into the ODS dim_material table successfully.
+2023-12-29 19:04:29,432 - root - INFO - Data inserted into the ODS dim_part_information table successfully.
+2023-12-29 19:04:32,507 - root - INFO - Data inserted into the ODS dim_machine table successfully.
+2023-12-29 19:04:52,789 - root - INFO - Data inserted into the ODS dim_contract table successfully.
+2023-12-29 19:05:01,262 - root - INFO - Data inserted into the ODS dim_time table successfully.
+2023-12-29 19:05:10,673 - root - INFO - Data inserted into the ODS fact_sales table successfully.
+2023-12-29 19:14:31,322 - root - INFO - Data inserted into the ODS fact_supply_chain table successfully.
+
+```
