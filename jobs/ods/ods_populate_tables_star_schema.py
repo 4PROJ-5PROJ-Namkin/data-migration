@@ -358,9 +358,9 @@ if __name__ == "__main__":
     username = os.getenv('DB_USER')
     password = os.getenv('DB_PASSWORD')
 
-    input_path = '../../data/machines'
-    output_path = '../../data/machines_parquet/'
-    final_output_path = '../../data/machines_parquet/machines_all_parquet/'
+    input_path = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'machines')
+    output_path = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'machines_parquet')
+    final_output_path = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'machines_parquet', 'machines_all_parquet')
 
     current_datetime_udf = udf(get_current_datetime, StringType())
 
@@ -368,9 +368,11 @@ if __name__ == "__main__":
     convert_csv_to_parquet(input_path, output_path)
     concatenate_parquet_files(output_path, final_output_path)
 
-    material_df = read_excel_with_spark("../../data/material-data.xlsx" , "Material").withColumn("lastUpdate", current_datetime_udf())
-    part_information_df = read_excel_with_spark("../../data/part-reference.xlsx", "Part Information").withColumn("lastUpdate", current_datetime_udf())
-    sales_df = read_excel_with_spark("../../data/sales.xlsx", "Sales")
+    material_df = read_excel_with_spark(os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'material-data.xlsx') , "Material") \
+                    .withColumn("lastUpdate", current_datetime_udf())
+    part_information_df = read_excel_with_spark(os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'part-reference.xlsx'), "Part Information") \
+                            .withColumn("lastUpdate", current_datetime_udf())
+    sales_df = read_excel_with_spark(os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'sales.xlsx'), "Sales")
     supply_chain_df = read_parquet_with_spark(final_output_path, 'Supply Chain').withColumn("lastUpdate", current_datetime_udf())
     
     material_price_df = populate_dim_material_price_table(material_df)

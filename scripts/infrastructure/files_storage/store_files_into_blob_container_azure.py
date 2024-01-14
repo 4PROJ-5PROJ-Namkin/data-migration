@@ -2,6 +2,7 @@ import logging
 import os
 from dotenv import load_dotenv
 from azure.storage.blob import BlobServiceClient
+from azure.core.exceptions import ResourceExistsError
 
 def upload_to_azure_blob(account_name, account_key, container_name, blob_name, file_path):
     """
@@ -28,6 +29,9 @@ def upload_to_azure_blob(account_name, account_key, container_name, blob_name, f
             blob_client.upload_blob(data, blob_type="BlockBlob", timeout=timeout)
         
         logging.info(f"File '{file_path}' successfully uploaded as '{blob_name}' in container '{container_name}'.")
+    
+    except ResourceExistsError:
+        logging.info(f"File '{file_path}' already exists in container '{container_name}'. Skipping upload.")
 
     except Exception as e:
         logging.error(f"Error occurred during blob upload: {e}")
@@ -58,6 +62,6 @@ if __name__ == "__main__":
     account_name = os.getenv('AZURE_BLOB_STORAGE_ACCOUNT')
     account_key = os.getenv('AZURE_BLOB_ACCESS_KEY')
     container_name = os.getenv('AZURE_CONTAINER_NAME')
-    data_directory = '../../../data'
+    data_directory = os.path.join(os.path.dirname(__file__), '..', '..', '..', 'data')
 
     upload_directory(account_name, account_key, container_name, data_directory)

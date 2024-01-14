@@ -476,3 +476,615 @@ Response headers:
     'x-ms-request-server-encrypted': 'REDACTED'
     'Date': 'Sat, 13 Jan 2024 20:06:20 GMT'
 2024-01-13 21:06:21,457 - root - INFO - File '../../../data\sales.xlsx' successfully uploaded as 'sales.xlsx' in container 'namkincontainerfiles'.
+2024-01-13 23:15:07,475 - root - INFO - Uploading file: material-data.xlsx...
+2024-01-13 23:15:07,476 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 23:15:07,477 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: material-data.xlsx...
+2024-01-13 23:15:07,478 - root - INFO - Uploading file '../../../data\material-data.xlsx' to Azure Blob Storage...
+2024-01-13 23:15:07,535 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/material-data.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5411'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '3590ea9b-b261-11ee-8917-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 23:15:07,898 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'ac4430ef-601e-00be-5c6d-46daab000000'
+    'x-ms-client-request-id': '3590ea9b-b261-11ee-8917-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 22:15:07 GMT'
+2024-01-13 23:15:07,914 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:ac4430ef-601e-00be-5c6d-46daab000000
+Time:2024-01-13T22:15:07.6648171Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:ac4430ef-601e-00be-5c6d-46daab000000
+Time:2024-01-13T22:15:07.6648171Z</Message></Error>
+2024-01-13 23:15:07,917 - root - INFO - Uploading file: part-reference.xlsx...
+2024-01-13 23:15:07,917 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 23:15:07,919 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: part-reference.xlsx...
+2024-01-13 23:15:07,920 - root - INFO - Uploading file '../../../data\part-reference.xlsx' to Azure Blob Storage...
+2024-01-13 23:15:07,924 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/part-reference.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '8420'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '35cca303-b261-11ee-b43c-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 23:15:08,257 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '68a8c549-401e-0062-716d-4670f5000000'
+    'x-ms-client-request-id': '35cca303-b261-11ee-b43c-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 22:15:07 GMT'
+2024-01-13 23:15:08,260 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:68a8c549-401e-0062-716d-4670f5000000
+Time:2024-01-13T22:15:08.0301284Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:68a8c549-401e-0062-716d-4670f5000000
+Time:2024-01-13T22:15:08.0301284Z</Message></Error>
+2024-01-13 23:15:08,262 - root - INFO - Uploading file: sales.xlsx...
+2024-01-13 23:15:08,262 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 23:15:08,264 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: sales.xlsx...
+2024-01-13 23:15:08,265 - root - INFO - Uploading file '../../../data\sales.xlsx' to Azure Blob Storage...
+2024-01-13 23:15:08,271 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/sales.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '4761'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '36015d71-b261-11ee-b4aa-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 23:15:08,594 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f38e1b22-b01e-00bd-1f6d-463bcf000000'
+    'x-ms-client-request-id': '36015d71-b261-11ee-b4aa-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 22:15:08 GMT'
+2024-01-13 23:15:08,597 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:f38e1b22-b01e-00bd-1f6d-463bcf000000
+Time:2024-01-13T22:15:08.3656146Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:f38e1b22-b01e-00bd-1f6d-463bcf000000
+Time:2024-01-13T22:15:08.3656146Z</Message></Error>
+2024-01-13 23:23:44,840 - root - INFO - Uploading file: material-data.xlsx...
+2024-01-13 23:23:44,840 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 23:23:44,844 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: material-data.xlsx...
+2024-01-13 23:23:44,845 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\material-data.xlsx' to Azure Blob Storage...
+2024-01-13 23:23:44,857 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/material-data.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5411'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '69ea5229-b262-11ee-9bfd-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 23:23:45,284 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '686e56b9-601e-0091-376f-46d760000000'
+    'x-ms-client-request-id': '69ea5229-b262-11ee-9bfd-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 22:23:44 GMT'
+2024-01-13 23:23:45,286 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:686e56b9-601e-0091-376f-46d760000000
+Time:2024-01-13T22:23:45.0502557Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:686e56b9-601e-0091-376f-46d760000000
+Time:2024-01-13T22:23:45.0502557Z</Message></Error>
+2024-01-13 23:23:45,287 - root - INFO - Uploading file: part-reference.xlsx...
+2024-01-13 23:23:45,287 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 23:23:45,288 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: part-reference.xlsx...
+2024-01-13 23:23:45,289 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\part-reference.xlsx' to Azure Blob Storage...
+2024-01-13 23:23:45,290 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/part-reference.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '8420'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '6a2c5880-b262-11ee-8559-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 23:23:45,765 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '5b518eb3-f01e-00e1-496f-466e97000000'
+    'x-ms-client-request-id': '6a2c5880-b262-11ee-8559-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 22:23:44 GMT'
+2024-01-13 23:23:45,768 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:5b518eb3-f01e-00e1-496f-466e97000000
+Time:2024-01-13T22:23:45.5350554Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:5b518eb3-f01e-00e1-496f-466e97000000
+Time:2024-01-13T22:23:45.5350554Z</Message></Error>
+2024-01-13 23:23:45,772 - root - INFO - Uploading file: sales.xlsx...
+2024-01-13 23:23:45,772 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-13 23:23:45,774 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: sales.xlsx...
+2024-01-13 23:23:45,775 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\sales.xlsx' to Azure Blob Storage...
+2024-01-13 23:23:45,777 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/sales.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '4761'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '6a76ceb0-b262-11ee-9088-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-13 23:23:46,200 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '6837b036-701e-0046-476f-468655000000'
+    'x-ms-client-request-id': '6a76ceb0-b262-11ee-9088-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 22:23:45 GMT'
+2024-01-13 23:23:46,202 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:6837b036-701e-0046-476f-468655000000
+Time:2024-01-13T22:23:45.9328072Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:6837b036-701e-0046-476f-468655000000
+Time:2024-01-13T22:23:45.9328072Z</Message></Error>
+2024-01-14 00:51:37,897 - root - INFO - Uploading file: material-data.xlsx...
+2024-01-14 00:51:37,897 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-14 00:51:37,898 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: material-data.xlsx...
+2024-01-14 00:51:37,899 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\material-data.xlsx' to Azure Blob Storage...
+2024-01-14 00:51:37,918 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/material-data.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5411'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b0e7bfb7-b26e-11ee-a4da-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-14 00:51:38,324 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'fe103efc-401e-0072-167b-46b59d000000'
+    'x-ms-client-request-id': 'b0e7bfb7-b26e-11ee-a4da-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 23:51:37 GMT'
+2024-01-14 00:51:38,326 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:fe103efc-401e-0072-167b-46b59d000000
+Time:2024-01-13T23:51:38.0660999Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:fe103efc-401e-0072-167b-46b59d000000
+Time:2024-01-13T23:51:38.0660999Z</Message></Error>
+2024-01-14 00:51:38,327 - root - INFO - Uploading file: part-reference.xlsx...
+2024-01-14 00:51:38,327 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-14 00:51:38,328 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: part-reference.xlsx...
+2024-01-14 00:51:38,328 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\part-reference.xlsx' to Azure Blob Storage...
+2024-01-14 00:51:38,337 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/part-reference.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '8420'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b1278f04-b26e-11ee-b047-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-14 00:51:38,736 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'deb8748d-b01e-0059-6f7b-463551000000'
+    'x-ms-client-request-id': 'b1278f04-b26e-11ee-b047-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 23:51:38 GMT'
+2024-01-14 00:51:38,737 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:deb8748d-b01e-0059-6f7b-463551000000
+Time:2024-01-13T23:51:38.5027450Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:deb8748d-b01e-0059-6f7b-463551000000
+Time:2024-01-13T23:51:38.5027450Z</Message></Error>
+2024-01-14 00:51:38,738 - root - INFO - Uploading file: sales.xlsx...
+2024-01-14 00:51:38,738 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-14 00:51:38,738 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: sales.xlsx...
+2024-01-14 00:51:38,741 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\sales.xlsx' to Azure Blob Storage...
+2024-01-14 00:51:38,749 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/sales.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '4761'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b16684c7-b26e-11ee-87b6-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-14 00:51:39,086 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'e4002097-c01e-0043-797b-46548e000000'
+    'x-ms-client-request-id': 'b16684c7-b26e-11ee-87b6-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 23:51:38 GMT'
+2024-01-14 00:51:39,087 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:e4002097-c01e-0043-797b-46548e000000
+Time:2024-01-13T23:51:38.8450032Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:e4002097-c01e-0043-797b-46548e000000
+Time:2024-01-13T23:51:38.8450032Z</Message></Error>
+2024-01-14 00:54:03,315 - root - INFO - Uploading file: material-data.xlsx...
+2024-01-14 00:54:03,316 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-14 00:54:03,317 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: material-data.xlsx...
+2024-01-14 00:54:03,317 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\material-data.xlsx' to Azure Blob Storage...
+2024-01-14 00:54:03,331 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/material-data.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5411'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '0793e342-b26f-11ee-8eac-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-14 00:54:03,754 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '870a67db-301e-000a-3a7b-461665000000'
+    'x-ms-client-request-id': '0793e342-b26f-11ee-8eac-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 23:54:02 GMT'
+2024-01-14 00:54:03,759 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:870a67db-301e-000a-3a7b-461665000000
+Time:2024-01-13T23:54:03.5135542Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:870a67db-301e-000a-3a7b-461665000000
+Time:2024-01-13T23:54:03.5135542Z</Message></Error>
+2024-01-14 00:54:03,760 - root - INFO - Uploading file: part-reference.xlsx...
+2024-01-14 00:54:03,760 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-14 00:54:03,761 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: part-reference.xlsx...
+2024-01-14 00:54:03,761 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\part-reference.xlsx' to Azure Blob Storage...
+2024-01-14 00:54:03,765 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/part-reference.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '8420'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '07d61464-b26f-11ee-b667-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-14 00:54:04,131 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '244ab589-b01e-0049-557b-46f039000000'
+    'x-ms-client-request-id': '07d61464-b26f-11ee-b667-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 23:54:03 GMT'
+2024-01-14 00:54:04,134 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:244ab589-b01e-0049-557b-46f039000000
+Time:2024-01-13T23:54:03.8986277Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:244ab589-b01e-0049-557b-46f039000000
+Time:2024-01-13T23:54:03.8986277Z</Message></Error>
+2024-01-14 00:54:04,136 - root - INFO - Uploading file: sales.xlsx...
+2024-01-14 00:54:04,138 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-14 00:54:04,138 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: sales.xlsx...
+2024-01-14 00:54:04,139 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\sales.xlsx' to Azure Blob Storage...
+2024-01-14 00:54:04,141 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/sales.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '4761'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '080f948b-b26f-11ee-947b-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-14 00:54:04,459 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '85a22d6a-101e-001d-4c7b-46bf6e000000'
+    'x-ms-client-request-id': '080f948b-b26f-11ee-947b-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sat, 13 Jan 2024 23:54:03 GMT'
+2024-01-14 00:54:04,463 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:85a22d6a-101e-001d-4c7b-46bf6e000000
+Time:2024-01-13T23:54:04.2248051Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:85a22d6a-101e-001d-4c7b-46bf6e000000
+Time:2024-01-13T23:54:04.2248051Z</Message></Error>
+2024-01-14 01:31:18,148 - root - INFO - Uploading file: material-data.xlsx...
+2024-01-14 01:31:18,149 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-14 01:31:18,149 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: material-data.xlsx...
+2024-01-14 01:31:18,149 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\material-data.xlsx' to Azure Blob Storage...
+2024-01-14 01:31:18,167 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/material-data.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5411'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '3ba4d74c-b274-11ee-a818-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-14 01:31:18,501 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f6a804f4-001e-004c-3d80-4622e2000000'
+    'x-ms-client-request-id': '3ba4d74c-b274-11ee-a818-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sun, 14 Jan 2024 00:31:18 GMT'
+2024-01-14 01:31:18,503 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:f6a804f4-001e-004c-3d80-4622e2000000
+Time:2024-01-14T00:31:18.2683519Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:f6a804f4-001e-004c-3d80-4622e2000000
+Time:2024-01-14T00:31:18.2683519Z</Message></Error>
+2024-01-14 01:31:18,505 - root - INFO - Uploading file: part-reference.xlsx...
+2024-01-14 01:31:18,505 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-14 01:31:18,505 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: part-reference.xlsx...
+2024-01-14 01:31:18,506 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\part-reference.xlsx' to Azure Blob Storage...
+2024-01-14 01:31:18,508 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/part-reference.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '8420'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '3bd8afe9-b274-11ee-a879-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-14 01:31:18,823 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '1c5bb8e6-a01e-0027-1080-46a516000000'
+    'x-ms-client-request-id': '3bd8afe9-b274-11ee-a879-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sun, 14 Jan 2024 00:31:17 GMT'
+2024-01-14 01:31:18,825 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:1c5bb8e6-a01e-0027-1080-46a516000000
+Time:2024-01-14T00:31:18.6021316Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:1c5bb8e6-a01e-0027-1080-46a516000000
+Time:2024-01-14T00:31:18.6021316Z</Message></Error>
+2024-01-14 01:31:18,826 - root - INFO - Uploading file: sales.xlsx...
+2024-01-14 01:31:18,828 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-14 01:31:18,828 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: sales.xlsx...
+2024-01-14 01:31:18,829 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\sales.xlsx' to Azure Blob Storage...
+2024-01-14 01:31:18,831 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/sales.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '4761'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '3c0a2190-b274-11ee-b3be-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-14 01:31:19,108 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '0cce5085-801e-00c4-5c80-46c7eb000000'
+    'x-ms-client-request-id': '3c0a2190-b274-11ee-b3be-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sun, 14 Jan 2024 00:31:18 GMT'
+2024-01-14 01:31:19,110 - root - ERROR - Error occurred during blob upload: The specified blob already exists.
+RequestId:0cce5085-801e-00c4-5c80-46c7eb000000
+Time:2024-01-14T00:31:18.8862401Z
+ErrorCode:BlobAlreadyExists
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:0cce5085-801e-00c4-5c80-46c7eb000000
+Time:2024-01-14T00:31:18.8862401Z</Message></Error>
+2024-01-14 01:35:26,725 - root - INFO - Uploading file: material-data.xlsx...
+2024-01-14 01:35:26,726 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-14 01:35:26,727 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: material-data.xlsx...
+2024-01-14 01:35:26,727 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\material-data.xlsx' to Azure Blob Storage...
+2024-01-14 01:35:26,733 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/material-data.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5411'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'cfccf113-b274-11ee-ba3d-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-14 01:35:27,034 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '31aba377-301e-0035-5581-46dec6000000'
+    'x-ms-client-request-id': 'cfccf113-b274-11ee-ba3d-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sun, 14 Jan 2024 00:35:26 GMT'
+2024-01-14 01:35:27,036 - root - INFO - File './scripts/infrastructure/files_storage\..\..\..\data\material-data.xlsx' already exists in container 'namkincontainerfiles'. Skipping upload.
+2024-01-14 01:35:27,037 - root - INFO - Uploading file: part-reference.xlsx...
+2024-01-14 01:35:27,037 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-14 01:35:27,038 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: part-reference.xlsx...
+2024-01-14 01:35:27,039 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\part-reference.xlsx' to Azure Blob Storage...
+2024-01-14 01:35:27,041 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/part-reference.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '8420'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'cffbd561-b274-11ee-aa6e-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-14 01:35:27,369 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '6ae7ceaf-101e-006f-3481-46b821000000'
+    'x-ms-client-request-id': 'cffbd561-b274-11ee-aa6e-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sun, 14 Jan 2024 00:35:26 GMT'
+2024-01-14 01:35:27,371 - root - INFO - File './scripts/infrastructure/files_storage\..\..\..\data\part-reference.xlsx' already exists in container 'namkincontainerfiles'. Skipping upload.
+2024-01-14 01:35:27,373 - root - INFO - Uploading file: sales.xlsx...
+2024-01-14 01:35:27,373 - root - INFO - Connecting to Azure Blob Storage...
+2024-01-14 01:35:27,374 - root - INFO - Creating blob client for container: namkincontainerfiles, blob: sales.xlsx...
+2024-01-14 01:35:27,375 - root - INFO - Uploading file './scripts/infrastructure/files_storage\..\..\..\data\sales.xlsx' to Azure Blob Storage...
+2024-01-14 01:35:27,376 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://namkinstorage20240113.blob.core.windows.net/namkincontainerfiles/sales.xlsx?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '4761'
+    'x-ms-blob-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.8.4 (Windows-10-10.0.22621-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'd02f20ed-b274-11ee-80e0-7413ea0e4ce5'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2024-01-14 01:35:27,677 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 409
+Response headers:
+    'Content-Length': '220'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '8171fb50-d01e-0012-6981-46c902000000'
+    'x-ms-client-request-id': 'd02f20ed-b274-11ee-80e0-7413ea0e4ce5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobAlreadyExists'
+    'Date': 'Sun, 14 Jan 2024 00:35:27 GMT'
+2024-01-14 01:35:27,681 - root - INFO - File './scripts/infrastructure/files_storage\..\..\..\data\sales.xlsx' already exists in container 'namkincontainerfiles'. Skipping upload.

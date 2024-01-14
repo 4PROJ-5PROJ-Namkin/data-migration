@@ -2169,3 +2169,113 @@ kafka.errors.CommitFailedError: CommitFailedError: Commit cannot be completed si
 2024-01-12 01:27:22,616 - INFO - Leaving consumer group (g2).
 2024-01-12 01:27:22,631 - INFO - <BrokerConnection node_id=coordinator-1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
 2024-01-12 01:27:22,632 - INFO - <BrokerConnection node_id=1001 host=kafka:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2024-01-13 23:08:11,032 - ERROR - An error occurred while connecting to the ODS (Operational Data Store): ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Named Pipes Provider: Could not open a connection to SQL Server [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (53)')
+2024-01-13 23:10:29,596 - ERROR - An error occurred while connecting to the ODS (Operational Data Store): <class 'pyodbc.Error'> returned a result with an error set
+2024-01-13 23:10:42,559 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 23:10:42,643 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-13 23:10:42,661 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-13 23:10:42,662 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-13 23:10:42,674 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-13 23:10:42,685 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-13 23:10:42,697 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-13 23:10:42,720 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-13 23:10:42,722 - INFO - Connection to the ODS (Operational Data Store) closed.
+2024-01-13 23:13:44,216 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 23:13:44,246 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-13 23:13:44,257 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-13 23:13:44,259 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-13 23:13:44,271 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-13 23:13:44,328 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-13 23:13:44,351 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-13 23:13:44,364 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-13 23:13:44,364 - INFO - Connection to the ODS (Operational Data Store) closed.
+2024-01-13 23:14:35,795 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 23:14:35,822 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-13 23:14:35,837 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-13 23:14:35,838 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-13 23:14:35,860 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-13 23:14:35,875 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-13 23:14:35,889 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-13 23:14:35,913 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-13 23:14:35,917 - INFO - Connection to the ODS (Operational Data Store) closed.
+2024-01-13 23:15:30,615 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 23:15:30,646 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-13 23:15:30,656 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-13 23:15:30,658 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-13 23:15:30,671 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-13 23:15:30,684 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-13 23:15:30,695 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-13 23:15:30,704 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-13 23:15:30,705 - INFO - Connection to the ODS (Operational Data Store) closed.
+2024-01-13 23:21:49,294 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 23:21:49,349 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-13 23:21:49,361 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-13 23:21:49,363 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-13 23:21:49,390 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-13 23:21:49,424 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-13 23:21:49,440 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-13 23:21:49,451 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-13 23:21:49,452 - INFO - Connection to the ODS (Operational Data Store) closed.
+2024-01-13 23:23:31,420 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 23:23:31,458 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-13 23:23:31,473 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-13 23:23:31,474 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-13 23:23:31,490 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-13 23:23:31,505 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-13 23:23:31,520 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-13 23:23:31,532 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-13 23:23:31,533 - INFO - Connection to the ODS (Operational Data Store) closed.
+2024-01-13 23:23:44,450 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-13 23:23:44,453 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-13 23:23:44,453 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-13 23:23:44,454 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-13 23:23:44,455 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-13 23:23:44,455 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-13 23:23:44,456 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-13 23:23:44,456 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-13 23:23:44,458 - INFO - Connection to the ODS (Operational Data Store) closed.
+2024-01-14 00:51:37,746 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-14 00:51:37,885 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-14 00:51:37,903 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-14 00:51:37,904 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-14 00:51:37,918 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-14 00:51:37,934 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-14 00:51:37,947 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-14 00:51:37,958 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-14 00:51:37,960 - INFO - Connection to the ODS (Operational Data Store) closed.
+2024-01-14 00:54:03,202 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-14 00:54:03,240 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-14 00:54:03,250 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-14 00:54:03,251 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-14 00:54:03,262 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-14 00:54:03,273 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-14 00:54:03,280 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-14 00:54:03,288 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-14 00:54:03,288 - INFO - Connection to the ODS (Operational Data Store) closed.
+2024-01-14 01:31:17,808 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-14 01:31:17,842 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-14 01:31:17,852 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-14 01:31:17,852 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-14 01:31:17,858 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-14 01:31:17,864 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-14 01:31:17,874 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-14 01:31:17,883 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-14 01:31:17,884 - INFO - Connection to the ODS (Operational Data Store) closed.
+2024-01-14 01:34:37,743 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-14 01:34:37,769 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-14 01:34:37,783 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-14 01:34:37,784 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-14 01:34:37,799 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-14 01:34:37,809 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-14 01:34:37,821 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-14 01:34:37,830 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-14 01:34:37,831 - INFO - Connection to the ODS (Operational Data Store) closed.
+2024-01-14 01:35:26,472 - INFO - Connection to the ODS (Operational Data Store) established successfully.
+2024-01-14 01:35:26,474 - INFO - Table dim_part_information already exists. Skipping creation.
+2024-01-14 01:35:26,474 - INFO - Table dim_material already exists. Skipping creation.
+2024-01-14 01:35:26,474 - INFO - Table dim_contract already exists. Skipping creation.
+2024-01-14 01:35:26,476 - INFO - Table dim_machine already exists. Skipping creation.
+2024-01-14 01:35:26,477 - INFO - Table dim_time already exists. Skipping creation.
+2024-01-14 01:35:26,478 - INFO - Table fact_supply_chain already exists. Skipping creation.
+2024-01-14 01:35:26,478 - INFO - Table fact_sales already exists. Skipping creation.
+2024-01-14 01:35:26,479 - INFO - Connection to the ODS (Operational Data Store) closed.
