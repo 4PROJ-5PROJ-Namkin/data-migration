@@ -266,7 +266,7 @@ sudo nano /etc/hosts
 127.0.0.1 kafka
 ```
 
-Finally, the Kafka Consumer will consume all the message from countless topics. Upsert or delete operation will be heavilly performed on the ODS.
+Finally, the Kafka Consumer will consume all the messages from countless topics. Upsert or delete operation will be heavily performed on the ODS.
 
 For each topic message received, you'll have to run this script in order to bring up to date the data warehouse by running this script in a native SQL Server engine rather than using a JDBC connector:
 ```
