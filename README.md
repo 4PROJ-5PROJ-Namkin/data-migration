@@ -221,7 +221,52 @@ In this section, we've followed the standards behind the Kimball Dimensional Mod
 
 Kimball data modeling's approach optimizes data for efficient querying and analysis, focusing on ease of understanding and accessibility for business users whereas OLTP databases aren't ideal for analytics due to their normalized structure, which prioritizes transaction processing and data integrity but results in complex queries and slower performance for analytical purposes.
 
-<img src="https://i.ibb.co/PhjdGnM/dwh-3.png" alt="dwh-3" border="0"></a>
+<img src="https://i.imgur.com/qzGddmW.jpg" alt="dwh-3-1" style="max-width:100%; max-height:100%;" border="0">
+
+### Data Storage Infrastructure
+#### Data Warehouse Restore and Replication Strategy
+Backup and restore scripts for the DWH database are declared in the ``infrastructure`` folder.
+
+Generate a backup storage by running this command:
+```
+sqlcmd -S <your-local-machine> -E -i "./scripts/infrastructure/dwh/trigger_backup_dwh_production.sql"
+```
+Then at anytime you might run this command in order to restore the database by an existant backup storage (replace the name of the backup file ``.bak`` by the backup file of your choice):
+
+```
+sqlcmd -S <your-local-machine> -E -i "./scripts/infrastructure/dwh/restore_dwh_production.sql"
+```
+
+Replication is supported by SQL Server's Replication Wizard to configure replication. You'll have to set up Publications (database objects to replicate), Subscriptions (destination servers), Articles (tables, views, etc.), and Replication Agents (processes responsible for data copying).
+
+#### File version history
+All the files are persisted in an azure container using the Azure Blob Storage service. The blobs are persisted in a cool storage tier and the cluster is deployed on a LRS (Local Redundant Storage) strategy.
+
+#### Kafka Consumer System
+Before running the main job runner, please make sure that the Kafka broker is already up and that communication is established between the kafka producer and the kafka consumer. Check out the [back-end repository](https://github.com/4PROJ-5PROJ-Namkin/microservice-backend/tree/main) to launch the Kafka Broker.
+
+If no broker is still unavailable, it only mean that the IP address cannot resolve the hostname. To solve this issue, follow these steps:
+#### In Windows:
+1. Type the following command:
+``notepad C:\Windows\System32\drivers\etc\hosts``
+2. Add a new line and save the file:
+``127.0.0.1 kafka``
+
+#### In Linux:
+1. Type the following command:
+`` sudo nano /etc/hosts``
+2. Add a new line and save the file:
+``127.0.0.1 kafka``
+
+Finally, the Kafka Consumer will consume all the message from countless topics. Upsert or delete operation will be heavilly performed on the ODS.
+
+For each topic message received, you'll have to run this script in order to bring up to date the data warehouse by running this script in a native SQL Server engine rather than using a JDBC connector:
+```
+sqlcmd -S <your-local-machine> -E -i "./scripts/infrastructure/dwh/dwh_truncate_and_bulk_massive_inserts_<table-name>_table.sql
+```
+Replace the table name by the specific fact or dimension table corresponding to the topic message name.
+
+
 
 
 
