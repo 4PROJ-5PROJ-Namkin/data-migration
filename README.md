@@ -11,7 +11,6 @@ Install the software on your system and setup the environment variables in the P
 * [Python](https://www.python.org/downloads/)
 * [Java 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 * [Apache Spark](http://spark.apache.org/downloads.html)
-* Optional: [Anaconda](https://www.anaconda.com/distribution/#download-section)
 
 If you're familiar with Linux, you will have to export for example these environment variables:
 ```
